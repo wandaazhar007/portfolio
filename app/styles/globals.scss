@@ -1,0 +1,27 @@
+@import './responsive.scss';
+@import './variable.scss';
+
+html {
+  font-size: 62.5%;
+
+  @include phone {
+    font-size: 52.5%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapContainer {
+  width: 90%;
+  max-width: 133.4rem;
+  margin: 0 auto;
+  // border: .1rem solid green;
+}
