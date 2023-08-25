@@ -1,0 +1,23 @@
+.footer {
+  margin-top: 5rem;
+  width: 100%;
+  height: 5rem;
+  background-color: rgb(218, 216, 216);
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+
+  .wrapContainer {
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 5rem;
+      // border: .1rem solid salmon;
+
+      p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
