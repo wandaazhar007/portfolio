@@ -42,7 +42,7 @@
           // border: .1rem solid salmon;
           border-radius: 1rem;
           overflow: hidden;
-          // min-width: 100px;
+          min-width: 100px;
           // min-width: 12rem;
 
           // @include phone {
@@ -64,7 +64,7 @@
           justify-content: center;
 
           .title {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 600;
             color: #0149B4;
           }
@@ -174,7 +174,8 @@
 }
 
 .skeleton.skeletonImage {
-  width: 15rem;
+  width: 13rem;
+  min-width: 10rem;
   // height: 24rem;
   border-radius: 1rem;
   opacity: .5;
