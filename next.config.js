@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['localhost', 'api.kanshamissouri.com'] // <== Domain name
+    domains: ['localhost', 'portfolio.birojasa-sahabat.com'] // <== Domain name
   }
 }
 

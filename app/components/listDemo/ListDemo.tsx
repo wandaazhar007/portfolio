@@ -27,19 +27,12 @@ const ListDemo: React.FC = () => {
   }
 
   const getMyWork = async () => {
-    const response = await axios.get(`http://localhost:2001/my-work?search_query=${keywordButton}&page=${page}&limit=${limit}`);
+    const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK}?search_query=${keywordButton}&page=${page}&limit=${limit}`);
     console.log(response.data.result);
-    // setTimeout(() => {
-    //   setIsLoading(true)
-    // }, 1000)
-    // setIsLoading(true)
-    // setTimeout(() => {
     setMyWorks(response.data.result);
     setPage(response.data.page);
     setPages(response.data.totalPage);
     setRows(response.data.totalRows);
-    // setIsLoading(false)
-    // }, 2000)
   }
 
 
@@ -77,36 +70,32 @@ const ListDemo: React.FC = () => {
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque optio eum molestiae saepe sequi aperiam.</p>
           </div>
 
-          {/* <div className="content"> */}
           {isLoading ? (
-            <>
-              {/* <h1 className='skeleton'>loading...</h1> */}
-              <div className="content">
-                {myWorks.map((myWork: any, index) => (
-                  <div className="box"  >
-                    <div className="image skeleton skeletonImage">
+            <div className="content">
+              {myWorks.map((myWork: any, index) => (
+                <div className="box"  >
+                  <div className="image skeleton skeletonImage">
 
+                  </div>
+                  <div className="detail">
+                    <div className="title skeleton skeletonTitle"></div>
+                    <p className="desc skeleton skeletonDesc"></p>
+                    <p className="desc skeleton skeletonDesc"></p>
+                    <p className="desc skeleton skeletonDesc"></p>
+                    <p className="desc skeleton skeletonDesc"></p>
+                    <div className="tag">
+                      <div className="skeleton skeletonBtnTag"></div>
+                      <div className="skeleton skeletonBtnTag"></div>
+                      <div className="skeleton skeletonBtnTag"></div>
                     </div>
-                    <div className="detail">
-                      <div className="title skeleton skeletonTitle"></div>
-                      <p className="desc skeleton skeletonDesc"></p>
-                      <p className="desc skeleton skeletonDesc"></p>
-                      <p className="desc skeleton skeletonDesc"></p>
-                      <p className="desc skeleton skeletonDesc"></p>
-                      <div className="tag">
-                        <div className="skeleton skeletonBtnTag"></div>
-                        <div className="skeleton skeletonBtnTag"></div>
-                        <div className="skeleton skeletonBtnTag"></div>
-                      </div>
-                      <div className="license skeleton skeletonLicense">
-                        <span> </span>
-                        <span></span>
-                      </div>
+                    <div className="license skeleton skeletonLicense">
+                      <span> </span>
+                      <span></span>
                     </div>
                   </div>
-                ))}
-              </div>
-            </>
+                </div>
+              ))}
+            </div>
           ) : (
             <>
               <div className="content">
@@ -119,7 +108,6 @@ const ListDemo: React.FC = () => {
                       <div className="title">{myWork.name}</div>
                       <p className="desc">{myWork.desc.substring(0, 150)}</p>
                       <div className="tag">
-                        {/* {myWork.tag} */}
                         <button>reactjs</button>
                         <button>nextjs</button>
                         <button>tailwind-css</button>
@@ -134,7 +122,6 @@ const ListDemo: React.FC = () => {
               </div>
             </>
           )}
-          {/* </div> */}
         </div>
 
         <div className="pagination">

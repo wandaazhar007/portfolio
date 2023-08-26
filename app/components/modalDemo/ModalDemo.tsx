@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import './modalDemo.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faAppleAlt, faClose, faComputerMouse, faDashboard, faEye, faPaperPlane, faStop, faStopCircle } from '@fortawesome/free-solid-svg-icons';
+import { faAppStore, faApple, faApplePay, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
@@ -17,11 +17,12 @@ const ModalDemo: any = ({ openModal, closeModal, propsId }: any) => {
   const [preview, setPreview] = useState("");
   const [github, setGithub] = useState("");
   const [tag, setTag] = useState("");
+  const [type, setType] = useState("");
   const [urlImage, setUrlImage] = useState("");
   const [license, setLicense] = useState("");
 
   const getMyWorkById = async () => {
-    const response = await axios.get(`http://localhost:2001/my-work/${propsId}`);
+    const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK}/${propsId}`);
     console.log(response.data.name)
     setTimeout(() => {
       setName(response.data.name);
@@ -29,6 +30,8 @@ const ModalDemo: any = ({ openModal, closeModal, propsId }: any) => {
       setTag(response.data.tag);
       setPreview(response.data.preview);
       setGithub(response.data.github);
+      setLicense(response.data.license);
+      setType(response.data.type);
       setUrlImage(response.data.urlImage);
       setIsLoading(false);
     }, 1000)
@@ -88,9 +91,15 @@ const ModalDemo: any = ({ openModal, closeModal, propsId }: any) => {
                       <button className="btnTag">NextJs</button>
                     </div>
                     <div className="footerModal">
-                      <Link href={preview} target='_blank'>
-                        <button className="btn btnPreview"><FontAwesomeIcon icon={faEye} className='icon' /> Live Preview</button>
-                      </Link>
+                      {type === 'backend' ? (
+                        <Link href="#">
+                          <button className="btn btnPreviewDisable"><FontAwesomeIcon icon={faEye} className='icon' /> Live Preview</button>
+                        </Link>
+                      ) : (
+                        <Link href={preview} target='_blank'>
+                          <button className="btn btnPreview"><FontAwesomeIcon icon={faDashboard} className='icon' /> Preview</button>
+                        </Link>
+                      )}
                       <Link href={github} target='_blank'>
                         <button className="btn btnGithub"><FontAwesomeIcon icon={faGithub} className='icon' /> Repository</button>
                       </Link>

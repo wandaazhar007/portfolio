@@ -79,16 +79,15 @@
             display: flex;
             gap: 2rem;
             justify-content: center;
+            // border: .1rem solid salmon;
 
 
             .btn {
               border: transparent;
-              background-color: #06779d;
-              color: #f0f0f0;
               padding: 1rem 2rem;
               border-radius: .5rem;
               cursor: pointer;
-              width: 100%;
+              width: 16rem;
               font-weight: 700;
               display: flex;
               gap: .5rem;
@@ -96,15 +95,30 @@
               align-items: center;
               justify-content: center;
 
+              @media screen and (max-width: 360px) {
+                width: 12rem;
+              }
+
               .icon {
                 font-size: 3rem;
               }
             }
 
-            // .btn.btnPreview {}
+            .btn.btnPreviewDisable {
+              background-color: red;
+              // width: 15rem;
+              color: #f0f0f0;
+              cursor: not-allowed;
+            }
+
+            .btn.btnPreview {
+              background-color: #06779d;
+              color: #f0f0f0;
+            }
 
             .btn.btnGithub {
               background-color: #000;
+              color: #f0f0f0;
             }
 
           }
