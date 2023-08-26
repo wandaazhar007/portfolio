@@ -3,18 +3,11 @@
 
 
 .faq {
-  margin-top: 2rem;
-  // padding: 5rem 0;
-  // background-color: rgb(255, 228, 116, .3);
-  // height: 81.5vh;
+  margin-top: 5rem;
+  // border: .1rem solid salmon;
 
   .wrapContainer {
     .box-container {
-      // display: flex;
-      // flex-direction: column;
-      // align-items: center;
-      // gap: 2rem;
-
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
@@ -24,11 +17,12 @@
       }
 
       .header {
-
         // border: .1rem solid salmon;
+        color: $colorOldFossil;
 
         h1 {
           font-size: 3.6rem;
+          color: $colorDrab;
           // text-align: center;
         }
 
@@ -62,7 +56,8 @@
               padding: 1rem;
               cursor: pointer;
               font-size: 1.6rem;
-              font-weight: bold;
+              font-weight: 500;
+              color: $colorDrab;
 
               &::before {
                 content: '+';
@@ -92,7 +87,7 @@
           }
 
           .content {
-            color: var(--primary);
+            color: $colorOldFossil;
             padding: 0 1rem;
             line-height: 1.6rem;
             max-height: 0;
@@ -102,7 +97,7 @@
             p {
               font-size: 1.4rem;
               line-height: 2.5rem;
-              color: grey;
+              // color: $colorOldFossil;
             }
           }
         }

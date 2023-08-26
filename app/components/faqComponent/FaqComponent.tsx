@@ -17,6 +17,9 @@ const FaqComponent: React.FC = () => {
             className="header">
             <h1>Frequently Asked Questions</h1>
             <p>Let me answer some of your questions.</p>
+            <p>
+              If you're ready, let's dive into the questions that matter most to you. Simply click on any question to reveal its answer. If you have additional inquiries or want to learn more about my journey, don't hesitate to reach out. Your curiosity fuels my enthusiasm to create and collaborate in the world of web development
+            </p>
           </motion.div>
           <div className="box">
             <ul className="accordion">
