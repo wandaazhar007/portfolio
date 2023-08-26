@@ -29,7 +29,34 @@
         p {
           font-size: 1.8rem;
           // text-align: center;
-          margin-top: 2rem;
+          // margin-top: 2rem;
+          line-height: 2.5rem;
+        }
+
+        .boxHeaderContainer {
+          margin-top: 1.5rem;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+
+          .boxHeader {
+            // border: .1rem solid salmon;
+            padding: 1rem 1.5rem;
+            font-size: 1.4rem;
+            line-height: 2rem;
+            border-radius: 1rem;
+            color: $colorSnow;
+          }
+
+          .boxHeader.boxHeader1 {
+            grid-column: span 1;
+            background-color: $colorOldDrab;
+          }
+
+          .boxHeader.boxHeader2 {
+            grid-column: span 2;
+            background-color: $colorOldFossil;
+          }
         }
       }
 

@@ -29,7 +29,8 @@ const ListDemo: React.FC = () => {
   }
 
   const getMyWork = async () => {
-    const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK}?search_query=${keywordButton}&page=${page}&limit=${limit}`);
+    // const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK}?search_query=${keywordButton}&page=${page}&limit=${limit}`);
+    const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK_LOCAL}?search_query=${keywordButton}&page=${page}&limit=${limit}`);
     console.log(response.data.result);
     setMyWorks(response.data.result);
     setPage(response.data.page);
@@ -82,7 +83,7 @@ const ListDemo: React.FC = () => {
                 Feel free to explore, interact, and get inspired by these projects.
               </div>
               <div className="box box2">
-                If you're interested in collaborating, have questions, or want to learn more about my development process, don't hesitate to reach out.
+                If you&apos;re interested in collaborating, have questions, or want to learn more about my development process, don&apos;t hesitate to reach out.
               </div>
               <div className="box box3">
                 Each project is a testament to my dedication to the craft and my eagerness to contribute to the digital landscape.
@@ -93,7 +94,7 @@ const ListDemo: React.FC = () => {
           {isLoading ? (
             <div className="content">
               {myWorks.map((myWork: any, index) => (
-                <div className="box"  >
+                <div className="box" key={index} >
                   <div className="image skeleton skeletonImage">
 
                   </div>
@@ -120,7 +121,7 @@ const ListDemo: React.FC = () => {
             <>
               <div className="content">
                 {myWorks.map((myWork: any, index) => (
-                  <div className="box" onClick={() => handleModal(myWork.id)}>
+                  <div className="box" key={index} onClick={() => handleModal(myWork.id)}>
                     <div className="image">
                       <Image src={myWork.urlImage} alt='apple' width={500} height={500} />
                     </div>

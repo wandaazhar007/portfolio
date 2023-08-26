@@ -17,9 +17,14 @@ const FaqComponent: React.FC = () => {
             className="header">
             <h1>Frequently Asked Questions</h1>
             <p>Let me answer some of your questions.</p>
-            <p>
-              If you're ready, let's dive into the questions that matter most to you. Simply click on any question to reveal its answer. If you have additional inquiries or want to learn more about my journey, don't hesitate to reach out. Your curiosity fuels my enthusiasm to create and collaborate in the world of web development
-            </p>
+            <div className="boxHeaderContainer">
+              <div className="boxHeader boxHeader1">
+                If you&apos;re ready, let&apos;s dive into the questions that matter most to you. Simply click on any question to reveal its answer.
+              </div>
+              <div className="boxHeader boxHeader2">
+                If you have additional inquiries or want to learn more about my journey, don&apos;t hesitate to reach out. Your curiosity fuels my enthusiasm to create and collaborate in the world of web development
+              </div>
+            </div>
           </motion.div>
           <div className="box">
             <ul className="accordion">
@@ -32,7 +37,7 @@ const FaqComponent: React.FC = () => {
                 <label htmlFor="first">What technologies and programming languages are you proficient in?</label>
                 <div className="content">
                   <p>
-                    I am skilled in a range of technologies and programming languages relevant to web development. This includes HTML, CSS, JavaScript, as well as popular frameworks like ReactJS and Next.js for building dynamic and responsive user interfaces. I'm also experienced in server-side programming using Node.js, and I'm comfortable working with databases and APIs.
+                    I am skilled in a range of technologies and programming languages relevant to web development. This includes HTML, CSS, JavaScript, as well as popular frameworks like ReactJS and Next.js for building dynamic and responsive user interfaces. I&apos;m also experienced in server-side programming using Node.js, and I&apos;m comfortable working with databases and APIs.
                   </p>
                 </div>
               </motion.li>
@@ -55,10 +60,10 @@ const FaqComponent: React.FC = () => {
                 transition={{ duration: 0.6 }}
               >
                 <input type="radio" name='accordion' id="thrid" />
-                <label htmlFor="thrid">Can you provide examples of projects you've worked on?</label>
+                <label htmlFor="thrid">Can you provide examples of projects you&apos;ve worked on?</label>
                 <div className="content">
                   <p>
-                    Certainly! Here are a couple of projects I've worked on:
+                    Certainly! Here are a couple of projects I&apos;ve worked on:
 
                     Project: E-commerce Website
                     Description: Developed a fully functional e-commerce platform using ReactJS and Redux for state management. Integrated secure payment gateways and implemented responsive design for a seamless shopping experience.
@@ -95,7 +100,7 @@ const FaqComponent: React.FC = () => {
                 <label htmlFor="five">Are you open to collaboration or freelance opportunities?</label>
                 <div className="content">
                   <p>
-                    Yes, I'm open to both collaboration and freelance opportunities. If you have a project in mind or need assistance with web development tasks, feel free to reach out to me. You can contact me via email at wandaazhar@gmail.com or connect with me on LinkedIn.
+                    Yes, I&apos;m open to both collaboration and freelance opportunities. If you have a project in mind or need assistance with web development tasks, feel free to reach out to me. You can contact me via email at wandaazhar@gmail.com or connect with me on LinkedIn.
                   </p>
                 </div>
               </motion.li>
@@ -152,7 +157,7 @@ const FaqComponent: React.FC = () => {
                 <label htmlFor="nine">What coding standards and practices do you follow?</label>
                 <div className="content">
                   <p>
-                    I believe in writing clean, maintainable, and efficient code. I adhere to coding standards such as proper indentation, consistent naming conventions, and meaningful comments. I also follow the DRY (Don't Repeat Yourself) principle to minimize code duplication. Additionally, I use version control (Git) to track changes, collaborate with others, and maintain a history of code revisions. I use ESLint to ensure code quality and consistency by catching common programming errors and enforcing coding standards.
+                    I believe in writing clean, maintainable, and efficient code. I adhere to coding standards such as proper indentation, consistent naming conventions, and meaningful comments. I also follow the DRY (Don&apos;t Repeat Yourself) principle to minimize code duplication. Additionally, I use version control (Git) to track changes, collaborate with others, and maintain a history of code revisions. I use ESLint to ensure code quality and consistency by catching common programming errors and enforcing coding standards.
                   </p>
                 </div>
               </motion.li>

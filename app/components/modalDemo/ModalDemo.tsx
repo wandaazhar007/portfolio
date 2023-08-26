@@ -22,7 +22,8 @@ const ModalDemo: any = ({ openModal, closeModal, propsId }: any) => {
   const [license, setLicense] = useState("");
 
   const getMyWorkById = async () => {
-    const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK}/${propsId}`);
+    // const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK}/${propsId}`);
+    const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK_LOCAL}/${propsId}`);
     setTimeout(() => {
       setName(response.data.name);
       setDesc(response.data.desc);
