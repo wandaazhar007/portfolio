@@ -114,7 +114,6 @@ const ListDemo: React.FC = () => {
                       </div>
                       <div className="license">
                         <span><FontAwesomeIcon icon={faScaleBalanced} className='icon' /> {myWork.license}</span>
-                        <span>2023</span>
                       </div>
                     </div>
                   </div>

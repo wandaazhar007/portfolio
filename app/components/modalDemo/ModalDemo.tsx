@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import './modalDemo.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAppleAlt, faClose, faComputerMouse, faDashboard, faEye, faPaperPlane, faStop, faStopCircle } from '@fortawesome/free-solid-svg-icons';
+import { faAppleAlt, faClose, faComputerMouse, faDashboard, faEye, faPaperPlane, faScaleBalanced, faStop, faStopCircle } from '@fortawesome/free-solid-svg-icons';
 import { faAppStore, faApple, faApplePay, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -105,7 +105,7 @@ const ModalDemo: any = ({ openModal, closeModal, propsId }: any) => {
                       </Link>
                     </div>
                     <div className="license">
-                      <p>{license}</p>
+                      <p><FontAwesomeIcon icon={faScaleBalanced} className='icon' /> {license}</p>
                     </div>
                   </div>
                 </div>

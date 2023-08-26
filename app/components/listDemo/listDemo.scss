@@ -76,6 +76,7 @@
           }
 
           .tag {
+            margin-top: 1rem;
             display: flex;
             gap: .3rem;
             flex-wrap: wrap;
@@ -131,11 +132,11 @@
         cursor: pointer;
 
 
-        @include tablet {
-          height: 2.5rem;
-          width: 2.5rem;
-          font-size: 1.4rem;
-        }
+        // @include tablet {
+        //   height: 2.5rem;
+        //   width: 2.5rem;
+        //   font-size: 1.4rem;
+        // }
       }
 
       .on {
@@ -202,7 +203,7 @@
 }
 
 .skeleton.skeletonBtnTag {
-  margin-top: 2rem;
+  // margin-top: 2rem;
   // padding: 1rem;
   // height: 20rem;
   // width: 6rem;
