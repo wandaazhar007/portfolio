@@ -7,6 +7,8 @@ import ModalDemo from '../modalDemo/ModalDemo';
 import { useEffect, useState } from 'react';
 import axios from "axios";
 import ReactPaginate from 'react-paginate';
+import { Fira_Sans } from 'next/font/google';
+const firaSans = Fira_Sans({ subsets: ['latin'], weight: ['100', '200', '300', '500', '700'] });
 
 const ListDemo: React.FC = () => {
   const [myWorks, setMyWorks] = useState([]);
@@ -66,8 +68,26 @@ const ListDemo: React.FC = () => {
       <section className="listDemo">
         <div className="wrapContainer">
           <div className="header">
-            <h1>My Last Project</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque optio eum molestiae saepe sequi aperiam.</p>
+            <div className="colLeft">
+              <h1 className={firaSans.className}>Explore My Web Development Projects</h1>
+              <div className="box">
+                Welcome to the heart of my portfolio — a collection of web development projects that showcase my skills, creativity, and dedication to crafting impactful digital experiences. Each project reflects my passion for coding and my commitment to delivering solutions that combine functionality, aesthetics, and user-friendliness.
+              </div>
+            </div>
+            <div className="colRight">
+              <div className="headBox">
+                <h1 className={firaSans.className}>Learn, Collaborate, Connect:</h1>
+              </div>
+              <div className="box box1">
+                Feel free to explore, interact, and get inspired by these projects.
+              </div>
+              <div className="box box2">
+                If you're interested in collaborating, have questions, or want to learn more about my development process, don't hesitate to reach out.
+              </div>
+              <div className="box box3">
+                Each project is a testament to my dedication to the craft and my eagerness to contribute to the digital landscape.
+              </div>
+            </div>
           </div>
 
           {isLoading ? (

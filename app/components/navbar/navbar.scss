@@ -23,7 +23,7 @@
 
       .colLeft {
         .logo {
-          border: .5rem solid grey;
+          border: .3rem solid $colorOldDrab;
           border-radius: .3rem;
           width: 6rem;
           height: 6rem;
@@ -79,7 +79,7 @@
 
           .link {
             font-size: 1.6rem;
-            color: grey;
+            color: $colorOldGrey;
             font-weight: 400;
             display: flex;
             justify-content: center;
@@ -92,8 +92,8 @@
 
 
             @include tablet {
-              border-left: .001rem solid grey;
-              border-bottom: .001rem solid grey;
+              border-left: .001rem solid $colorOldGrey;
+              border-bottom: .001rem solid $colorOldGrey;
             }
 
             .icon {
@@ -109,14 +109,14 @@
           }
 
           .link.on {
-            color: white;
+            color: $colorSnow;
             font-weight: 700;
 
             &::after {
               content: '';
               width: 120%;
               height: 3rem;
-              background-color: gray;
+              background-color: $colorOldDrab;
               border-radius: .5rem;
               z-index: -1;
               position: absolute;
@@ -139,7 +139,7 @@
           position: fixed;
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
-          background-color: #fff;
+          background-color: $colorSnow;
           bottom: 0;
           right: 0;
           width: 100%;
@@ -158,10 +158,10 @@
 
           .btnLogin {
             padding: 1rem 2rem;
-            background-color: gray;
-            color: #fff;
+            background-color: $colorOldDrab;
+            color: $colorSnow;
             border: none;
-            border-radius: .3rem;
+            border-radius: 1rem;
             font-size: 1.4rem;
             cursor: pointer;
             display: flex;
@@ -182,11 +182,11 @@
               bottom: 8.5rem;
               right: 5rem;
               padding: 1.5rem 2rem;
-              background-color: #f4efef;
-              color: grey;
+              background-color: $colorSnow;
+              color: $colorOldDrab;
               border: none;
               border-radius: .3rem;
-              font-size: 1.4rem;
+              font-size: 2.6rem;
               cursor: pointer;
               display: flex;
               gap: 1rem;

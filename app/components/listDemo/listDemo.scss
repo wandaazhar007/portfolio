@@ -6,13 +6,94 @@
 
   .wrapContainer {
     .header {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
 
-      h1 {
-        font-size: 2.8rem;
+      @include tablet {
+        grid-template-columns: 1fr;
       }
 
-      p {
-        font-size: 1.6rem;
+      .colLeft {
+        // border: .1rem solid salmon;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+
+        h1 {
+          font-size: 2.8rem;
+          color: $colorDrab;
+        }
+
+        .box {
+          font-size: 1.4rem;
+          line-height: 2.5rem;
+          background-color: $colorOldDrab;
+          color: $colorSnow;
+          padding: 1rem 3rem;
+          border-radius: 1rem;
+          min-height: 17rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+
+          &::after {
+            content: '🔍';
+            font-size: 4.8rem;
+            color: $colorSnow;
+            // opacity: .5;
+            position: absolute;
+            right: 1rem;
+            bottom: 2rem;
+            // box-shadow: $boxShadow;
+            // z-index: -8;
+            // transform: rotate(-30deg);
+          }
+        }
+      }
+
+      .colRight {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+
+
+
+        .headBox {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          h1 {
+            font-size: 2.8rem;
+            color: $colorDrab;
+          }
+        }
+
+        .box {
+          font-size: 1.4rem;
+          border-radius: 1rem;
+          padding: 2rem;
+          line-height: 2rem;
+          // border: .1rem solid salmon;
+        }
+
+        .box.box1 {
+          background-color: $colorSlate;
+          color: $colorSnow;
+        }
+
+        .box.box2 {
+          background-color: $colorOldSand;
+          color: $colorSnow;
+        }
+
+        .box.box3 {
+          background-color: $colorOldFossil;
+          color: $colorSnow;
+        }
       }
     }
 
@@ -66,13 +147,13 @@
           .title {
             font-size: 1.8rem;
             font-weight: 600;
-            color: #0149B4;
+            color: $colorOldDrab;
           }
 
           .desc {
             font-size: 1.4rem;
             line-height: 2rem;
-            color: grey;
+            color: $colorGrey;
           }
 
           .tag {
@@ -127,9 +208,13 @@
         justify-content: center;
         align-items: center;
         border-radius: .6rem;
-        border: .1rem solid gray;
-        color: #4966e7;
+        // border: .1rem solid gray;
+        background-color: $colorSnow;
+        color: $colorOldDrab;
+        font-weight: 700;
+        font-size: 1.4rem;
         cursor: pointer;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px 3px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
 
         // @include tablet {
@@ -139,18 +224,22 @@
         // }
       }
 
-      .on {
-        background-color: #4966e7;
-        color: #fff;
+      .link.on {
+        background-color: $colorDrab;
+        color: $colorSnow;
         font-weight: 700;
+        // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px 3px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
       }
 
       .disabled {
-        background-color: rgb(220, 220, 220);
+        background-color: $colorFossil;
         color: black;
         cursor: not-allowed;
         border: transparent;
         border-radius: .5rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px 3px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
       }
     }
   }
