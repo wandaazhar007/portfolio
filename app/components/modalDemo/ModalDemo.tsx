@@ -23,7 +23,6 @@ const ModalDemo: any = ({ openModal, closeModal, propsId }: any) => {
 
   const getMyWorkById = async () => {
     const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK}/${propsId}`);
-    console.log(response.data.name)
     setTimeout(() => {
       setName(response.data.name);
       setDesc(response.data.desc);
@@ -34,6 +33,7 @@ const ModalDemo: any = ({ openModal, closeModal, propsId }: any) => {
       setType(response.data.type);
       setUrlImage(response.data.urlImage);
       setIsLoading(false);
+      console.log('license', response.data.name)
     }, 1000)
   }
 
@@ -63,7 +63,7 @@ const ModalDemo: any = ({ openModal, closeModal, propsId }: any) => {
                       <button className="skeleton skeletonBtnTag"></button>
                       <button className="skeleton skeletonBtnTag"></button>
                     </div>
-                    <div className="footerModal">
+                    <div className="buttonGroup">
                       <Link href="#" target='_blank'>
                         <button className="btn btnPreview skeleton skeletonBtnModal"> Live Preview</button>
                       </Link>
@@ -90,7 +90,7 @@ const ModalDemo: any = ({ openModal, closeModal, propsId }: any) => {
                       <button className="btnTag">ReactJs</button>
                       <button className="btnTag">NextJs</button>
                     </div>
-                    <div className="footerModal">
+                    <div className="buttonGroup">
                       {type === 'backend' ? (
                         <Link href="#">
                           <button className="btn btnPreviewDisable"><FontAwesomeIcon icon={faEye} className='icon' /> Live Preview</button>
@@ -104,19 +104,22 @@ const ModalDemo: any = ({ openModal, closeModal, propsId }: any) => {
                         <button className="btn btnGithub"><FontAwesomeIcon icon={faGithub} className='icon' /> Repository</button>
                       </Link>
                     </div>
+                    <div className="license">
+                      <p>{license}</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </>
           )}
-          <div className="boxContainer">
+          {/* <div className="boxContainer">
             <div className="modalBody">
               <div className="btnClose" onClick={closeModal}></div>
               <div className="image">
                 <Image src="/ss_admin_kansha.png" alt='image' width={100} height={100} />
               </div>
               <div className="content">
-                <h1 className="title">{name}</h1>
+                <h1 className="title">{name}test</h1>
                 <p className="desc">{desc}</p>
                 <div className="tag">
                   <button className="btnTag">ReactJs</button>
@@ -132,7 +135,7 @@ const ModalDemo: any = ({ openModal, closeModal, propsId }: any) => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
         </div>
       </section>
