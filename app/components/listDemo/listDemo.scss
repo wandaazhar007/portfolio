@@ -15,7 +15,6 @@
       }
 
       .colLeft {
-        // border: .1rem solid salmon;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -49,14 +48,9 @@
           &::after {
             content: '🔍';
             font-size: 4.8rem;
-            // color: $colorSnow;
-            // opacity: .5;
             position: absolute;
             right: 1rem;
             bottom: 2rem;
-            // box-shadow: $boxShadow;
-            // z-index: -8;
-            // transform: rotate(-30deg);
           }
         }
       }
@@ -72,17 +66,12 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          // border: .1rem solid salmon;
           padding: 2rem;
 
           h1 {
             font-size: 2.4rem;
             color: $colorDrab;
             font-family: 'Fira Sans', sans-serif;
-          }
-
-          @include phone {
-            // text-align: center;
           }
         }
 
@@ -124,26 +113,16 @@
       .box {
         display: flex;
         gap: 1rem;
-        // border: .1rem solid salmon;
         padding: 1rem;
         border-radius: 1rem;
         background-color: #ffffff;
-        // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px 3px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 1px 10px 1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         cursor: pointer;
-        // align-items: center;
-        // justify-content: center;
 
         .image {
-          // border: .1rem solid salmon;
           border-radius: 1rem;
           overflow: hidden;
           min-width: 100px;
-          // min-width: 12rem;
-
-          // @include phone {
-          //   display: none;
-          // }
 
           img {
             width: 100%;
@@ -156,7 +135,6 @@
           display: flex;
           flex-direction: column;
           gap: .5rem;
-          // border: .1rem solid green;
           justify-content: center;
 
           .title {
@@ -223,28 +201,18 @@
         justify-content: center;
         align-items: center;
         border-radius: .6rem;
-        // border: .1rem solid gray;
         background-color: $colorSnow;
         color: $colorOldDrab;
         font-weight: 700;
         font-size: 1.4rem;
         cursor: pointer;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px 3px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-
-
-        // @include tablet {
-        //   height: 2.5rem;
-        //   width: 2.5rem;
-        //   font-size: 1.4rem;
-        // }
       }
 
       .link.on {
         background-color: $colorDrab;
         color: $colorSnow;
         font-weight: 700;
-        // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px 3px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-
       }
 
       .disabled {
@@ -262,8 +230,7 @@
 
 
 
-// SKELETON MODAL
-
+// SKELETON MODAL DEMO
 @keyframes skeletonLoading {
   0% {
     background-color: hsl(200, 20%, 70%);
@@ -281,13 +248,11 @@
 .skeleton.skeletonImage {
   width: 13rem;
   min-width: 10rem;
-  // height: 24rem;
   border-radius: 1rem;
   opacity: .5;
 }
 
 .skeleton.skeletonTitle {
-  // margin-top: 2rem;
   margin-bottom: 1rem;
   width: 50%;
   height: 2rem;
@@ -295,30 +260,17 @@
 }
 
 .skeleton.skeletonDesc {
-  // min-width: 1rem;
   width: 100%;
   height: 1rem;
   border-radius: 1rem;
-  // border: .1rem solid salmon;
 
   @include phone {
     width: 15rem;
   }
 }
 
-// .skeleton.skeletonBtnTag {
-//   margin-top: 2rem;
-//   padding: 1rem;
-//   height: 20rem;
-//   width: 6rem;
-//   border-radius: 1rem;
-//   border: transparent;
-//   border: none;
-// }
-
 .skeleton.skeletonLicense {
   margin-top: 2rem;
-  // padding: .5rem;
   height: 1rem;
   width: 10rem;
   border-radius: 1rem;
