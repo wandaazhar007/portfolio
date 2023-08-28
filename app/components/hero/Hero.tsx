@@ -11,6 +11,7 @@ import Headline from '../headline/Headline';
 import Experiences from '../experiences/Experiences';
 import Accomplishments from '../accomplishments/Accomplishments';
 import WorkExperiences from '../workExperiences/WorkExperiences';
+import Educations from '../educations/Educations';
 // import { Fira_Sans } from 'next/font/google';
 
 // const firaSans = Fira_Sans({ subsets: ['latin'], weight: ['100', '200', '300', '500', '700'] });
@@ -190,7 +191,7 @@ const Hero: React.FC = () => {
           </div> */}
           <WorkExperiences />
 
-          <div className="education">
+          {/* <div className="education">
             <h1 >EDUCATIONS</h1>
             <div className="wrapBox">
               <motion.div
@@ -210,7 +211,8 @@ const Hero: React.FC = () => {
                 <hr />
               </motion.div>
             </div>
-          </div>
+          </div> */}
+          <Educations />
 
           <div className="sertification">
             <h1 >SERTIFICATIONS</h1>
