@@ -13,22 +13,35 @@ const FaqComponent: React.FC = () => {
     <section className="faq">
       <div className="wrapContainer">
         <div className="box-container">
-          <motion.div
-            initial={{ opacity: 1, scale: 1, y: -100 }}
-            whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="header">
-            <h1>Frequently Asked Questions</h1>
-            <p>Let me answer some of your questions.</p>
+          <div className="header">
+            <motion.h1
+              initial={{ opacity: 0, scale: 1, y: -100 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >Frequently Asked Questions
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, scale: 1, y: 100 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >Let me answer some of your questions.</motion.p>
             <div className="boxHeaderContainer">
-              <div className="boxHeader boxHeader1">
+              <motion.div
+                initial={{ opacity: 0, scale: 1, x: -100 }}
+                whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                transition={{ duration: 1 }}
+                className="boxHeader boxHeader1">
                 If you&apos;re ready, let&apos;s dive into the questions that matter most to you. Simply click on any question to reveal its answer.
-              </div>
-              <div className="boxHeader boxHeader2">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 1, x: 100 }}
+                whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                transition={{ duration: 1 }}
+                className="boxHeader boxHeader2">
                 If you have additional inquiries or want to learn more about my journey, don&apos;t hesitate to reach out. Your curiosity fuels my enthusiasm to create and collaborate in the world of web development
-              </div>
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
           <div className="box">
             <ul className="accordion">
               <motion.li
