@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './navbar.scss';
 import Image from "next/image";
 import Link from "next/link";
-import { faArrowUp, faArrowUpRightDots, faArrowUpRightFromSquare, faBars, faBook, faBookOpen, faClose, faCode, faCommenting, faComments, faHome, faPencil, faPhoneAlt, faPhoneSquare, faQuestionCircle, faSignIn, faSquareArrowUpRight, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faClose, faPencil, faQuestionCircle, faSquareArrowUpRight, faUser } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import { usePathname } from "next/navigation";
-import { faGithub, faGithubAlt, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Navbar: React.FC = () => {
   const pathname = usePathname();

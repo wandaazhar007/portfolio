@@ -5,11 +5,6 @@
   height: 7rem;
   display: flex;
   align-items: center;
-  // border: .1rem solid salmon;
-  // position: fixed;
-  // left: 0;
-  // right: 0;
-  // top: 0;
   z-index: 999;
   background-color: #e4eaea;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -57,7 +52,6 @@
         justify-content: space-between;
         gap: 2rem;
         align-items: center;
-        // border: .1rem solid green;
 
         .iconClose {
           display: none;
@@ -84,7 +78,6 @@
         .nav {
           display: flex;
           gap: 3rem;
-          // border: .1rem solid salmon;
 
           @media screen and (max-width : 857px) {
             gap: 1rem;
@@ -140,7 +133,6 @@
               z-index: -1;
               position: absolute;
               padding: .3rem 1.5rem;
-              // z-index: 9;
 
               @media screen and (max-width : 857px) {
                 padding: .3rem .1rem;
@@ -175,10 +167,8 @@
           display: flex;
           justify-content: space-between;
           gap: 2rem;
-          // border: .1rem solid salmon;
 
           .btnGithub {
-            // padding: 1rem 2rem;
             height: 3.5rem;
             padding: .3rem 1.5rem;
             background-color: $colorOldDrab;
@@ -192,7 +182,6 @@
             align-items: center;
 
             .icon {
-              // width: 1.5rem;
               margin-right: -.4rem;
             }
 
