@@ -41,7 +41,6 @@ const Hero: React.FC = () => {
 
         </div>
       </div>
-      {/* <ModalPhoto openModal={openModal} closeModal={() => setOpenModal(false)} isLoading={isLoading} setIsLoading={setIsLoading} /> */}
     </section>
   );
 }
