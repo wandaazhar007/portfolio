@@ -160,80 +160,74 @@
       //   }
       // }
 
-      .accomplishments {
-        // border: .1rem solid green;
-        // height: 30rem;
-        grid-column: span 2;
-        border-radius: 2rem;
-        background-color: #dadfd9;
-        color: $colorOldGrey;
-        padding: 2rem;
-        position: relative;
-        overflow: hidden;
+      // .accomplishments {
+      //   grid-column: span 2;
+      //   border-radius: 2rem;
+      //   background-color: #dadfd9;
+      //   color: $colorOldGrey;
+      //   padding: 2rem;
+      //   position: relative;
+      //   overflow: hidden;
 
-        &::before {
-          content: '';
-          width: 25rem;
-          height: 4rem;
-          background-color: #d3dcd1;
-          position: absolute;
-          left: -2rem;
-          top: 1.2rem;
-          border-radius: 1rem;
-          opacity: .5;
-        }
+      //   &::before {
+      //     content: '';
+      //     width: 25rem;
+      //     height: 4rem;
+      //     background-color: #d3dcd1;
+      //     position: absolute;
+      //     left: -2rem;
+      //     top: 1.2rem;
+      //     border-radius: 1rem;
+      //     opacity: .5;
+      //   }
 
-        @include tablet {
-          grid-column: span 3;
-        }
+      //   @include tablet {
+      //     grid-column: span 3;
+      //   }
 
-        h1 {
-          font-size: 1.8rem;
-          position: relative;
-        }
+      //   h1 {
+      //     font-size: 1.8rem;
+      //     position: relative;
+      //   }
 
-        .wrapBox {
-          display: flex;
-          gap: 2rem;
-          margin-top: 1.5rem;
-          // border: .1rem solid salmon;
+      //   .wrapBox {
+      //     display: flex;
+      //     gap: 2rem;
+      //     margin-top: 1.5rem;
 
-          @include phone {
-            flex-wrap: wrap;
-            gap: 0;
-          }
-        }
+      //     @include phone {
+      //       flex-wrap: wrap;
+      //       gap: 0;
+      //     }
+      //   }
 
-        ul {
-          margin-top: 2rem;
-          // border: .1rem solid salmon;
+      //   ul {
+      //     margin-top: 2rem;
 
-          li {
-            font-size: 1.6rem;
-            margin-top: 2rem;
-            line-height: 2.5rem;
-            // padding: 1rem;
-            list-style: none;
-            padding: 2rem;
-            border-radius: 1rem;
-            background-color: #d3dcd1;
-            position: relative;
-            // box-shadow: $boxShadow;
+      //     li {
+      //       font-size: 1.6rem;
+      //       margin-top: 2rem;
+      //       line-height: 2.5rem;
+      //       list-style: none;
+      //       padding: 2rem;
+      //       border-radius: 1rem;
+      //       background-color: #d3dcd1;
+      //       position: relative;
 
-            &::before {
-              content: '';
-              width: 2rem;
-              height: 2rem;
-              border-radius: 50%;
-              background-color: #d3dcd1;
-              position: absolute;
-              left: -1rem;
-              top: 2.2rem;
-            }
-          }
+      //       &::before {
+      //         content: '';
+      //         width: 2rem;
+      //         height: 2rem;
+      //         border-radius: 50%;
+      //         background-color: #d3dcd1;
+      //         position: absolute;
+      //         left: -1rem;
+      //         top: 2.2rem;
+      //       }
+      //     }
 
-        }
-      }
+      //   }
+      // }
 
       .workExperiences {
         // border: .1rem solid green;

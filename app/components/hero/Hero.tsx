@@ -9,6 +9,7 @@ import ModalPhoto from '../modalPhoto/ModalPhoto';
 import { useState } from 'react';
 import Headline from '../headline/Headline';
 import Experiences from '../experiences/Experiences';
+import Accomplishments from '../accomplishments/Accomplishments';
 // import { Fira_Sans } from 'next/font/google';
 
 // const firaSans = Fira_Sans({ subsets: ['latin'], weight: ['100', '200', '300', '500', '700'] });
@@ -117,7 +118,7 @@ const Hero: React.FC = () => {
           </div> */}
           <Experiences />
 
-          <div className="accomplishments">
+          {/* <div className="accomplishments">
             <h1 >ACCOMPLISHMENTS</h1>
             <div className="wrapBox">
               <div className="box">
@@ -158,7 +159,8 @@ const Hero: React.FC = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
+          <Accomplishments />
 
           <div className="workExperiences">
             <h1 >WORK EXPERIENCES</h1>
