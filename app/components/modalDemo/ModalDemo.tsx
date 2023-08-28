@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import './modalDemo.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAppleAlt, faClose, faComputerMouse, faDashboard, faEye, faPaperPlane, faScaleBalanced, faStop, faStopCircle } from '@fortawesome/free-solid-svg-icons';
+import { faAppleAlt, faClose, faClosedCaptioning, faComputerMouse, faDashboard, faEye, faPaperPlane, faScaleBalanced, faStop, faStopCircle } from '@fortawesome/free-solid-svg-icons';
 import { faAppStore, faApple, faApplePay, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -94,7 +94,7 @@ const ModalDemo: any = ({ openModal, closeModal, propsId }: any) => {
                     <div className="buttonGroup">
                       {type === 'backend' ? (
                         <Link href="#">
-                          <button className="btn btnPreviewDisable"><FontAwesomeIcon icon={faEye} className='icon' /> Live Preview</button>
+                          <button className="btn btnPreviewDisable"><FontAwesomeIcon icon={faClose} className='icon' /> No Preview</button>
                         </Link>
                       ) : (
                         <Link href={preview} target='_blank'>
