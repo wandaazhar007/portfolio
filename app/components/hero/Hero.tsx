@@ -14,6 +14,7 @@ import WorkExperiences from '../workExperiences/WorkExperiences';
 import Educations from '../educations/Educations';
 // import Certifications from '../certifications/Certifications';
 import Certifications from '../certifications/Certifications';
+import Biodata from '../biodata/Biodata';
 // import { Fira_Sans } from 'next/font/google';
 
 // const firaSans = Fira_Sans({ subsets: ['latin'], weight: ['100', '200', '300', '500', '700'] });
@@ -237,10 +238,9 @@ const Hero: React.FC = () => {
               </motion.div>
             </div>
           </div> */}
-
           <Certifications />
 
-          <div className="biodata">
+          {/* <div className="biodata">
             <h1 >BIODATA</h1>
             <div className="wrapBox">
               <motion.div
@@ -267,11 +267,13 @@ const Hero: React.FC = () => {
                 </div>
               </motion.div>
             </div>
-          </div>
+          </div> */}
+          <Biodata />
+
 
         </div>
       </div>
-      <ModalPhoto openModal={openModal} closeModal={() => setOpenModal(false)} isLoading={isLoading} setIsLoading={setIsLoading} />
+      {/* <ModalPhoto openModal={openModal} closeModal={() => setOpenModal(false)} isLoading={isLoading} setIsLoading={setIsLoading} /> */}
     </section>
   );
 }
