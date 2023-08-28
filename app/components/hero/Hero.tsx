@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
                 rotate: [0, -3, 0]
               }}
             >I do more than just build a website</motion.h1>
-            <p > I work for an advertising digital agency as a front-end web designer. currently, I’m not looking for a job but I love to help small businesses grow especially with websites or landing pages</p>
+            <p > I work for an advertising digital agency as a front-end web designer. currently, I&apos;m not looking for a job but I love to help small businesses grow especially with websites or landing pages</p>
             <div className="proof">
               <div className="icons">
                 <FontAwesomeIcon icon={faStar} className="icon" />
