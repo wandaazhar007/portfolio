@@ -23,12 +23,14 @@ const Navbar: React.FC = () => {
       <div className="wrapContainer">
         <div className="sectionContainer">
           <div className="colLeft">
-            <div className="logo">
-              <Image src="/wanda-azhar.jpg" alt="logo" width={500} height={500} />
-            </div>
-            <div className="name">
-              <h1>Wanda Azhar</h1>
-            </div>
+            <Link href="/">
+              <div className="logo">
+                <Image src="/wanda-azhar.jpg" alt="logo" width={500} height={500} />
+              </div>
+              <div className="name">
+                <h1>Wanda Azhar</h1>
+              </div>
+            </Link>
           </div>
           <div className="colRight">
             <FontAwesomeIcon icon={faClose} className={`iconClose ${on ? 'on' : ''}`} onClick={handleNavbar} />

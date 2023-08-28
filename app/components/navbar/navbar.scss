@@ -22,23 +22,27 @@
       align-items: center;
 
       .colLeft {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
+        a {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
 
-        .logo {
-          border: .3rem solid #6594b0;
-          border-radius: 50%;
-          width: 6rem;
-          height: 6rem;
-          overflow: hidden;
+          .logo {
+            border: .3rem solid #6594b0;
+            border-radius: 50%;
+            width: 6rem;
+            height: 6rem;
+            overflow: hidden;
 
-          img {
-            width: 7rem;
-            height: 7rem;
-            object-fit: contain;
+            img {
+              width: 7rem;
+              height: 7rem;
+              object-fit: contain;
+            }
           }
         }
+
+
 
         .name {
           h1 {
