@@ -7,8 +7,8 @@ import ModalDemo from '../modalDemo/ModalDemo';
 import { useEffect, useState } from 'react';
 import axios from "axios";
 import ReactPaginate from 'react-paginate';
-import { Fira_Sans } from 'next/font/google';
-const firaSans = Fira_Sans({ subsets: ['latin'], weight: ['100', '200', '300', '500', '700'] });
+// import { Fira_Sans } from 'next/font/google';
+// const firaSans = Fira_Sans({ subsets: ['latin'], weight: ['100', '200', '300', '500', '700'] });
 
 const ListDemo: React.FC = () => {
   const [myWorks, setMyWorks] = useState([]);
@@ -70,14 +70,14 @@ const ListDemo: React.FC = () => {
         <div className="wrapContainer">
           <div className="header">
             <div className="colLeft">
-              <h1 className={firaSans.className}>Explore My Web Development Projects</h1>
+              <h1>Explore My Web Development Projects Q</h1>
               <div className="box">
                 Welcome to the heart of my portfolio — a collection of web development projects that showcase my skills, creativity, and dedication to crafting impactful digital experiences. Each project reflects my passion for coding and my commitment to delivering solutions that combine functionality, aesthetics, and user-friendliness.
               </div>
             </div>
             <div className="colRight">
               <div className="headBox">
-                <h1 className={firaSans.className}>Learn, Collaborate, Connect:</h1>
+                <h1>Learn, Collaborate, Connect:</h1>
               </div>
               <div className="box box1">
                 Feel free to explore, interact, and get inspired by these projects.

@@ -6,9 +6,9 @@ import { faArrowUpRightFromSquare, faEnvelope, faMapLocation, faPhone, faStar, f
 import Link from 'next/link';
 import ModalPhoto from '../modalPhoto/ModalPhoto';
 import { useState } from 'react';
-import { Fira_Sans } from 'next/font/google';
+// import { Fira_Sans } from 'next/font/google';
 
-const firaSans = Fira_Sans({ subsets: ['latin'], weight: ['100', '200', '300', '500', '700'] });
+// const firaSans = Fira_Sans({ subsets: ['latin'], weight: ['100', '200', '300', '500', '700'] });
 const Hero: React.FC = () => {
   const [openModal, setOpenModal] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -23,9 +23,9 @@ const Hero: React.FC = () => {
         <div className="sectionContainer">
 
           <div className="headline">
-            <h3 className={firaSans.className}>Hi, There... !</h3>
-            <h1 className={firaSans.className}>I do more than just build a website</h1>
-            <p className={firaSans.className}> I work for an advertising digital agency as a front-end web designer. currently, I’m not looking for a job but I love to help small businesses grow especially with websites or landing pages</p>
+            <h3 >Hi, There... !</h3>
+            <h1 >I do more than just build a website</h1>
+            <p > I work for an advertising digital agency as a front-end web designer. currently, I’m not looking for a job but I love to help small businesses grow especially with websites or landing pages</p>
             <div className="proof">
               <div className="icons">
                 <FontAwesomeIcon icon={faStar} className="icon" />
@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
           </div>
 
           <div className="experiences">
-            <h1 className={firaSans.className}>MY EXPERIENCES</h1>
+            <h1 >MY EXPERIENCES</h1>
             <div className="wrapBox">
               <div className="box">
                 <ul>
@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
           </div>
 
           <div className="accomplishments">
-            <h1 className={firaSans.className}>ACCOMPLISHMENTS</h1>
+            <h1 >ACCOMPLISHMENTS</h1>
             <div className="wrapBox">
               <div className="box">
                 <ul>
@@ -97,7 +97,7 @@ const Hero: React.FC = () => {
           </div>
 
           <div className="workExperiences">
-            <h1 className={firaSans.className}>WORK EXPERIENCES</h1>
+            <h1 >WORK EXPERIENCES</h1>
             <div className="wrapBox">
               <div className="box">
                 <p><Link href="#">RedTree</Link> <span>Pittsburgh, Pennsylvania</span></p>
@@ -114,7 +114,7 @@ const Hero: React.FC = () => {
           </div>
 
           <div className="education">
-            <h1 className={firaSans.className}>EDUCATIONS</h1>
+            <h1 >EDUCATIONS</h1>
             <div className="wrapBox">
               <div className="box">
                 <h2>Harvard CS50</h2>
@@ -132,7 +132,7 @@ const Hero: React.FC = () => {
           </div>
 
           <div className="sertification">
-            <h1 className={firaSans.className}>SERTIFICATIONS</h1>
+            <h1 >SERTIFICATIONS</h1>
             <div className="wrapBox">
               <div className="box">
                 <h2><Link href="">Harvard CS50 <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></h2>
@@ -150,7 +150,7 @@ const Hero: React.FC = () => {
           </div>
 
           <div className="biodata">
-            <h1 className={firaSans.className}>BIODATA</h1>
+            <h1 >BIODATA</h1>
             <div className="wrapBox">
               <div className="box">
                 <div className="boxImage">

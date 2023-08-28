@@ -10,8 +10,8 @@
   // left: 0;
   // right: 0;
   // top: 0;
-  // z-index: 99;
-  // background-color: white;
+  z-index: 999;
+  background-color: #e4eaea;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   ;
 
@@ -22,9 +22,13 @@
       align-items: center;
 
       .colLeft {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
         .logo {
-          border: .3rem solid $colorOldDrab;
-          border-radius: .3rem;
+          border: .3rem solid #6594b0;
+          border-radius: 50%;
           width: 6rem;
           height: 6rem;
           overflow: hidden;
@@ -35,13 +39,21 @@
             object-fit: contain;
           }
         }
+
+        .name {
+          h1 {
+            font-size: 1.6rem;
+            color: $colorDrab;
+          }
+        }
       }
 
       .colRight {
         display: flex;
         justify-content: space-between;
-        gap: 8rem;
+        gap: 2rem;
         align-items: center;
+        // border: .1rem solid green;
 
         .iconClose {
           display: none;
@@ -67,6 +79,7 @@
         .nav {
           display: flex;
           gap: 3rem;
+          // border: .1rem solid salmon;
 
           @media screen and (max-width : 857px) {
             gap: 1rem;
@@ -88,6 +101,7 @@
             gap: 1rem;
             transition: .5s linear;
             position: relative;
+            z-index: 99;
 
 
 
@@ -117,10 +131,11 @@
               width: 120%;
               height: 3rem;
               background-color: $colorOldDrab;
-              border-radius: .5rem;
+              border-radius: 1rem;
               z-index: -1;
               position: absolute;
               padding: .3rem 1.5rem;
+              // z-index: 9;
 
               @media screen and (max-width : 857px) {
                 padding: .3rem .1rem;
@@ -151,13 +166,16 @@
           z-index: 3;
         }
 
-        .wrap {
+        .cta {
           display: flex;
           justify-content: space-between;
           gap: 2rem;
+          // border: .1rem solid salmon;
 
-          .btnLogin {
-            padding: 1rem 2rem;
+          .btnGithub {
+            // padding: 1rem 2rem;
+            height: 3.5rem;
+            padding: .3rem 1.5rem;
             background-color: $colorOldDrab;
             color: $colorSnow;
             border: none;
@@ -169,7 +187,13 @@
             align-items: center;
 
             .icon {
-              width: 1.5rem;
+              // width: 1.5rem;
+              margin-right: -.4rem;
+            }
+
+            .iconArrow {
+              margin-left: -.5rem;
+              display: none;
             }
           }
 

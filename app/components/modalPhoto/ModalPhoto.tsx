@@ -2,7 +2,7 @@ import Image from 'next/image';
 import './modalPhoto.scss';
 import { useEffect, useState } from 'react';
 
-const ModalPhoto: React.FC = ({ openModal, closeModal, isLoading, setIsLoading }: any) => {
+const ModalPhoto = ({ openModal, closeModal, isLoading, setIsLoading }: any) => {
 
 
   // useEffect(() => {
@@ -19,7 +19,7 @@ const ModalPhoto: React.FC = ({ openModal, closeModal, isLoading, setIsLoading }
     <div className="modalPhoto">
       {isLoading ? (
         <div className="boxPhoto">
-          <div className="skeletonProfile skeletonProfileImage">Loading Image</div>
+          <div className="skeletonProfile skeletonProfileImage">Are you ready..?</div>
         </div>
       ) : (
         <div className="boxPhoto">

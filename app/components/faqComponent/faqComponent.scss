@@ -23,6 +23,8 @@
         h1 {
           font-size: 3.6rem;
           color: $colorDrab;
+          font-family: 'Fira Sans', sans-serif;
+          // font-family: 'Courier New', Courier, monospace;
           // text-align: center;
         }
 
@@ -39,23 +41,43 @@
           grid-template-columns: repeat(3, 1fr);
           gap: 1rem;
 
+          @include phone {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
           .boxHeader {
             // border: .1rem solid salmon;
-            padding: 1rem 1.5rem;
+            padding: 2rem 2.5rem;
             font-size: 1.4rem;
             line-height: 2rem;
             border-radius: 1rem;
-            color: $colorSnow;
+            color: $colorOldGrey;
           }
 
           .boxHeader.boxHeader1 {
             grid-column: span 1;
-            background-color: $colorOldDrab;
+            background-color: #D0DBE2;
+
+            @include phone {
+              grid-column: span 1;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+            }
           }
 
           .boxHeader.boxHeader2 {
             grid-column: span 2;
-            background-color: $colorOldFossil;
+            background-color: #D2DCC9;
+
+            @include phone {
+              grid-column: span 1;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+            }
           }
         }
       }
