@@ -43,7 +43,9 @@ const Navbar: React.FC = () => {
               <Link href="/faq" className={`link ${pathname === '/faq' ? 'on' : ''}`} onClick={handleClickMenu}><FontAwesomeIcon icon={faQuestionCircle} className="icon" /> Faq</Link>
             </div>
             <div className="cta">
-              <button className="btnGithub"><FontAwesomeIcon icon={faGithub} className='icon' />GitHub<FontAwesomeIcon icon={faSquareArrowUpRight} className='iconArrow' /></button>
+              <Link href="https://github.com/wandaazhar007/" target='_blank'>
+                <button className="btnGithub"><FontAwesomeIcon icon={faGithub} className='icon' />GitHub<FontAwesomeIcon icon={faSquareArrowUpRight} className='iconArrow' /></button>
+              </Link>
               <button className="btnMenu" onClick={handleNavbar}>
                 <FontAwesomeIcon icon={faBars} className='icon' />
               </button>
