@@ -12,12 +12,10 @@
   align-items: center;
 
   .boxPhoto {
-    // border: .1rem solid salmon;
     width: 40rem;
     height: 40rem;
     background-color: white;
     border-radius: 1rem;
-    // overflow: hidden;
     padding: 2rem;
 
     img {
@@ -52,7 +50,7 @@
 }
 
 
-// SKELETON MODAL
+// SKELETON MODAL PHOTO
 
 @keyframes skeletonLoading {
   0% {
