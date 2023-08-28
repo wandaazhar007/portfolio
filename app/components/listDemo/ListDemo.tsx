@@ -8,8 +8,6 @@ import { useEffect, useState } from 'react';
 import axios from "axios";
 import ReactPaginate from 'react-paginate';
 import { motion } from 'framer-motion';
-// import { Fira_Sans } from 'next/font/google';
-// const firaSans = Fira_Sans({ subsets: ['latin'], weight: ['100', '200', '300', '500', '700'] });
 
 const ListDemo: React.FC = () => {
   const [myWorks, setMyWorks] = useState([]);
@@ -30,7 +28,6 @@ const ListDemo: React.FC = () => {
   }
 
   const getMyWork = async () => {
-    // const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK}?search_query=${keywordButton}&page=${page}&limit=${limit}`);
     const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK_LOCAL}?search_query=${keywordButton}&page=${page}&limit=${limit}`);
     console.log(response.data.result);
     setMyWorks(response.data.result);
@@ -87,9 +84,6 @@ const ListDemo: React.FC = () => {
             <div className="colRight">
               <div className="headBox">
                 <motion.h1
-                  // initial={{ opacity: 0 }}
-                  // whileInView={{ opacity: 1 }}
-                  // transition={{ duration: 2 }}
                   animate={{
                     scale: [0, 1.5, 1]
                   }}
