@@ -1,0 +1,62 @@
+@import '../../styles/responsive.scss';
+@import '../../styles/variable.scss';
+
+.certification {
+  grid-column: span 1;
+  border-radius: 2rem;
+  background-color: #D0DBE2;
+  color: $colorOldGrey;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    width: 22rem;
+    height: 4rem;
+    background-color: #c7d3da;
+    position: absolute;
+    left: -2rem;
+    top: 1.2rem;
+    border-radius: 1rem;
+  }
+
+  @include tablet {
+    grid-column: span 3;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    position: relative;
+  }
+
+  .box {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    background-color: #c7d3da;
+    position: relative;
+
+    h2 {
+      a {
+        color: $colorDrab;
+      }
+    }
+
+    ul {
+      margin-left: 1.5rem;
+
+      li {
+        font-size: 1.4rem;
+      }
+    }
+
+    hr {
+      opacity: .3;
+    }
+  }
+}
