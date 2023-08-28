@@ -1,19 +1,12 @@
 import Image from 'next/image';
 import './modalPhoto.scss';
-import { useEffect, useState } from 'react';
 
 const ModalPhoto = ({ openModal, closeModal, isLoading, setIsLoading }: any) => {
 
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 2000)
-  // }, []);
-
   setTimeout(() => {
     setIsLoading(false);
-  }, 4000)
+  }, 3000);
+
   if (!openModal) return null
   return (
     <div className="modalPhoto">
