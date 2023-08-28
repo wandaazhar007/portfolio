@@ -6,7 +6,6 @@
 
 html {
   font-size: 62.5%;
-  // font-family: 'PT Sans Caption', sans-serif;
 
   @include phone {
     font-size: 52.5%;
@@ -27,8 +26,6 @@ html {
 
 body {
   background-color: $colorBackground;
-
-  // font-family: 'PT Sans Caption', sans-serif;
 }
 
 a {
@@ -39,5 +36,4 @@ a {
   width: 90%;
   max-width: 133.4rem;
   margin: 0 auto;
-  // border: .1rem solid green;
 }
