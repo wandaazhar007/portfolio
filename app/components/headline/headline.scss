@@ -1,0 +1,80 @@
+@import '../../styles/responsive.scss';
+@import '../../styles/variable.scss';
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  grid-column: span 1;
+  color: $colorGrey;
+
+
+  @include tablet {
+    grid-column: span 3;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+    color: $colorOldGrey;
+  }
+
+  h1 {
+    font-size: 3.8rem;
+    line-height: 4rem;
+    font-weight: 700;
+    color: $colorDrab;
+    font-family: 'Fira Sans', sans-serif;
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+  }
+
+  .proof {
+    display: flex;
+    gap: .5rem;
+    color: goldenrod;
+
+
+    .icons {
+      .icon {
+        font-size: 1.6rem;
+      }
+    }
+
+    span {
+      font-size: 1.4rem;
+      color: $colorOldDrab;
+      font-weight: 700;
+    }
+
+  }
+
+  button {
+    font-size: 1.6rem;
+    width: 25rem;
+    padding: 1.2rem 1.8rem;
+    border: transparent;
+    border-radius: 1rem;
+    cursor: pointer;
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    background-color: $colorOldDrab;
+
+
+    .icon {
+      color: #fff;
+      margin-right: 1rem;
+    }
+
+    span {
+      font-weight: 700;
+      letter-spacing: .1rem;
+      font-size: 1.6rem;
+      color: #fff;
+    }
+  }
+}

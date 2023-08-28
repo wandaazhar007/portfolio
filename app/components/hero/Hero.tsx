@@ -2,11 +2,13 @@
 import Image from 'next/image';
 import './hero.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare, faEnvelope, faMapLocation, faPhone, faStar, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare, faEnvelope, faMapLocation, faPhone, faUser } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import ModalPhoto from '../modalPhoto/ModalPhoto';
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import Headline from '../headline/Headline';
+import Experiences from '../experiences/Experiences';
 // import { Fira_Sans } from 'next/font/google';
 
 // const firaSans = Fira_Sans({ subsets: ['latin'], weight: ['100', '200', '300', '500', '700'] });
@@ -23,7 +25,7 @@ const Hero: React.FC = () => {
       <div className="wrapContainer">
         <div className="sectionContainer">
 
-          <div className="headline">
+          {/* <div className="headline">
             <motion.h3
               initial={{ opacity: 0, scale: 1, x: -100 }}
               whileInView={{ opacity: 1, scale: 1, x: 0 }}
@@ -68,9 +70,10 @@ const Hero: React.FC = () => {
                 <span>My Fiverr Profile</span>
               </motion.button>
             </Link>
-          </div>
+          </div> */}
+          <Headline />
 
-          <div className="experiences">
+          {/* <div className="experiences">
             <h1 >MY EXPERIENCES</h1>
             <div className="wrapBox">
               <div className="box">
@@ -111,7 +114,8 @@ const Hero: React.FC = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
+          <Experiences />
 
           <div className="accomplishments">
             <h1 >ACCOMPLISHMENTS</h1>
@@ -254,6 +258,7 @@ const Hero: React.FC = () => {
               </motion.div>
             </div>
           </div>
+
         </div>
       </div>
       <ModalPhoto openModal={openModal} closeModal={() => setOpenModal(false)} isLoading={isLoading} setIsLoading={setIsLoading} />
