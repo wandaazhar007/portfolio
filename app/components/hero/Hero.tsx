@@ -6,6 +6,7 @@ import { faArrowUpRightFromSquare, faEnvelope, faMapLocation, faPhone, faStar, f
 import Link from 'next/link';
 import ModalPhoto from '../modalPhoto/ModalPhoto';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 // import { Fira_Sans } from 'next/font/google';
 
 // const firaSans = Fira_Sans({ subsets: ['latin'], weight: ['100', '200', '300', '500', '700'] });
@@ -23,8 +24,17 @@ const Hero: React.FC = () => {
         <div className="sectionContainer">
 
           <div className="headline">
-            <h3 >Hi, There... !</h3>
-            <h1 >I do more than just build a website</h1>
+            <motion.h3
+              initial={{ opacity: 0, scale: 1, x: -100 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 1 }}
+            >Hi, There... !</motion.h3>
+            <motion.h1
+              animate={{
+                scale: [0, 1.2, 1],
+                rotate: [0, -3, 0]
+              }}
+            >I do more than just build a website</motion.h1>
             <p > I work for an advertising digital agency as a front-end web designer. currently, I’m not looking for a job but I love to help small businesses grow especially with websites or landing pages</p>
             <div className="proof">
               <div className="icons">
@@ -47,23 +57,39 @@ const Hero: React.FC = () => {
             <div className="wrapBox">
               <div className="box">
                 <ul>
-                  <li>
+                  <motion.li
+                    initial={{ opacity: 0, scale: 1, y: 100 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                  >
                     Manage websites for individual, business, non-profit, and higher education. Meet with clients to identify objectives and scope of website. Maintain regular client communication updates, issue list, and project plan.
-                  </li>
-                  <li>
+                  </motion.li>
+                  <motion.li
+                    initial={{ opacity: 0, scale: 1, y: 100 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                  >
                     Design, develop, produce and maintain cross-browser, standards-based websites using HTML5, CSS3, JAVASCRIPT, REACTJS, WEBPACK, BABEL, NEXTJS, REST API, GRAPHQL
-                  </li>
+                  </motion.li>
                 </ul>
               </div>
 
               <div className="box">
                 <ul>
-                  <li>
+                  <motion.li
+                    initial={{ opacity: 0, scale: 1, y: 100 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                  >
                     Expertise working with content management systems including WordPress, Textpattern, and Frog CMS. Install and manage multi-network of WordPress multisites. Create custom and branded WordPress themes.
-                  </li>
-                  <li>
+                  </motion.li>
+                  <motion.li
+                    initial={{ opacity: 0, scale: 1, y: 100 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                  >
                     Experience in release coordination and quality assurance. Develop test plans, work with team members to schedule and resolve product defects and enhancements.
-                  </li>
+                  </motion.li>
                 </ul>
               </div>
             </div>
@@ -74,23 +100,39 @@ const Hero: React.FC = () => {
             <div className="wrapBox">
               <div className="box">
                 <ul>
-                  <li>
+                  <motion.li
+                    initial={{ opacity: 0, scale: 1, y: 100 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                  >
                     Designed, developed, created content strategy, and maintained websites for community college and clients. Created information architecture and graphics Validated and tested web pages.
-                  </li>
-                  <li>
+                  </motion.li>
+                  <motion.li
+                    initial={{ opacity: 0, scale: 1, y: 100 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                  >
                     Reviewed and tested code and documentation. Researched, identified, and isolated issues; recommended appropriate resolutions
-                  </li>
+                  </motion.li>
                 </ul>
               </div>
 
               <div className="box">
                 <ul>
-                  <li>
+                  <motion.li
+                    initial={{ opacity: 0, scale: 1, y: 100 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                  >
                     Improved search engine rankings (from page 4 to page 1) for websites and web pages. Decreased page load time 50-400% through web development best practices.
-                  </li>
-                  <li>
+                  </motion.li>
+                  <motion.li
+                    initial={{ opacity: 0, scale: 1, y: 100 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                  >
                     Coordinated product releases and verification of decision support applications. Worked with development teams
-                  </li>
+                  </motion.li>
                 </ul>
               </div>
             </div>
@@ -99,24 +141,37 @@ const Hero: React.FC = () => {
           <div className="workExperiences">
             <h1 >WORK EXPERIENCES</h1>
             <div className="wrapBox">
-              <div className="box">
+              <motion.div
+                initial={{ opacity: 0, scale: 1, y: 100 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                className="box">
                 <p><Link href="#">RedTree</Link> <span>Pittsburgh, Pennsylvania</span></p>
-              </div>
+              </motion.div>
 
-              <div className="box">
+              <motion.div
+                initial={{ opacity: 0, scale: 1, y: 100 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                className="box">
                 <p><Link href="#">RazorFrog</Link> <span>San Francisco - California</span></p>
-              </div>
+              </motion.div>
 
-              <div className="box">
+              <motion.div
+                className="box">
                 <p><Link href="#">BMG Media</Link> <span>Birmingham - Michigan</span></p>
-              </div>
+              </motion.div>
             </div>
           </div>
 
           <div className="education">
             <h1 >EDUCATIONS</h1>
             <div className="wrapBox">
-              <div className="box">
+              <motion.div
+                initial={{ opacity: 0, scale: 1, y: 100 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                className="box">
                 <h2>Harvard CS50</h2>
                 <ul>
                   <li>UI/UX Designer (2016)</li>
@@ -127,14 +182,18 @@ const Hero: React.FC = () => {
                   <li>Communication Advertising (2021)</li>
                 </ul>
                 <hr />
-              </div>
+              </motion.div>
             </div>
           </div>
 
           <div className="sertification">
             <h1 >SERTIFICATIONS</h1>
             <div className="wrapBox">
-              <div className="box">
+              <motion.div
+                initial={{ opacity: 0, scale: 1, y: 100 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                className="box">
                 <h2><Link href="">Harvard CS50 <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></h2>
                 <ul>
                   <li>UI/UX Designer (2016)</li>
@@ -145,14 +204,18 @@ const Hero: React.FC = () => {
                   <li>Communication Advertising (2021)</li>
                 </ul>
                 <hr />
-              </div>
+              </motion.div>
             </div>
           </div>
 
           <div className="biodata">
             <h1 >BIODATA</h1>
             <div className="wrapBox">
-              <div className="box">
+              <motion.div
+                initial={{ opacity: 0, scale: 1, y: 100 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                className="box">
                 <div className="boxImage">
                   <div className="image" onClick={handleModal}>
                     <Image src="/wanda-azhar.jpg" alt='wanda azhar portfolio web developer' width={100} height={100} />
@@ -170,7 +233,7 @@ const Hero: React.FC = () => {
                 <div className="row">
                   <FontAwesomeIcon icon={faMapLocation} className='icon' /> : Canton, MI, USA
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

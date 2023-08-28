@@ -7,6 +7,7 @@ import ModalDemo from '../modalDemo/ModalDemo';
 import { useEffect, useState } from 'react';
 import axios from "axios";
 import ReactPaginate from 'react-paginate';
+import { motion } from 'framer-motion';
 // import { Fira_Sans } from 'next/font/google';
 // const firaSans = Fira_Sans({ subsets: ['latin'], weight: ['100', '200', '300', '500', '700'] });
 
@@ -70,24 +71,52 @@ const ListDemo: React.FC = () => {
         <div className="wrapContainer">
           <div className="header">
             <div className="colLeft">
-              <h1>Explore My Web Development Projects Q</h1>
-              <div className="box">
+              <motion.h1
+                initial={{ opacity: 0, scale: 1, y: -100 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 1 }}
+              >Explore My Web Development Projects</motion.h1>
+              <motion.div
+                animate={{
+                  // scale: [1, 1.2, 1],
+                  // rotate: [0, 10, 0]
+                }}
+                className="box">
                 Welcome to the heart of my portfolio — a collection of web development projects that showcase my skills, creativity, and dedication to crafting impactful digital experiences. Each project reflects my passion for coding and my commitment to delivering solutions that combine functionality, aesthetics, and user-friendliness.
-              </div>
+              </motion.div>
             </div>
             <div className="colRight">
               <div className="headBox">
-                <h1>Learn, Collaborate, Connect:</h1>
+                <motion.h1
+                  // initial={{ opacity: 0 }}
+                  // whileInView={{ opacity: 1 }}
+                  // transition={{ duration: 2 }}
+                  animate={{
+                    scale: [0, 1.5, 1]
+                  }}
+                >Learn, Collaborate, Connect:</motion.h1>
               </div>
-              <div className="box box1">
+              <motion.div
+                animate={{
+                  rotate: [0, -10, 0]
+                }}
+                className="box box1">
                 Feel free to explore, interact, and get inspired by these projects.
-              </div>
-              <div className="box box2">
+              </motion.div>
+              <motion.div
+                animate={{
+                  rotate: [0, 10, 0]
+                }}
+                className="box box2">
                 If you&apos;re interested in collaborating, have questions, or want to learn more about my development process, don&apos;t hesitate to reach out.
-              </div>
-              <div className="box box3">
+              </motion.div>
+              <motion.div
+                animate={{
+                  rotate: [0, -10, 0]
+                }}
+                className="box box3">
                 Each project is a testament to my dedication to the craft and my eagerness to contribute to the digital landscape.
-              </div>
+              </motion.div>
             </div>
           </div>
 
