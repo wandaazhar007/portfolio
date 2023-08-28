@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import './modalDemo.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAppleAlt, faClose, faClosedCaptioning, faComputerMouse, faDashboard, faEye, faPaperPlane, faScaleBalanced, faStop, faStopCircle } from '@fortawesome/free-solid-svg-icons';
-import { faAppStore, faApple, faApplePay, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faClose, faDashboard, faScaleBalanced } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
@@ -10,7 +10,7 @@ import Link from 'next/link';
 const ModalDemo: any = ({ openModal, closeModal, propsId }: any) => {
   if (!openModal) return null;
 
-  const [myWork, setMyWork] = useState([]);
+  // const [myWork, setMyWork] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [name, setName] = useState("");
   const [desc, setDesc] = useState("");
