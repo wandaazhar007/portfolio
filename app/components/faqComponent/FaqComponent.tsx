@@ -31,14 +31,17 @@ const FaqComponent: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{ duration: 1 }}
                 className="boxHeader boxHeader1">
-                If you&apos;re ready, let&apos;s dive into the questions that matter most to you. Simply click on any question to reveal its answer.
+                you'll find answers to questions that potential employers, collaborators, and visitors often ask.
+                {/* If you have a question that isn't covered here, feel free to get in touch with me through the provided contact information. */}
+
+                {/* If you&apos;re ready, let&apos;s dive into the questions that matter most to you. Simply click on any question to reveal its answer. */}
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 1, x: 100 }}
                 whileInView={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{ duration: 1 }}
                 className="boxHeader boxHeader2">
-                If you have additional inquiries or want to learn more about my journey, don&apos;t hesitate to reach out. Your curiosity fuels my enthusiasm to create and collaborate in the world of web development
+                I&apos;m committed to transparency and open communication, and this FAQ page is designed to provide you with insights into my experience, approach, and values as a web developer.
               </motion.div>
             </div>
           </div>
