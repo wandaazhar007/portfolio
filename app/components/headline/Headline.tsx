@@ -40,7 +40,7 @@ const Headline: React.FC = () => {
         </div>
         <span>Rated 5 stars on Fiverr</span>
       </motion.div>
-      <Link href="https://fiverr.com/" target="_blank">
+      <Link href="https://www.fiverr.com/wandaazhar/" target="_blank">
         <motion.button
           animate={{
             scale: [0, 1.2, 1],
