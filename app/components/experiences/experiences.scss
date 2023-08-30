@@ -66,7 +66,15 @@
         position: absolute;
         left: -1rem;
         top: 2.2rem;
+
+        .point {
+          span {
+            display: block;
+            color: salmon;
+          }
+        }
       }
+
     }
 
   }

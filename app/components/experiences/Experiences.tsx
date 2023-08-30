@@ -13,6 +13,7 @@ const Experiences: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
+              <span className="point">Project Development and Implementation</span>
               Manage websites for individual, business, non-profit, and higher education. Meet with clients to identify objectives and scope of website. Maintain regular client communication updates, issue list, and project plan.
             </motion.li>
             <motion.li
