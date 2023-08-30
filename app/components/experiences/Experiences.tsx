@@ -21,7 +21,7 @@ const Experiences: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              Design, develop, produce and maintain cross-browser, standards-based websites using HTML5, CSS3, JAVASCRIPT, REACTJS, WEBPACK, BABEL, NEXTJS, REST API, GRAPHQL
+              <span className="point"> Design, develop, produce and maintain</span> cross-browser, standards-based websites using HTML5, CSS3, JAVASCRIPT, REACTJS, WEBPACK, BABEL, NEXTJS, REST API, GRAPHQL
             </motion.li>
           </ul>
         </div>
@@ -33,14 +33,14 @@ const Experiences: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              Expertise working with content management systems including WordPress, Textpattern, and Frog CMS. Install and manage multi-network of WordPress multisites. Create custom and branded WordPress themes.
+              <span className="point">Expertise working </span> with content management systems including WordPress, Textpattern, and Frog CMS. Install and manage multi-network of WordPress multisites. Create custom and branded WordPress themes.
             </motion.li>
             <motion.li
               initial={{ opacity: 0, scale: 1, y: 100 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              Experience in release coordination and quality assurance. Develop test plans, work with team members to schedule and resolve product defects and enhancements.
+              <span className="point">Experience in release coordination</span> and quality assurance. Develop test plans, work with team members to schedule and resolve product defects and enhancements.
             </motion.li>
           </ul>
         </div>

@@ -1,3 +1,6 @@
+@import '../../styles/responsive.scss';
+@import '../../styles/variable.scss';
+
 .modalPhoto {
   position: fixed;
   top: 0;
@@ -12,11 +15,17 @@
   align-items: center;
 
   .boxPhoto {
-    width: 40rem;
-    height: 40rem;
+    width: 45rem;
+    height: 45rem;
     background-color: white;
+    border: .1rem solid salmon;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 1.5rem;
+
+    @include phone {
+      width: 35rem;
+      height: 35rem;
+    }
 
     img {
       width: 100%;

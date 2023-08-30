@@ -57,6 +57,16 @@
       background-color: #d3d5d3;
       position: relative;
 
+      .point {
+        color: $colorOldGrey;
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 700;
+        // font-style: italic
+        // text-decoration: underline;
+        margin-bottom: .8rem;
+      }
+
       &::before {
         content: '';
         width: 2rem;
