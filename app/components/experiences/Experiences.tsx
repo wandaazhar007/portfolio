@@ -15,15 +15,15 @@ const Experiences: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              <span className="point">Website Development and Implementation</span>
-              Manage websites for individual, business, non-profit, and higher education. Meet with clients to identify objectives and scope of website. Maintain regular client communication updates, issue list, and project plan.
+              <span className="point"> Research, Design & Development Website</span> Manage websites for individual, business, non-profit, and higher education. Meet with clients to identify objectives and scope of website. Maintain regular client communication updates, issue list, and project plan.
             </motion.li>
             <motion.li
               initial={{ opacity: 0, scale: 1, y: 100 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              <span className="point"> Research, Design, Develop & Maintain</span> cross-browser, standards-based websites using HTML5, CSS3, JAVASCRIPT, REACTJS, WEBPACK, BABEL, NEXTJS, REST API, GRAPHQL
+              <span className="point">Website Implementation</span>
+              Manage websites for individual, business, non-profit, and higher education. Meet with clients to identify objectives and scope of website. Maintain regular client communication updates, issue list, and project plan.
             </motion.li>
           </ul>
         </div>
@@ -89,6 +89,30 @@ const Experiences: React.FC = () => {
                   Rest API <FontAwesomeIcon icon={faInfoCircle} />
                   <div className="tooltip tooltipRestApi">
                     <p className='heading'>Rest API (2 Years Experience)</p>
+                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                </button>
+                <button className="skill">
+                  GIT <FontAwesomeIcon icon={faInfoCircle} />
+                  <div className="tooltip tooltipGit">
+                    <p className='heading'>GIT (2 Years Experience)</p>
+                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                </button>
+                <button className="skill">
+                  GitHub <FontAwesomeIcon icon={faInfoCircle} />
+                  <div className="tooltip tooltipGithub">
+                    <p className='heading'>GitHub (2 Years Experience)</p>
+                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                </button>
+                <button className="skill">
+                  Linux Server <FontAwesomeIcon icon={faInfoCircle} />
+                  <div className="tooltip tooltipLinux">
+                    <p className='heading'>Linux Server (2 Years Experience)</p>
+                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                </button>
+                <button className="skill">
+                  Nginx <FontAwesomeIcon icon={faInfoCircle} />
+                  <div className="tooltip tooltipNginx">
+                    <p className='heading'>Nginx (2 Years Experience)</p>
                     Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
                 </button>
               </div>
