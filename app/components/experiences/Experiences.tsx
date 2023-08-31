@@ -116,7 +116,6 @@ const Experiences: React.FC = () => {
                     Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
                 </button>
               </div>
-              {/* with content management systems including WordPress, Textpattern, and Frog CMS. Install and manage multi-network of WordPress multisites. Create custom and branded WordPress themes. */}
             </motion.li>
             <motion.li
               initial={{ opacity: 0, scale: 1, y: 100 }}
