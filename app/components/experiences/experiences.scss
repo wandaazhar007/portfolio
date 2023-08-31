@@ -65,6 +65,95 @@
         // font-style: italic
         // text-decoration: underline;
         margin-bottom: .8rem;
+        width: 100%;
+      }
+
+      .groupSkill {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: .5rem;
+        column-gap: .3rem;
+
+        .skill {
+          border: .1rem solid $colorOldDrab;
+          background-color: #D3DDD1;
+          color: $colorOldDrab;
+          padding: .5rem 1rem;
+          border-radius: 1rem;
+          font-size: 1.2rem;
+          // position: relative;
+          // text-decoration: underline;
+
+          .tooltip {
+            visibility: hidden;
+            width: 100%;
+
+            color: $colorOldGrey;
+            border-radius: 1rem;
+            padding: 2rem;
+            position: absolute;
+            z-index: 9999;
+            left: 0;
+            margin-top: 1rem;
+            line-height: 2rem;
+            text-align: start;
+
+            .heading {
+              color: $colorOldDrab;
+              font-weight: 700;
+              margin-bottom: .5rem;
+            }
+          }
+
+          &:hover {
+            .tooltipHtml {
+              visibility: visible;
+              background-color: #eee9e9;
+            }
+
+            .tooltipCss {
+              visibility: visible;
+              background-color: #eceee9;
+            }
+
+            .tooltipJavaScript {
+              visibility: visible;
+              background-color: #eeeee9;
+            }
+
+            .tooltipTypeScript {
+              visibility: visible;
+              background-color: #e9eaee;
+            }
+
+            .tooltipReactJs {
+              visibility: visible;
+              background-color: #eee9ee;
+            }
+
+            .tooltipNodeJs {
+              visibility: visible;
+              background-color: #e9eeec;
+            }
+
+            .tooltipExpressJs {
+              visibility: visible;
+              background-color: #eeeee9;
+            }
+
+            .tooltipMySql {
+              visibility: visible;
+              background-color: #e9eeeb;
+            }
+
+            .tooltipRestApi {
+              visibility: visible;
+              background-color: #e9ebee;
+            }
+
+
+          }
+        }
       }
 
       &::before {

@@ -1,5 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './experiences.scss';
 import { motion } from 'framer-motion';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Experiences: React.FC = () => {
   return (
@@ -13,7 +15,7 @@ const Experiences: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              <span className="point">Project Development and Implementation</span>
+              <span className="point">Website Development and Implementation</span>
               Manage websites for individual, business, non-profit, and higher education. Meet with clients to identify objectives and scope of website. Maintain regular client communication updates, issue list, and project plan.
             </motion.li>
             <motion.li
@@ -21,7 +23,7 @@ const Experiences: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              <span className="point"> Design, develop, produce and maintain</span> cross-browser, standards-based websites using HTML5, CSS3, JAVASCRIPT, REACTJS, WEBPACK, BABEL, NEXTJS, REST API, GRAPHQL
+              <span className="point"> Research, Design, Develop & Maintain</span> cross-browser, standards-based websites using HTML5, CSS3, JAVASCRIPT, REACTJS, WEBPACK, BABEL, NEXTJS, REST API, GRAPHQL
             </motion.li>
           </ul>
         </div>
@@ -33,7 +35,64 @@ const Experiences: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              <span className="point">Expertise working </span> with content management systems including WordPress, Textpattern, and Frog CMS. Install and manage multi-network of WordPress multisites. Create custom and branded WordPress themes.
+              <div className="groupSkill">
+                <span className="point">Programming Language </span>
+                <button className="skill">
+                  HTML5 <FontAwesomeIcon icon={faInfoCircle} />
+                  <div className="tooltip tooltipHtml">
+                    <p className='heading'>HTML5 (5 Years Experience)</p>
+                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                </button>
+                <button className="skill">
+                  CSS3 <FontAwesomeIcon icon={faInfoCircle} />
+                  <div className="tooltip tooltipCss">
+                    <p className='heading'>CSS (5 Years Experience)</p>
+                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                </button>
+                <button className="skill">
+                  JavaScript <FontAwesomeIcon icon={faInfoCircle} />
+                  <div className="tooltip tooltipJavaScript">
+                    <p className='heading'>JavaScript (3 Years Experience)</p>
+                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                </button>
+                <button className="skill">
+                  TypeScript <FontAwesomeIcon icon={faInfoCircle} />
+                  <div className="tooltip tooltipTypeScript">
+                    <p className='heading'>TypeScript (1 Years Experience)</p>
+                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                </button>
+                <button className="skill">
+                  ReactJs <FontAwesomeIcon icon={faInfoCircle} />
+                  <div className="tooltip tooltipReactJs">
+                    <p className='heading'>ReactJs (2 Years Experience)</p>
+                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                </button>
+                <button className="skill">
+                  NodeJs <FontAwesomeIcon icon={faInfoCircle} />
+                  <div className="tooltip tooltipNodeJs">
+                    <p className='heading'>NodeJs (2 Years Experience)</p>
+                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                </button>
+                <button className="skill">
+                  ExpressJs <FontAwesomeIcon icon={faInfoCircle} />
+                  <div className="tooltip tooltipExpressJs">
+                    <p className='heading'>ExpressJs (2 Years Experience)</p>
+                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                </button>
+                <button className="skill">
+                  MySql <FontAwesomeIcon icon={faInfoCircle} />
+                  <div className="tooltip tooltipMySql">
+                    <p className='heading'>MySql (3 Years Experience)</p>
+                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                </button>
+                <button className="skill">
+                  Rest API <FontAwesomeIcon icon={faInfoCircle} />
+                  <div className="tooltip tooltipRestApi">
+                    <p className='heading'>Rest API (2 Years Experience)</p>
+                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                </button>
+              </div>
+              {/* with content management systems including WordPress, Textpattern, and Frog CMS. Install and manage multi-network of WordPress multisites. Create custom and branded WordPress themes. */}
             </motion.li>
             <motion.li
               initial={{ opacity: 0, scale: 1, y: 100 }}
