@@ -28,8 +28,8 @@ const ListDemo: React.FC = () => {
   }
 
   const getMyWork = async () => {
-    // const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK}?search_query=${keywordButton}&page=${page}&limit=${limit}`);
-    const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK_LOCAL}?search_query=${keywordButton}&page=${page}&limit=${limit}`);
+    const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK}?search_query=${keywordButton}&page=${page}&limit=${limit}`);
+    // const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK_LOCAL}?search_query=${keywordButton}&page=${page}&limit=${limit}`);
     console.log(response.data.result);
     setMyWorks(response.data.result);
     setPage(response.data.page);
