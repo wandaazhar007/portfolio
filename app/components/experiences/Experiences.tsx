@@ -41,37 +41,40 @@ const Experiences: React.FC = () => {
                   HTML5 <FontAwesomeIcon icon={faInfoCircle} />
                   <div className="tooltip tooltipHtml">
                     <p className='heading'>HTML5 (5 Years Experience)</p>
-                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                    With half a decade of hands-on experience, I've become a seasoned HTML practitioner. From foundational static content to dynamic interactions, I've fine-tuned my skills in crafting clean, accessible, and responsive web pages. My journey with HTML is a testament to my ability to seamlessly integrate multimedia, optimize for search engines, and ensure cross-device compatibility.</div>
                 </button>
                 <button className="skill">
                   CSS3 <FontAwesomeIcon icon={faInfoCircle} />
                   <div className="tooltip tooltipCss">
                     <p className='heading'>CSS (5 Years Experience)</p>
-                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                    With five years of dedicated experience, I've become a seasoned CSS practitioner, seamlessly blending design and functionality. From creating pixel-perfect layouts to introducing animations and responsive designs, I bring a keen eye for detail to every project.
+                  </div>
                 </button>
                 <button className="skill">
                   JavaScript <FontAwesomeIcon icon={faInfoCircle} />
                   <div className="tooltip tooltipJavaScript">
                     <p className='heading'>JavaScript (3 Years Experience)</p>
-                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                    From scripting novice to dynamic web developer. Expert in DOM manipulation, user interactions, APIs. Creating engaging, performance-driven solutions. Staying current with modern frameworks. Pushing web dev boundaries.</div>
                 </button>
                 <button className="skill">
                   TypeScript <FontAwesomeIcon icon={faInfoCircle} />
                   <div className="tooltip tooltipTypeScript">
                     <p className='heading'>TypeScript (1 Years Experience)</p>
-                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                    Leveraging static typing and OOP principles, I've seamlessly transitioned to TypeScript. Enhancing code quality, catch errors early, and deliver robust, maintainable applications.</div>
                 </button>
                 <button className="skill">
                   ReactJs <FontAwesomeIcon icon={faInfoCircle} />
                   <div className="tooltip tooltipReactJs">
                     <p className='heading'>ReactJs (2 Years Experience)</p>
-                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                    Mastering component-based architecture, state management, and JSX. Crafting dynamic user interfaces and scalable web applications. Proficient in React hooks and context API for optimal code efficiency.
+                  </div>
                 </button>
                 <button className="skill">
                   NodeJs <FontAwesomeIcon icon={faInfoCircle} />
                   <div className="tooltip tooltipNodeJs">
                     <p className='heading'>NodeJs (2 Years Experience)</p>
-                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                    Empowering server-side development with Node.js. Building efficient and scalable APIs, integrating databases, and handling asynchronous operations seamlessly. Expertise in Express.js for creating robust web applications.
+                  </div>
                 </button>
                 <button className="skill">
                   ExpressJs <FontAwesomeIcon icon={faInfoCircle} />
