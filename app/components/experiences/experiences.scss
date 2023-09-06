@@ -8,7 +8,7 @@
   color: $colorOldGrey;
   padding: 2rem;
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
 
   @include phone {
     margin-top: 3rem;
@@ -44,10 +44,10 @@
     }
   }
 
-  ul {
+  .ulBox {
     margin-top: 3rem;
 
-    li {
+    .liBox {
       font-size: 1.6rem;
       margin-top: 2rem;
       line-height: 2.5rem;
@@ -87,12 +87,11 @@
           .tooltip {
             visibility: hidden;
             width: 100%;
-
             color: $colorOldGrey;
             border-radius: 1rem;
             padding: 2rem;
             position: absolute;
-            z-index: 9999;
+            z-index: 99;
             left: 0;
             margin-top: 1rem;
             line-height: 2rem;
@@ -102,6 +101,48 @@
               color: $colorOldDrab;
               font-weight: 700;
               margin-bottom: .5rem;
+            }
+
+            .ulTooltip {
+              .liTooltip {
+                // font-size: 1.6rem;
+                margin-top: 1rem;
+                list-style: none;
+                padding: 2rem;
+                border-radius: 1rem;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: 10rem;
+
+                &::before {
+                  content: '';
+                  width: 2rem;
+                  height: 2rem;
+                  border-radius: 50%;
+                  position: absolute;
+                  left: -1rem;
+                  top: 2.2rem;
+
+
+                }
+              }
+
+              .liTooltip.liTooltipExpress {
+                background-color: #d1dcdd;
+
+                &::before {
+                  background-color: #d1dcdd;
+                }
+              }
+
+              .liTooltip.liTooltipMysql {
+                background-color: #d9d1dd;
+
+                &::before {
+                  background-color: #d9d1dd;
+                }
+              }
             }
           }
 

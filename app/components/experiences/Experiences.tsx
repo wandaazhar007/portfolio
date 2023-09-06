@@ -9,11 +9,12 @@ const Experiences: React.FC = () => {
       <h1 >MY EXPERIENCES</h1>
       <div className="wrapBox">
         <div className="box">
-          <ul>
+          <ul className="ulBox">
             <motion.li
               initial={{ opacity: 0, scale: 1, y: 100 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1 }}
+              className="liBox"
             >
               <span className="point"> Research, Design & Development Website</span> Manage websites for individual, business, non-profit, and higher education. Meet with clients to identify objectives and scope of website. Maintain regular client communication updates, issue list, and project plan.
             </motion.li>
@@ -21,6 +22,7 @@ const Experiences: React.FC = () => {
               initial={{ opacity: 0, scale: 1, y: 100 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1 }}
+              className="liBox"
             >
               <span className="point">Website Implementation</span>
               Manage websites for individual, business, non-profit, and higher education. Meet with clients to identify objectives and scope of website. Maintain regular client communication updates, issue list, and project plan.
@@ -29,11 +31,12 @@ const Experiences: React.FC = () => {
         </div>
 
         <div className="box">
-          <ul>
+          <ul className="ulBox">
             <motion.li
               initial={{ opacity: 0, scale: 1, y: 100 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1 }}
+              className="liBox"
             >
               <div className="groupSkill">
                 <span className="point">Programming Language </span>
@@ -80,13 +83,38 @@ const Experiences: React.FC = () => {
                   ExpressJs <FontAwesomeIcon icon={faInfoCircle} />
                   <div className="tooltip tooltipExpressJs">
                     <p className='heading'>ExpressJs (2 Years Experience)</p>
-                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                    <ul className="ulTooltip">
+                      <li className="liTooltip liTooltipExpress">
+                        Developed and deployed a microservices architecture for a high-traffic e-commerce website.
+                      </li>
+                      <li className="liTooltip liTooltipExpress">
+                        resulting in a 25% increase in page load speed and a 20% increase in overall site performance.
+                      </li>
+                      <li className="liTooltip liTooltipExpress">
+                        Collaborated with front-end developers to integrate user-facing elements with server-side logic, resulting in a 15% increase in user engagement and a 10% increase in conversion rates.
+                      </li>
+                      <li className="liTooltip liTooltipExpress">
+                        Implemented security measures and data protection protocols, ensuring compliance with industry standards and preventing data breaches.
+                      </li>
+                    </ul>
+                  </div>
                 </button>
                 <button className="skill">
                   MySql <FontAwesomeIcon icon={faInfoCircle} />
                   <div className="tooltip tooltipMySql">
                     <p className='heading'>MySql (3 Years Experience)</p>
-                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                    <ul className="ulTooltip">
+                      <li className="liTooltip liTooltipMysql">
+                        Designed the database architecture for client projects.
+                      </li>
+                      <li className="liTooltip liTooltipMysql">
+                        Developed Data Flow Diagrams, Entity Relationship Diagrams and Data Structure Diagrams.
+                      </li>
+                      <li className="liTooltip liTooltipMysql">
+                        Ensured 24×7 database availability, reliability and security while in a production environment.
+                      </li>
+                    </ul>
+                  </div>
                 </button>
                 <button className="skill">
                   Rest API <FontAwesomeIcon icon={faInfoCircle} />
@@ -124,6 +152,7 @@ const Experiences: React.FC = () => {
               initial={{ opacity: 0, scale: 1, y: 100 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1 }}
+              className="liBox"
             >
               <span className="point">Experience in release coordination</span> and quality assurance. Develop test plans, work with team members to schedule and resolve product defects and enhancements.
             </motion.li>
