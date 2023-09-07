@@ -2,6 +2,8 @@
 import './workExperiences.scss';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Lottie from "lottie-react";
+import animation_smile from "../../../public/animation_smile.json";
 
 const WorkExperiences: React.FC = () => {
   return (
@@ -15,7 +17,7 @@ const WorkExperiences: React.FC = () => {
           className="box">
           <p><Link href="#">RedTree</Link> <span>Pittsburgh, Pennsylvania</span></p>
         </motion.div>
-
+        <Lottie animationData={animation_smile} loop={true} />
         <motion.div
           initial={{ opacity: 0, scale: 1, y: 100 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}

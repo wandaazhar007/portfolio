@@ -1,0 +1,80 @@
+@import '../../styles/responsive.scss';
+@import '../../styles/variable.scss';
+
+.headlineTwo {
+  grid-column: span 1;
+  border-radius: 2rem;
+  // background-color: #e7e4e2;
+  color: $colorOldGrey;
+  padding: 0 2rem;
+  // position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+
+  @include tablet {
+    grid-column: span 3;
+  }
+
+  .animationWrap {
+    display: flex;
+    // flex-direction: column;
+    justify-content: space-between;
+    // align-items: center;
+    // max-width: 40rem;
+    // height: 40rem;
+    gap: 1rem;
+    // border: .1rem solid salmon;
+    // background-color: saddlebrown;
+
+    .animationSmile {
+      // width: 10rem;
+      // height: 10rem;
+      background-color: rgb(255, 238, 237);
+      border-radius: 1rem;
+      box-shadow: $boxShadow;
+    }
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+    }
+  }
+
+  .github {
+    button {
+      padding: 1rem;
+      border-radius: .5rem;
+      border: transparent;
+      background-color: black;
+      color: white;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: 1.4rem;
+      cursor: pointer;
+
+      .iconGithub {
+        font-size: 2.2rem;
+      }
+
+      .iconLink {
+        font-size: 1rem;
+      }
+    }
+  }
+
+}

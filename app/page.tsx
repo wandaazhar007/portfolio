@@ -4,6 +4,7 @@ import Certifications from './components/certifications/Certifications'
 import Educations from './components/educations/Educations'
 import Experiences from './components/experiences/Experiences'
 import Headline from './components/headline/Headline'
+import HeadlineTwo from './components/headlineTwo/HeadlineTwo'
 import Hero from './components/hero/Hero'
 import WorkExperiences from './components/workExperiences/WorkExperiences'
 
@@ -16,7 +17,8 @@ export default function Home() {
           <Headline />
           <Experiences />
           <Accomplishments />
-          <WorkExperiences />
+          {/* <WorkExperiences /> */}
+          <HeadlineTwo />
           <Educations />
           <Certifications />
           <Biodata />
