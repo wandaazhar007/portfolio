@@ -120,31 +120,31 @@ const Experiences: React.FC = () => {
                   Rest API <FontAwesomeIcon icon={faInfoCircle} />
                   <div className="tooltip tooltipRestApi">
                     <p className='heading'>Rest API (2 Years Experience)</p>
-                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                    Crafting robust RESTful APIs, handling data transactions, and ensuring secure communication. Proficient in API design, endpoints, and authentication for seamless data interaction</div>
                 </button>
                 <button className="skill">
                   GIT <FontAwesomeIcon icon={faInfoCircle} />
                   <div className="tooltip tooltipGit">
                     <p className='heading'>GIT (2 Years Experience)</p>
-                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                    Mastering version control with Git. Skillfully managing repositories, branching, merging, and collaborating effectively with teams for streamlined code development and collaboration</div>
                 </button>
                 <button className="skill">
                   GitHub <FontAwesomeIcon icon={faInfoCircle} />
                   <div className="tooltip tooltipGithub">
                     <p className='heading'>GitHub (2 Years Experience)</p>
-                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                    Leveraging GitHub for efficient version control, collaboration, and project management. Effectively utilizing features like pull requests, issues, and code reviews to facilitate seamless teamwork and code development.</div>
                 </button>
                 <button className="skill">
                   Linux Server <FontAwesomeIcon icon={faInfoCircle} />
                   <div className="tooltip tooltipLinux">
                     <p className='heading'>Linux Server (2 Years Experience)</p>
-                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                    Competent in Linux server administration, ensuring system stability and security. Proficient in managing configurations, deploying applications, and troubleshooting to maintain robust server environments.</div>
                 </button>
                 <button className="skill">
                   Nginx <FontAwesomeIcon icon={faInfoCircle} />
                   <div className="tooltip tooltipNginx">
                     <p className='heading'>Nginx (2 Years Experience)</p>
-                    Lorem, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam commodi autem beatae, tenetur consequatur ratione delectus reprehenderit voluptatem deleniti, voluptatum accusamus quis exercitationem optio quibusdam. Sapiente dolor ipsam reprehenderit hic fuga iste odio vitae facere nihil officiis. Recusandae, debitis ducimus!</div>
+                    Skillfully configuring and managing Nginx web servers. Optimizing performance, handling load balancing, and ensuring secure and efficient web application delivery.</div>
                 </button>
               </div>
             </motion.li>

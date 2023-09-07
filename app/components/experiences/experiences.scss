@@ -20,9 +20,9 @@
     height: 4rem;
     background-color: #d3d5d3;
     position: absolute;
-    left: -2rem;
+    left: -.001rem;
     top: 1.2rem;
-    border-radius: 1rem;
+    border-radius: .5rem 1rem 1rem 0;
   }
 
   @include tablet {
