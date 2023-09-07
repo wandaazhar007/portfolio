@@ -12,7 +12,6 @@ const Hero: React.FC = () => {
     <section className="home">
       <div className="wrapContainer">
         <div className="sectionContainer">
-
           <Headline />
           <Experiences />
           <Accomplishments />

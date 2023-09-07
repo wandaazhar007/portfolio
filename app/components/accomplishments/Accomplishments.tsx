@@ -1,3 +1,4 @@
+'use client'
 import './accomplishments.scss';
 import { motion } from 'framer-motion';
 

@@ -1,3 +1,4 @@
+'use client'
 import './headline.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';

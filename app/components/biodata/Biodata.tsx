@@ -1,3 +1,4 @@
+'use client'
 import './biodata.scss';
 import Image from 'next/image';
 import './biodata.scss';

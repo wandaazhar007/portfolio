@@ -1,3 +1,4 @@
+'use client'
 import './educations.scss';
 import { motion } from 'framer-motion';
 

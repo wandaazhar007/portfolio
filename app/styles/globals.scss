@@ -46,3 +46,14 @@ a {
   max-width: 133.4rem;
   margin: 0 auto;
 }
+
+.home {
+  .wrapContainer {
+    .sectionContainer {
+      margin-top: 5rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  }
+}
