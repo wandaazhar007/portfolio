@@ -14,9 +14,26 @@
     grid-column: span 3;
   }
 
-  h3 {
-    font-size: 2.2rem;
-    color: $colorOldGrey;
+  .top {
+    // display: flex;
+    position: relative;
+
+    h3 {
+      font-size: 2.2rem;
+      color: $colorOldGrey;
+      // border: .1rem solid salmon;
+    }
+
+    .animationBox {
+      // border: .1rem solid salmon;
+      position: absolute;
+      top: -5rem;
+      right: 2rem;
+
+      .animationHi {
+        width: 12rem;
+      }
+    }
   }
 
   h1 {

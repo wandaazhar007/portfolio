@@ -2,17 +2,30 @@
 import './headline.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
-import { faArrowUpRightFromSquare, faEnvelope, faMapLocation, faPhone, faStar, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare, faStar } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+
+import Lottie from "lottie-react";
+import animation_hi4 from "../../../public/animation_hi4.json";
 
 const Headline: React.FC = () => {
   return (
     <div className="headline">
-      <motion.h3
-        initial={{ opacity: 0, scale: 1, x: -100 }}
-        whileInView={{ opacity: 1, scale: 1, x: 0 }}
-        transition={{ duration: 1 }}
-      >Hi, There... !</motion.h3>
+      <div className="top">
+        <motion.h3
+          initial={{ opacity: 0, scale: 1, x: -100 }}
+          whileInView={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >Hi, There... !
+        </motion.h3>
+        <motion.div
+          initial={{ opacity: 0, scale: 1, y: -100 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="animationBox">
+          <Lottie animationData={animation_hi4} loop={true} className='animationHi' />
+        </motion.div>
+      </div>
       <motion.h1
         animate={{
           scale: [0, 1.2, 1],

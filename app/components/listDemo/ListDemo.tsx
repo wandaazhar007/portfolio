@@ -8,6 +8,8 @@ import { useEffect, useState } from 'react';
 import axios from "axios";
 import ReactPaginate from 'react-paginate';
 import { motion } from 'framer-motion';
+import Lottie from "lottie-react";
+import animation_work2 from "../../../public/animation_work2.json";
 
 const ListDemo: React.FC = () => {
   const [myWorks, setMyWorks] = useState([]);
@@ -74,13 +76,20 @@ const ListDemo: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 1 }}
               >Explore My Web Development Projects</motion.h1>
-              <motion.div
-                initial={{ opacity: 0, scale: 1, y: 100 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 1 }}
-                className="box">
-                Welcome to the heart of my portfolio — a collection of web development projects that showcase my skills, creativity, and dedication to crafting impactful digital experiences. Each project reflects my passion for coding and my commitment to delivering solutions that combine functionality, aesthetics, and user-friendliness.
-              </motion.div>
+              <div className="box">
+                <div className="box1">
+                  Welcome to the heart of my portfolio — a collection of web development projects that showcase my skills, creativity, and dedication to crafting impactful digital experiences. Each project reflects my passion for coding and my commitment to delivering solutions that combine functionality, aesthetics, and user-friendliness.
+                </div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 1, y: 100 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ duration: 1 }}
+                  className="animationWra">
+                  <div className="animationBo">
+                    <Lottie animationData={animation_work2} loop={true} className='animationSmile' />
+                  </div>
+                </motion.div>
+              </div>
             </div>
             <div className="colRight">
               <div className="headBox">
