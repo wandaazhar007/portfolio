@@ -32,7 +32,7 @@ const Biodata = () => {
               </div>
             </div>
             <div className="row">
-              <FontAwesomeIcon icon={faUser} className='icon' /> : Wanda Riezka Azhari (Wanda Azhar)
+              <FontAwesomeIcon icon={faUser} className='icon' /> : Riezka Azhari (Wanda Azhar)
             </div>
             <div className="row">
               <FontAwesomeIcon icon={faPhone} className='icon' /> : 646-4671926

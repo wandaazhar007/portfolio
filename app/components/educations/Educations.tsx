@@ -12,15 +12,19 @@ const Educations: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="box">
-          <h2>Harvard CS50</h2>
-          <ul>
-            <li>UI/UX Designer (2016)</li>
-          </ul>
-          <hr />
           <h2>University of Muhammadiyah Jakarta</h2>
           <ul>
             <li>Communication Advertising (2021)</li>
           </ul>
+          <h2>Harvard CS50 (Online)</h2>
+          <ul>
+            <li>UI/UX Web Design (2021)</li>
+          </ul>
+          <h2>University of Michigan (Online)</h2>
+          <ul>
+            <li>HTML, CSS, Javascript (2022)</li>
+          </ul>
+          <hr />
           <hr />
         </motion.div>
       </div>

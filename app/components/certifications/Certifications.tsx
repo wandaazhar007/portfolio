@@ -15,14 +15,19 @@ const Certifications: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="box">
-          <h2><Link href="">Harvard CS50 <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></h2>
-          <ul>
-            <li>UI/UX Designer (2016)</li>
-          </ul>
-          <hr />
-          <h2><Link href="">Dicoding <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></h2>
+          <h2><Link href="">University of Muhammadiyah Jakarta <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></h2>
           <ul>
             <li>Communication Advertising (2021)</li>
+          </ul>
+          <hr />
+          <h2><Link href="">Harvard CS50 (edx online) <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></h2>
+          <ul>
+            <li>UI/UX Web Design (2021)</li>
+          </ul>
+          <hr />
+          <h2><Link href="">University of Michigan (coursera) <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></h2>
+          <ul>
+            <li>HTML, CSS, Javascript (2022)</li>
           </ul>
           <hr />
         </motion.div>
