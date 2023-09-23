@@ -8,6 +8,13 @@ import HeadlineTwo from './components/headlineTwo/HeadlineTwo'
 import Hero from './components/hero/Hero'
 import WorkExperiences from './components/workExperiences/WorkExperiences'
 
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Wanda Azhar | Portfolio',
+  description: 'Experience innovative web development beyond websites. Explore interactive design that sparks curiosity and emotion. See my portfolio today',
+}
+
 export default function Home() {
   return (
     // <Hero />
@@ -17,9 +24,9 @@ export default function Home() {
           <Headline />
           <Experiences />
           <Accomplishments />
-          {/* <WorkExperiences /> */}
           <HeadlineTwo />
-          <Educations />
+          <WorkExperiences />
+          {/* <Educations /> */}
           <Certifications />
           <Biodata />
 

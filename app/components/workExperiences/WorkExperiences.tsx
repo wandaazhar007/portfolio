@@ -17,7 +17,7 @@ const WorkExperiences: React.FC = () => {
           className="box">
           <p><Link href="#">RedTree</Link> <span>Pittsburgh, Pennsylvania</span></p>
         </motion.div>
-        <Lottie animationData={animation_smile} loop={true} />
+
         <motion.div
           initial={{ opacity: 0, scale: 1, y: 100 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
