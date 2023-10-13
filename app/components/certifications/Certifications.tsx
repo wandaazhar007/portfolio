@@ -33,6 +33,14 @@ const Certifications: React.FC = () => {
             <li><Link href="https://coursera.org/share/0cef304219c8f7f0a6374ca52b199fe3" target="_blank">Introduction to HTML5 <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
           </ul>
           <hr />
+          <h2><Link href="#" target="_blank">Meta Front-End Developer <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></h2>
+          <ul>
+            <li><Link href="https://coursera.org/share/58162217487a2d7d265244d4c14803fd" target="_blank">Introduction Front-End Development <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
+            <li><Link href="https://coursera.org/share/58162217487a2d7d265244d4c14803fd" target="_blank">Programming with JavaScript <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
+            <li><Link href="https://coursera.org/share/58162217487a2d7d265244d4c14803fd" target="_blank">GIT Version Control <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
+            <li><Link href="https://coursera.org/share/58162217487a2d7d265244d4c14803fd" target="_blank">Advance React <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
+          </ul>
+          <hr />
         </motion.div>
       </div>
     </div>
