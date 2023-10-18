@@ -27,6 +27,7 @@ const Certifications: React.FC = () => {
           <hr />
           <h2><Link href="https://online.umich.edu" target="_blank">University of Michigan <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></h2>
           <ul>
+            <li><Link href="https://coursera.org/share/7ed906e9a2caa104eff295594f6a6180" target="_blank">Web Design for Everybody <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
             <li><Link href="https://coursera.org/share/09e31a65562b56a318db5b2b71087e03" target="_blank">Advanced Styling with Responsive Design <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
             <li><Link href="https://coursera.org/share/45c8a53d48df1f01cfee70448b942f3d" target="_blank">Interactivity with JavaScript <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
             <li><Link href="https://coursera.org/share/1ef1ca40c859af21e51560628375c188" target="_blank">Introduction to CSS3 <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
@@ -36,9 +37,9 @@ const Certifications: React.FC = () => {
           <h2><Link href="#" target="_blank">Meta Front-End Developer <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></h2>
           <ul>
             <li><Link href="https://coursera.org/share/58162217487a2d7d265244d4c14803fd" target="_blank">Introduction Front-End Development <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
-            <li><Link href="https://coursera.org/share/58162217487a2d7d265244d4c14803fd" target="_blank">Programming with JavaScript <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
-            <li><Link href="https://coursera.org/share/58162217487a2d7d265244d4c14803fd" target="_blank">GIT Version Control <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
-            <li><Link href="https://coursera.org/share/58162217487a2d7d265244d4c14803fd" target="_blank">Advance React <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
+            <li><Link href="https://coursera.org/share/d7224200c04c85b599c44633c3bda68f" target="_blank">Programming with JavaScript <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
+            <li><Link href="https://coursera.org/share/d7224200c04c85b599c44633c3bda68f" target="_blank">GIT Version Control <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
+            <li><Link href="https://coursera.org/share/d7224200c04c85b599c44633c3bda68f" target="_blank">Advance React <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
           </ul>
           <hr />
         </motion.div>
