@@ -3,7 +3,11 @@
 
 
 .faq {
-  margin-top: 5rem;
+  margin-top: 11rem;
+
+  @include largePhone {
+    margin-top: 5rem;
+  }
 
   .wrapContainer {
     .box-container {

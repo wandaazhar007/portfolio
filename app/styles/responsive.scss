@@ -10,6 +10,12 @@
   }
 }
 
+@mixin largePhone {
+  @media screen and (max-width: (527px)) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media screen and (max-width: (768px)) {
     @content;

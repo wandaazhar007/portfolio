@@ -1,14 +1,59 @@
 @import '../../styles/responsive.scss';
 @import '../../styles/variable.scss';
 
+
+.wrapSvgNav {
+  width: 100%;
+  max-width: 133.4rem;
+  margin: 0 auto;
+  position: relative;
+  // overflow: hidden;
+  // height: 20rem;
+  // border: .1rem solid salmon;
+
+
+  @include largePhone {
+    position: static;
+    // border: .1rem solid salmon;
+  }
+
+  .svgNav {
+    position: absolute;
+    top: 5rem;
+    z-index: -99;
+
+
+    @include largePhone {
+      top: 2rem;
+    }
+
+    // @include largePhone {
+    //   top: 9rem;
+    // }
+
+    img {
+      filter: drop-shadow(1px 5px 2px rgb(0 0 0 / 0.2));
+      object-fit: fill;
+      width: 100%;
+      // border: .1rem solid green;
+    }
+  }
+}
+
 .navbar {
   height: 7rem;
   display: flex;
   align-items: center;
   z-index: 999;
-  background-color: #e4eaea;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: #ffffff;
+  // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   ;
+
+  @include miniDesktop {
+    height: 7rem;
+    background-color: transparent;
+    // border: .1rem solid salmon;
+  }
 
   .wrapContainer {
     .sectionContainer {
@@ -25,13 +70,13 @@
           .logo {
             border: .3rem solid #6594b0;
             border-radius: 50%;
-            width: 6rem;
-            height: 6rem;
+            width: 5rem;
+            height: 5rem;
             overflow: hidden;
 
             img {
-              width: 7rem;
-              height: 7rem;
+              width: 5rem;
+              height: 5rem;
               object-fit: contain;
             }
           }

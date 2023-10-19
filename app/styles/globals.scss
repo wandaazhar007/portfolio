@@ -34,7 +34,7 @@ html {
 }
 
 body {
-  background-color: $colorBackground;
+  background-color: #fff;
 }
 
 a {
@@ -50,10 +50,11 @@ a {
 .home {
   .wrapContainer {
     .sectionContainer {
-      margin-top: 5rem;
+      margin-top: 9rem;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
+      // border: .1rem solid salmon;
     }
   }
 }

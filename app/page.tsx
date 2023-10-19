@@ -5,7 +5,7 @@ import Educations from './components/educations/Educations'
 import Experiences from './components/experiences/Experiences'
 import Headline from './components/headline/Headline'
 import HeadlineTwo from './components/headlineTwo/HeadlineTwo'
-import Hero from './components/hero/Hero'
+// import Hero from './components/hero/Hero'
 import WorkExperiences from './components/workExperiences/WorkExperiences'
 
 import type { Metadata } from 'next'

@@ -1,0 +1,23 @@
+@import '../styles/responsive.scss';
+@import '../styles/variable.scss';
+
+.blog {
+  margin-top: 9rem;
+
+  .wrapContainer {
+    .wrapBlog {
+      border: .1rem solid salmon;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      .box {
+        border: .1rem solid green;
+        height: 20rem;
+      }
+
+      .box.box1 {
+        grid-column: span 2;
+      }
+    }
+  }
+}

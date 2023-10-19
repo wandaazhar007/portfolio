@@ -2,7 +2,11 @@
 @import '../../styles/variable.scss';
 
 .listDemo {
-  margin-top: 5rem;
+  margin-top: 9rem;
+
+  @include largePhone {
+    margin-top: 5rem;
+  }
 
   .wrapContainer {
     .header {
