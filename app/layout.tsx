@@ -1,6 +1,7 @@
 import './styles/globals.scss';
 import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer';
+import SearchBlogProvider from './context/SearchBlogContext';
 
 export default function RootLayout({
   children,
@@ -9,11 +10,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
+      <SearchBlogProvider>
+        <body>
+          <Navbar />
+          {children}
+          <Footer />
+        </body>
+      </SearchBlogProvider>
     </html>
   )
 }
