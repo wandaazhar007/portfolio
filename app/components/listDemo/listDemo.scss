@@ -286,13 +286,13 @@
 
 .skeleton.skeletonTitle {
   margin-bottom: 1rem;
-  width: 50%;
+  width: 50rem;
   height: 2rem;
   border-radius: .5rem;
 }
 
 .skeleton.skeletonDesc {
-  width: 100%;
+  max-width: 100rem;
   height: 1rem;
   border-radius: 1rem;
 
