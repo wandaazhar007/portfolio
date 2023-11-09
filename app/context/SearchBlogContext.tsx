@@ -5,7 +5,7 @@ export const SearchBlogContext = createContext({});
 
 export function SearchBlogProvider({ children }: any) {
   const [querySearch, setQuerySearch] = useState('');
-  const [btnQuery, setBtnQuery] = useState(1);
+  const [btnQuery, setBtnQuery] = useState(3);
 
   const contextValue = {
     setQuerySearch,
@@ -17,7 +17,6 @@ export function SearchBlogProvider({ children }: any) {
   return (
     <SearchBlogContext.Provider value={contextValue}>
       {children}
-
     </SearchBlogContext.Provider>
   )
 }
