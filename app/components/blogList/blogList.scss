@@ -4,6 +4,12 @@
 .boxListBlog {
   margin-top: 3rem;
 
+  .searchResult {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    color: $colorGrey;
+  }
+
   .contentBlog {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -13,6 +19,8 @@
     @include tablet {
       grid-template-columns: repeat(1, 1fr);
     }
+
+
 
     .boxBlog {
       // border: .1rem solid salmon;
@@ -84,7 +92,7 @@
     display: flex;
     justify-content: center;
 
-    .box-container {
+    .containerPagination {
       display: flex;
       gap: 1.5rem;
       list-style: none;
@@ -105,7 +113,7 @@
         font-weight: 700;
         font-size: 1.4rem;
         cursor: pointer;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px 3px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        box-shadow: $boxShadow2
       }
 
       .link.on {
@@ -116,11 +124,9 @@
 
       .disabled {
         background-color: $colorFossil;
-        color: black;
         cursor: not-allowed;
         border: transparent;
         border-radius: .5rem;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px 3px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
       }
     }
