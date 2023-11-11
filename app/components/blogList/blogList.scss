@@ -23,9 +23,7 @@
 
 
     .boxBlog {
-      // border: .1rem solid salmon;
       max-width: 50rem;
-      // width: 50rem;
       padding: 2rem 0;
       border-bottom: .01rem solid grey;
       display: flex;
@@ -113,13 +111,15 @@
         font-weight: 700;
         font-size: 1.4rem;
         cursor: pointer;
-        box-shadow: $boxShadow2
+        border: .1rem solid $colorFossil;
       }
 
       .link.on {
         background-color: $colorDrab;
         color: $colorSnow;
         font-weight: 700;
+        box-shadow: $boxShadow2;
+        border: none;
       }
 
       .disabled {
@@ -192,9 +192,4 @@
   height: 1rem;
   border-radius: 1rem;
   margin-top: .3rem;
-  // border: .1rem solid salmon;
-
-  // @include phone {
-  //   width: 15rem;
-  // }
 }
