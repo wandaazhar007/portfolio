@@ -126,14 +126,13 @@ const ListDemo: React.FC = () => {
           {isLoading ? (
             <div className="content">
               {myWorks.map((myWork: any, index) => (
-                <div className="box" key={index} >
-                  <div className="image skeleton skeletonImage">
-
+                <div className="box skeletonBox" key={index} >
+                  <div className="image imageSkeleton skeleton skeletonImage">
+                    {/* <Image src={myWork.urlImage} width={500} height={500} alt='' /> */}
                   </div>
-                  <div className="detail">
-                    <div className="title skeleton skeletonTitle"></div>
-                    <p className="desc skeleton skeletonDesc"></p>
-                    <p className="desc skeleton skeletonDesc"></p>
+                  <div className="detail detailSkeleton">
+                    <div className="title skeleton skeletonTitle"><span>{myWork.title}</span></div>
+                    <p className="desc skeleton skeletonDesc"><span>{myWork.desc}</span></p>
                     <p className="desc skeleton skeletonDesc"></p>
                     <p className="desc skeleton skeletonDesc"></p>
                     <div className="tag">
@@ -142,8 +141,8 @@ const ListDemo: React.FC = () => {
                       <div className="skeleton skeletonBtnTag"></div>
                     </div>
                     <div className="license skeleton skeletonLicense">
-                      <span> </span>
-                      <span></span>
+                      {/* <span></span>
+                      <span></span> */}
                     </div>
                   </div>
                 </div>
@@ -155,11 +154,11 @@ const ListDemo: React.FC = () => {
                 {myWorks.map((myWork: any, index) => (
                   <div className="box" key={index} onClick={() => handleModal(myWork.id)}>
                     <div className="image">
-                      <Image src={myWork.urlImage} alt='apple' width={500} height={500} />
+                      <Image src={myWork.urlImage} alt='portfolio' width={500} height={500} />
                     </div>
                     <div className="detail">
                       <div className="title">{myWork.name}</div>
-                      <p className="desc">{myWork.desc.substring(0, 150)}</p>
+                      <p className="desc">{myWork.desc.substring(0, 100)} ...</p>
                       <div className="tag">
                         <button>reactjs</button>
                         <button>nextjs</button>

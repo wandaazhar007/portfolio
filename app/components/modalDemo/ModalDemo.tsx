@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import './modalDemo.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClose, faDashboard, faScaleBalanced } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRotateBackward, faArrowUpRightDots, faArrowUpRightFromSquare, faClose, faDashboard, faScaleBalanced, faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
+import { faFileArrowUp } from '@fortawesome/free-solid-svg-icons/faFileArrowUp';
 
 const ModalDemo: any = ({ openModal, closeModal, propsId }: any) => {
   if (!openModal) return null;
@@ -33,7 +34,7 @@ const ModalDemo: any = ({ openModal, closeModal, propsId }: any) => {
       setType(response.data.type);
       setUrlImage(response.data.urlImage);
       setIsLoading(false);
-      console.log('license', response.data.name)
+      // console.log('license', response.data)
     }, 1000)
   }
 
@@ -94,11 +95,11 @@ const ModalDemo: any = ({ openModal, closeModal, propsId }: any) => {
                       </Link>
                     ) : (
                       <Link href={preview} target='_blank'>
-                        <button className="btn btnPreview"><FontAwesomeIcon icon={faDashboard} className='icon' /> Preview</button>
+                        <button className="btn btnPreview">Preview <FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' /></button>
                       </Link>
                     )}
                     <Link href={github} target='_blank'>
-                      <button className="btn btnGithub"><FontAwesomeIcon icon={faGithub} className='icon' /> Repository</button>
+                      <button className="btn btnGithub"> Repository<FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' /></button>
                     </Link>
                   </div>
                   <div className="license">

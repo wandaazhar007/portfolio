@@ -1,19 +1,6 @@
 @import '../../styles/responsive.scss';
 @import '../../styles/variable.scss';
 
-:root {
-  --first-color: #2e2e41;
-  --second-color: #5b85ff;
-  --third-color: #434354;
-  --text-color: #fff;
-  --box-shadow: 0 5px 25px rgb(2, 2, 2, 0.1);
-  --text-shadow: 0 5px 25px rgb(2, 2, 2, 0.1);
-}
-
-// body {
-//   background-color: var(--first-color);
-// }
-
 .search {
   display: flex;
   flex-direction: column;
@@ -26,7 +13,6 @@
       justify-content: center;
       flex-direction: column;
       align-items: center;
-      // border: .1rem solid salmon;
       gap: 1rem;
 
       input {
@@ -68,20 +54,12 @@
       }
     }
 
-    // .tabNavbar {
-    // position: relative;
-    // margin: 65px 10px 40px 10px;
-    // padding: 10px;
-
     .tabNavigation {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      // max-width: fit-content;
       margin: 1rem auto;
-      // background-color: $colorSlate;
-      // width: 50rem;
 
       .leftBtn,
       .rightBtn {
@@ -92,18 +70,16 @@
           position: absolute;
           color: #cdcccc;
           font-size: 1.8rem;
-          padding: 10px;
+          padding: 1rem;
           cursor: pointer;
-          // box-shadow: $boxShadow2;
-          // opacity: .5;
         }
       }
 
       .leftBtn {
         left: 0;
         background: linear-gradient(to left, transparent, $colorSnow);
-        border-top-left-radius: 1px;
-        border-bottom-left-radius: 1px;
+        border-top-left-radius: .1rem;
+        border-bottom-left-radius: .1rem;
         cursor: pointer;
         display: none;
 
@@ -112,10 +88,9 @@
       .rightBtn {
         right: 0;
         background: linear-gradient(to right, transparent, $colorSnow);
-        border-top-right-radius: 1px;
-        border-bottom-right-radius: 1px;
+        border-top-right-radius: .1rem;
+        border-bottom-right-radius: .1rem;
         cursor: pointer;
-        // display: none;
       }
 
       // ul
@@ -123,13 +98,12 @@
         color: $colorSnow;
         list-style: none;
         max-width: 50rem;
-        padding: 10px;
+        padding: 1rem;
         white-space: nowrap;
         border-radius: .5rem;
         display: flex;
         justify-content: center;
         gap: .5rem;
-        // border: .1rem solid green;
 
         @include largePhone {
           width: 99vw;
@@ -146,7 +120,6 @@
         // li
         .tabButton {
           color: $colorOldDrab;
-          // background-color: #d9e8f3;
           margin: 0 .2rem;
           padding: 1rem 2rem;
           border-radius: 1rem;
@@ -154,7 +127,7 @@
           user-select: none;
           transition: .3s ease;
           font-size: 1.2rem;
-          box-shadow: $boxShadow2;
+          border: .1rem solid $colorFossil;
 
           &:hover {
             background-color: $colorOldDrab;
@@ -165,6 +138,8 @@
         .tabButton.active {
           background-color: $colorOldDrab;
           color: $colorSnow;
+          box-shadow: $boxShadow2;
+          border: none;
         }
       }
     }
@@ -172,31 +147,5 @@
     .tabNavigation.disable {
       display: none;
     }
-
-    // }
-
-
-
-
-
-    // .buttonGroup {
-    //   display: flex;
-    //   justify-content: center;
-    //   gap: 1rem;
-
-    //   button {
-    //     padding: .5rem 2rem;
-    //     background-color: #e2e2e2;
-    //     border-radius: .5rem;
-    //     border: transparent;
-    //     cursor: pointer;
-    //   }
-
-    //   button.active {
-    //     background-color: $colorOldDrab;
-    //     color: #fff;
-    //     font-weight: 700;
-    //   }
-    // }
   }
 }
