@@ -39,7 +39,7 @@ const Certifications: React.FC = () => {
             <li><Link href="https://coursera.org/share/58162217487a2d7d265244d4c14803fd" target="_blank">Introduction Front-End Development <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
             <li><Link href="https://coursera.org/share/d7224200c04c85b599c44633c3bda68f" target="_blank">Programming with JavaScript <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
             <li><Link href="https://coursera.org/share/9953c74eaeb424f9a3d65622b611e193" target="_blank">GIT Version Control <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
-            <li><Link href="https://coursera.org/share/d7224200c04c85b599c44633c3bda68f" target="_blank">Advance React <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
+            <li><Link href="https://coursera.org/share/d7b1009ecdb3db7421f52ad7b197af74" target="_blank">Advance React <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></li>
           </ul>
           <hr />
         </motion.div>
