@@ -7,7 +7,7 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 const Experiences: React.FC = () => {
   return (
     <div className="experiences">
-      <h1 >MY EXPERIENCES</h1>
+      <h1 >What do I do?</h1>
       <div className="wrapBox">
         <div className="box">
           <ul className="ulBox">
@@ -17,7 +17,7 @@ const Experiences: React.FC = () => {
               transition={{ duration: 1 }}
               className="liBox"
             >
-              <span className="point"> Research, Design & Development Website</span> Manage websites for individual, business, non-profit, and higher education. Meet with clients to identify objectives and scope of website. Maintain regular client communication updates, issue list, and project plan.
+              <span className="point"> Research</span> Manage websites for individual, business, non-profit, and higher education. Meet with clients to identify objectives and scope of website. Maintain regular client communication updates, issue list, and project plan.
             </motion.li>
             <motion.li
               initial={{ opacity: 0, scale: 1, y: 100 }}
@@ -25,8 +25,8 @@ const Experiences: React.FC = () => {
               transition={{ duration: 1 }}
               className="liBox"
             >
-              <span className="point">Website Implementation</span>
-              Manage websites for individual, business, non-profit, and higher education. Meet with clients to identify objectives and scope of website. Maintain regular client communication updates, issue list, and project plan.
+              <span className="point">Design</span>
+              Develops prototypes and mock-ups to help develop, demonstrate, and validate business requirements to ensure all stakeholders understand what will be built and to help identify potential issues early in the project.
             </motion.li>
           </ul>
         </div>
@@ -40,7 +40,7 @@ const Experiences: React.FC = () => {
               className="liBox"
             >
               <div className="groupSkill">
-                <span className="point">Programming Language </span>
+                <span className="point">Programming Language & Tools</span>
                 <button className="skill">
                   HTML5 <FontAwesomeIcon icon={faInfoCircle} />
                   <div className="tooltip tooltipHtml">
@@ -155,7 +155,7 @@ const Experiences: React.FC = () => {
               transition={{ duration: 1 }}
               className="liBox"
             >
-              <span className="point">Experience in release coordination</span> and quality assurance. Develop test plans, work with team members to schedule and resolve product defects and enhancements.
+              <span className="point">Development & Implementation</span> Develops the website and secured portals. Start from front-end and performs testing implementation. Provides technical support with the integration of front-end HTML, CSS and JavaScript design deliverables to the back-end development.
             </motion.li>
           </ul>
         </div>
