@@ -3,10 +3,11 @@ import './biodata.scss';
 import Image from 'next/image';
 import './biodata.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faMapLocation, faPhone, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare, faEnvelope, faMapLocation, faPhone, faUser } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import ModalPhoto from '../modalPhoto/ModalPhoto';
+import Link from 'next/link';
 
 const Biodata = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -35,10 +36,14 @@ const Biodata = () => {
               <FontAwesomeIcon icon={faUser} className='icon' /> : Riezka Azhari (Wanda Azhar)
             </div>
             <div className="row">
-              <FontAwesomeIcon icon={faPhone} className='icon' /> : 646-4671926
+              <Link href="tel:+16604299074" target='_blank'>
+                <FontAwesomeIcon icon={faPhone} className='icon' /> : 646-4671926 <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='linkTab' />
+              </Link>
             </div>
             <div className="row">
-              <FontAwesomeIcon icon={faEnvelope} className='icon' /> : wandaazhar@gmail.com
+              <Link href="mailto:wandaazhar@gmail.com" target='_blank'>
+                <FontAwesomeIcon icon={faEnvelope} className='icon' /> : wandaazhar@gmail.com <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='linkTab' />
+              </Link>
             </div>
             <div className="row">
               <FontAwesomeIcon icon={faMapLocation} className='icon' /> : Canton, MI, USA

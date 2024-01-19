@@ -19,7 +19,7 @@ const Certifications: React.FC = () => {
           <ul>
             <li>Communication Advertising (2021)</li>
           </ul>
-          <hr />
+          {/* <hr /> */}
           {/* <h2><Link href="">Harvard CS50 (edx online) <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='icon' /></Link></h2>
           <ul>
             <li>UI/UX Web Design (2021)</li>

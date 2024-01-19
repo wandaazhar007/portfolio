@@ -70,6 +70,14 @@
 
     .row {
       font-size: 1.6rem;
+
+      a {
+        color: #005bb0;
+
+        .linkTab {
+          font-size: 1.3rem;
+        }
+      }
     }
   }
 }
