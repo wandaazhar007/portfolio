@@ -17,7 +17,7 @@ const Experiences: React.FC = () => {
               transition={{ duration: 1 }}
               className="liBox"
             >
-              <span className="point"> Research</span> Manage websites for individual, business, non-profit, and higher education. Meet with clients to identify objectives and scope of website. Maintain regular client communication updates, issue list, and project plan.
+              <span className="point"> Research</span> Manage websites for individual, business and non-profit. Meet with clients to identify objectives and scope of website. Maintain regular client communication updates, issue list, and project plan.
             </motion.li>
             <motion.li
               initial={{ opacity: 0, scale: 1, y: 100 }}
