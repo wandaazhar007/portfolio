@@ -25,7 +25,7 @@ export default function Home() {
           <Experiences />
           <Accomplishments />
           <HeadlineTwo />
-          <WorkExperiences />
+          {/* <WorkExperiences /> */}
           {/* <Educations /> */}
           <Certifications />
           <Biodata />
