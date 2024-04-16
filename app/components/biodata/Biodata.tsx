@@ -3,7 +3,7 @@ import './biodata.scss';
 import Image from 'next/image';
 import './biodata.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare, faEnvelope, faMapLocation, faPhone, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare, faCarOn, faCircleCheck, faCircleExclamation, faEnvelope, faMapLocation, faPhone, faUser } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import ModalPhoto from '../modalPhoto/ModalPhoto';
@@ -20,7 +20,7 @@ const Biodata = () => {
   return (
     <>
       <div className="biodata">
-        <h1 >BIODATA</h1>
+        {/* <h1 >BIODATA</h1> */}
         <div className="wrapBox">
           <motion.div
             initial={{ opacity: 0, scale: 1, y: 100 }}
@@ -47,6 +47,15 @@ const Biodata = () => {
             </div>
             <div className="row">
               <FontAwesomeIcon icon={faMapLocation} className='icon' /> : Canton, MI, USA
+            </div>
+            <div className="row">
+              <FontAwesomeIcon icon={faCircleCheck} className='icon' /> : Fully Work Authorized
+            </div>
+            <div className="row">
+              <FontAwesomeIcon icon={faCircleExclamation} className='icon' /> : No Visa Sponsorship Required
+            </div>
+            <div className="row">
+              <FontAwesomeIcon icon={faCarOn} className='icon' /> : Open to Relocation
             </div>
           </motion.div>
         </div>

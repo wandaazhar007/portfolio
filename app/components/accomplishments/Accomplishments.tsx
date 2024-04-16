@@ -14,14 +14,14 @@ const Accomplishments: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              Designed, developed, created content strategy, and maintained websites for community college and clients. Created information architecture and graphics Validated and tested web pages.
+              Improved search engine rankings (from page 4 to page 1) for websites and web pages. Decreased page load time 50-400% through web development best practices.
             </motion.li>
             <motion.li
               initial={{ opacity: 0, scale: 1, y: 100 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              Reviewed and tested code and documentation. Researched, identified, and isolated issues; recommended appropriate resolutions
+              Collaborated with senior designers and developers to transform design concepts into functional websites, resulting in a 20% increase in conversions and a 15% decrease in bounce rate.
             </motion.li>
           </ul>
         </div>
@@ -33,14 +33,14 @@ const Accomplishments: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              Improved search engine rankings (from page 4 to page 1) for websites and web pages. Decreased page load time 50-400% through web development best practices.
+              Assisted in designing and creating website layouts, graphics, and user interfaces. leading to a 25% increase in user engagement metrics.
             </motion.li>
             <motion.li
               initial={{ opacity: 0, scale: 1, y: 100 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              Coordinated product releases and verification of decision support applications. Worked with development teams
+              Maintained and updated existing websites with new content, features, and enhancements. resulting in a 50% reduction in development time within one year.
             </motion.li>
           </ul>
         </div>

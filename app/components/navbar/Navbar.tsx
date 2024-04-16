@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
                 <Link href="/" className={`link ${pathname === '/' ? 'on' : ''}`} onClick={handleClickMenu}><FontAwesomeIcon icon={faUser} className="icon" /> Profile</Link>
                 <Link href="/my-works" className={`link ${pathname === '/my-works' ? 'on' : ''}`} onClick={handleClickMenu} ><FontAwesomeIcon icon={faPencil} className="icon" /> My Works</Link>
                 <Link href="/my-blog" className={`link ${pathname === '/my-blog' ? 'on' : ''}`} onClick={handleClickMenu}><FontAwesomeIcon icon={faBlog} className="icon" /> Blogs</Link>
-                <Link href="#" className="link" onClick={handleClickMenu}><FontAwesomeIcon icon={faLinkedin} className="icon" /> LinkedIn</Link>
+                <Link href="https://www.linkedin.com/in/wanda-azhar/" target='_blank' className="link" onClick={handleClickMenu}><FontAwesomeIcon icon={faLinkedin} className="icon" /> LinkedIn</Link>
                 <Link href="https://instagram.com/wanda_azharr/" target="_blank" className="link" onClick={handleClickMenu}><FontAwesomeIcon icon={faInstagram} className="icon" /> Instagram</Link>
                 <Link href="/faq" className={`link ${pathname === '/faq' ? 'on' : ''}`} onClick={handleClickMenu}><FontAwesomeIcon icon={faQuestionCircle} className="icon" /> Faq</Link>
               </div>

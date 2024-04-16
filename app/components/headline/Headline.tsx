@@ -7,6 +7,7 @@ import Link from 'next/link';
 
 import Lottie from "lottie-react";
 import animation_hi4 from "../../../public/animation_hi4.json";
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 const Headline: React.FC = () => {
   return (
@@ -56,15 +57,15 @@ const Headline: React.FC = () => {
         </div>
         <span>Rated 5 stars on Fiverr</span>
       </motion.div>
-      <Link href="https://www.fiverr.com/wandaazhar/" target="_blank">
+      <Link href="https://www.linkedin.com/in/wanda-azhar/" target="_blank">
         <motion.button
           animate={{
             scale: [0, 1.2, 1],
             rotate: [0, -3, 0]
           }}
         >
-          <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon" />
-          <span>My Fiverr Profile</span>
+          <FontAwesomeIcon icon={faLinkedinIn} className="icon" />
+          <span>LinkedIn Profile</span>
         </motion.button>
       </Link>
     </div>

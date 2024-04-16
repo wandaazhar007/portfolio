@@ -45,6 +45,7 @@
     .boxImage {
       display: flex;
       justify-content: center;
+      margin-bottom: 4rem;
 
       .image {
         width: 12rem;
@@ -53,7 +54,7 @@
         border-radius: 50%;
         overflow: hidden;
         position: absolute;
-        top: -9rem;
+        top: -6rem;
         display: flex;
         justify-content: center;
         cursor: pointer;
