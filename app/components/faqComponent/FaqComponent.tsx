@@ -4,9 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import { faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
-import { Fira_Sans } from 'next/font/google';
-
-const firaSans = Fira_Sans({ subsets: ['latin'], weight: ['100', '200', '300', '500', '700'] });
 
 const FaqComponent: React.FC = () => {
   return (
@@ -32,9 +29,6 @@ const FaqComponent: React.FC = () => {
                 transition={{ duration: 1 }}
                 className="boxHeader boxHeader1">
                 you'll find answers to questions that potential employers, collaborators, and visitors often ask.
-                {/* If you have a question that isn't covered here, feel free to get in touch with me through the provided contact information. */}
-
-                {/* If you&apos;re ready, let&apos;s dive into the questions that matter most to you. Simply click on any question to reveal its answer. */}
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 1, x: 100 }}
@@ -61,92 +55,38 @@ const FaqComponent: React.FC = () => {
                     </p>
                     <div className="groupList">
                       <ol className="list">
-                        <li>
-                          <Link href="#" target='_blank'>HTML <FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#" target='_blank'>CSS <FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#" target='_blank'>Javascript <FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' />
-                          </Link>
-                        </li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
                       </ol>
                       <div className="list">
-                        <li>
-                          <Link href="#" target='_blank'>Typescript <FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#" target='_blank'>NodeJs <FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#" target='_blank'>MySql <FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' />
-                          </Link>
-                        </li>
+                        <li>Typescript</li>
+                        <li>NodeJs</li>
+                        <li>MySql</li>
                       </div>
                     </div>
-                    <b>And Framework Technologies as :</b>
+                    <p>And Framework Technologies as :</p>
 
                     <div className="groupList">
                       <ol className="list">
-                        <li>
-                          <Link href="#" target='_blank'>NextJs <FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#" target='_blank'>ReactJs <FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#" target='_blank'>ExpressJs <FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' />
-                          </Link>
-                        </li>
+                        <li>NextJs </li>
+                        <li>ReactJs</li>
+                        <li>ExpressJs</li>
                       </ol>
                       <ol className="list">
-                        <li>
-                          <Link href="#" target='_blank'>Sequelize <FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#" target='_blank'>MySql <FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#" target='_blank'>Linux <FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' />
-                          </Link>
-                        </li>
+                        <li>Sequelize</li>
+                        <li>MySql</li>
+                        <li>Linux</li>
                       </ol>
                       <ol className="list">
-                        <li>
-                          <Link href="#" target='_blank'>Nginx <FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#" target='_blank'>Git (vcs) <FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#" target='_blank'>Github <FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' />
-                          </Link>
-                        </li>
+                        <li>Nginx</li>
+                        <li>Git (vcs)</li>
+                        <li>Github</li>
                       </ol>
                       <ol className="list">
-                        <li>
-                          <Link href="#" target='_blank'>CI/CD <FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#" target='_blank'>Nginx <FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#" target='_blank'>PM2 <FontAwesomeIcon icon={faSquareArrowUpRight} className='icon' />
-                          </Link>
-                        </li>
+                        <li>CI/CD</li>
+                        <li>Nginx</li>
+                        <li>PM2</li>
                       </ol>
                     </div>
                     <p>
@@ -179,13 +119,10 @@ const FaqComponent: React.FC = () => {
                 <label htmlFor="four">How do you approach problem-solving in your coding projects?</label>
                 <div className="content">
                   <div className="answer">
-                    Problem-solving is at the core of web development. I start by thoroughly understanding the requirements and breaking down the problem into smaller tasks. I research and explore potential solutions, leveraging online resources and documentation as needed. Testing and debugging are crucial stages, where I ensure the code is efficient and free of errors. I also seek feedback and collaborate with peers to arrive at optimal solutions.
+                    I start by thoroughly understanding the requirements and breaking down the problem into smaller tasks. I research and explore potential solutions, leveraging online resources and documentation as needed. Testing and debugging are crucial stages, where I ensure the code is efficient and free of errors. I also seek feedback and collaborate with peers to arrive at optimal solutions.
                   </div>
                 </div>
               </motion.li>
-
-
-
             </ul>
           </div>
 
@@ -206,8 +143,6 @@ const FaqComponent: React.FC = () => {
                 </div>
               </motion.li>
 
-
-
               <motion.li
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -217,7 +152,7 @@ const FaqComponent: React.FC = () => {
                 <label htmlFor="second">How do you ensure responsive design and compatibility across devices?</label>
                 <div className="content">
                   <div className="answer">
-                    Ensuring a responsive design is a crucial aspect of my development process. I use a mobile-first approach, where I design and style the website for mobile devices first and then gradually enhance it for larger screens. I utilize CSS media queries to adapt layouts and styles based on screen sizes, ensuring a seamless experience on various devices, including smartphones, tablets, and desktops.
+                    I use a mobile-first approach, where I design and style the website for mobile devices first and then gradually enhance it for larger screens. I utilize CSS media queries to adapt layouts and styles based on screen sizes, ensuring a seamless experience on various devices, including smartphones, tablets, and desktops.
                   </div>
                 </div>
               </motion.li>
@@ -235,8 +170,6 @@ const FaqComponent: React.FC = () => {
                   </div>
                 </div>
               </motion.li>
-
-
             </ul>
           </div>
 
@@ -252,17 +185,10 @@ const FaqComponent: React.FC = () => {
                 <label htmlFor="thrid">Can you provide examples of projects you&apos;ve worked on?</label>
                 <div className="content">
                   <div className="answer">
-                    Certainly! Here are a couple of projects I&apos;ve worked on:
-
-                    Project: E-commerce Website
-                    Description: Developed a fully functional e-commerce platform using ReactJS and Redux for state management. Integrated secure payment gateways and implemented responsive design for a seamless shopping experience.
-
-                    Project: Personal Blog Website
-                    Description: Built a personal blog using Next.js, where I share web development tutorials and insights. Integrated a Markdown editor for easy content creation and used server-side rendering for improved SEO.
+                    Certainly! Here are a couple of projects I&apos;ve worked on: <Link href={'/my-works'}>My Work <FontAwesomeIcon icon={faSquareArrowUpRight} /></Link>
                   </div>
                 </div>
               </motion.li>
-
 
               <motion.li
                 initial={{ opacity: 0, scale: 0 }}
@@ -273,7 +199,7 @@ const FaqComponent: React.FC = () => {
                 <label htmlFor="five">Are you open to collaboration or freelance opportunities?</label>
                 <div className="content">
                   <div className="answer">
-                    Yes, I&apos;m open to both collaboration and freelance opportunities. If you have a project in mind or need assistance with web development tasks, feel free to reach out to me. You can contact me via email at wandaazhar@gmail.com or connect with me on LinkedIn.
+                    Yes, I&apos;m open to both collaboration and freelance opportunities. If you have a project in mind or need assistance with web development tasks, feel free to reach out to me. You can contact me via email at <b>wandaazhar@gmail.com</b>
                   </div>
                 </div>
               </motion.li>
@@ -288,19 +214,12 @@ const FaqComponent: React.FC = () => {
                 <label htmlFor="seven">How can I get in touch with you?</label>
                 <div className="content">
                   <div className="answer">
-                    You can reach out to me through email at wandaazhar@gmail.com. Additionally, you can connect with me on my LinkedIn profile: Wanda Azhar. I&apos;m always open to discussions, collaborations, and sharing insights related to web development.
+                    You can reach out to me through email at <b>wandaazhar@gmail.com</b>. I&apos;m always open to discussions, collaborations, and sharing insights related to web development.
                   </div>
                 </div>
               </motion.li>
-
-
             </ul>
           </div>
-          {/* <div className="all-faq">
-            <Link href="/faq">
-              <p>See All Faq's <FontAwesomeIcon icon={faSquareArrowUpRight} className="icon" /></p>
-            </Link>
-          </div> */}
         </div>
       </div>
     </section>

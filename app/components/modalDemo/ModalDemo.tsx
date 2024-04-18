@@ -1,14 +1,18 @@
 import Image from 'next/image';
 import './modalDemo.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRotateBackward, faArrowUpRightDots, faArrowUpRightFromSquare, faClose, faDashboard, faScaleBalanced, faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faClose, faScaleBalanced, faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
-import { faFileArrowUp } from '@fortawesome/free-solid-svg-icons/faFileArrowUp';
 
-const ModalDemo: any = ({ openModal, closeModal, propsId }: any) => {
+type PropsType = {
+  propsId: number,
+  closeModal: any,
+  openModal: string
+}
+
+const ModalDemo: any = ({ openModal, closeModal, propsId }: PropsType) => {
   if (!openModal) return null;
 
   const [isLoading, setIsLoading] = useState(true);
@@ -22,8 +26,7 @@ const ModalDemo: any = ({ openModal, closeModal, propsId }: any) => {
   const [license, setLicense] = useState("");
 
   const getMyWorkById = async () => {
-    const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK}/${propsId}`);
-    // const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK_LOCAL}/${propsId}`);
+    const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK}${propsId}`);
     setTimeout(() => {
       setName(response.data.name);
       setDesc(response.data.desc);
@@ -34,8 +37,7 @@ const ModalDemo: any = ({ openModal, closeModal, propsId }: any) => {
       setType(response.data.type);
       setUrlImage(response.data.urlImage);
       setIsLoading(false);
-      // console.log('license', response.data)
-    }, 1000)
+    }, 500)
   }
 
   useEffect(() => {

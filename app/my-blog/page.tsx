@@ -4,8 +4,8 @@ import SearchBlog from '../components/searchBlog/SearchBlog';
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Web Development Portfolio: Crafting Impactful Digital Experiences',
-  description: 'Explore a web developer portfolio showcasing skills, creativity, and dedication in crafting impactful digital experiences. Discover coding passion and user-friendly solutions.',
+  title: 'Web Development Blog | Insights and Tutorials by Wanda Azhar | Canton, Michigan',
+  description: 'tay up-to-date with the latest web development trends and insights. Read my blog for expert advice, tutorials, and industry news',
 }
 const MyBlogPage: React.FC = () => {
   return (

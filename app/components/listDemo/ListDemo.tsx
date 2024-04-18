@@ -14,7 +14,7 @@ import animation_work2 from "../../../public/animation_work2.json";
 const ListDemo: React.FC = () => {
   const [myWorks, setMyWorks] = useState([]);
   const [openModal, setOpenModal] = useState(false);
-  const [propsId, setPropId] = useState('');
+  const [propsId, setPropId] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [pages, setPages] = useState(0);
   const [page, setPage] = useState(0);
@@ -24,14 +24,21 @@ const ListDemo: React.FC = () => {
   const [keywordButton, setKeywordButton] = useState("");
 
 
-  const handleModal = (id: any) => {
+  type MyWork = {
+    id: number,
+    name: string,
+    title: string,
+    desc: string,
+    license: string,
+    urlImage: string,
+  }
+  const handleModal = (id: number) => {
     setOpenModal(true);
     setPropId(id);
   }
 
   const getMyWork = async () => {
     const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK}?search_query=${keywordButton}&page=${page}&limit=${limit}`);
-    // const response = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_WORK_LOCAL}?search_query=${keywordButton}&page=${page}&limit=${limit}`);
     console.log(response.data.result);
     setMyWorks(response.data.result);
     setPage(response.data.page);
@@ -40,11 +47,11 @@ const ListDemo: React.FC = () => {
   }
 
 
-  const changePage = ({ selected }: any) => {
+  const changePage = ({ selected }: { selected: number }) => {
     setIsLoading(true)
     setTimeout(() => {
       setPage(selected);
-    }, 1000)
+    }, 300)
     if (selected === 9) {
       setMsg(
         "Please search by specific keyword..."
@@ -125,7 +132,7 @@ const ListDemo: React.FC = () => {
 
           {isLoading ? (
             <div className="content">
-              {myWorks.map((myWork: any, index) => (
+              {myWorks.map((myWork: MyWork, index) => (
                 <div className="box skeletonBox" key={index} >
                   <div className="image imageSkeleton skeleton skeletonImage">
                     {/* <Image src={myWork.urlImage} width={500} height={500} alt='' /> */}
@@ -151,10 +158,10 @@ const ListDemo: React.FC = () => {
           ) : (
             <>
               <div className="content">
-                {myWorks.map((myWork: any, index) => (
+                {myWorks.map((myWork: MyWork, index) => (
                   <div className="box" key={index} onClick={() => handleModal(myWork.id)}>
                     <div className="image">
-                      <Image src={myWork.urlImage} alt='portfolio' width={500} height={500} />
+                      <Image src={myWork.urlImage} alt='portfolio wanda azhar' width={500} height={500} />
                     </div>
                     <div className="detail">
                       <div className="title">{myWork.name}</div>
