@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     <footer className="footer">
       <div className="wrapContainer">
         <div className="box">
-          <p>Build with ❤️ By Wanda Azhar in Michigan, USA</p>
+          <p>Build with ❤️ By Wanda Azhar in Twin Falls, ID. USA</p>
         </div>
       </div>
     </footer>

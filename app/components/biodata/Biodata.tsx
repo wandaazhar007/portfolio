@@ -46,7 +46,7 @@ const Biodata = () => {
               </Link>
             </div>
             <div className="row">
-              <FontAwesomeIcon icon={faMapLocation} className='icon' /> : Canton, MI, USA
+              <FontAwesomeIcon icon={faMapLocation} className='icon' /> : Twin Falls, ID. USA
             </div>
             <div className="row">
               <FontAwesomeIcon icon={faCircleCheck} className='icon' /> : Fully Work Authorized
