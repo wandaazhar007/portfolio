@@ -8,7 +8,7 @@ import HeadlineTwo from './components/headlineTwo/HeadlineTwo'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Web Development Services | Wanda Azhar | Canton, Michigan',
+  title: 'Full-Stack Web Developer | Wanda Azhar | Twin Falls, ID',
   description: 'Expert web development services by Wanda Azhar, building responsive, user-friendly websites. Learn more about my services and expertise.',
 }
 
