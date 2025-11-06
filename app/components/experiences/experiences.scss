@@ -73,9 +73,12 @@
         column-gap: .3rem;
 
         .skill {
-          border: .1rem solid $colorOldDrab;
-          background-color: #D3DDD1;
-          color: $colorOldDrab;
+          // border: .1rem solid $colorOldDrab;
+          border: none;
+          // background-color: #D3DDD1;
+          background-color: $colorOldDrab;
+          color: #e9eaee;
+          // color: $colorOldDrab;
           padding: .5rem 1rem;
           border-radius: 1rem;
           font-size: 1.2rem;
