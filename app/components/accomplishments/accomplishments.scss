@@ -4,7 +4,8 @@
 .accomplishments {
   grid-column: span 2;
   border-radius: 2rem;
-  background-color: #dadfd9;
+  // background-color: #c5f9ba;
+  background-color: #b7e9bb;
   color: $colorOldGrey;
   padding: 2rem;
   position: relative;
@@ -14,7 +15,7 @@
     content: '';
     width: 25rem;
     height: 4rem;
-    background-color: #d3dcd1;
+    // background-color: #d3dcd1;
     position: absolute;
     left: -2rem;
     top: 1.2rem;
@@ -52,7 +53,7 @@
       list-style: none;
       padding: 2rem;
       border-radius: 1rem;
-      background-color: #d3dcd1;
+      background-color: #a3e7a9;
       position: relative;
 
       &::before {
@@ -60,7 +61,7 @@
         width: 2rem;
         height: 2rem;
         border-radius: 50%;
-        background-color: #d3dcd1;
+        background-color: #b7e9bb;
         position: absolute;
         left: -1rem;
         top: 2.2rem;

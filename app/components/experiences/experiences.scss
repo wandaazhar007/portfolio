@@ -5,9 +5,12 @@
   grid-column: span 2;
   border-radius: 2rem;
   background-color: #bfe5f8;
+  // background-color: #dae9b7;
   color: $colorOldGrey;
   padding: 2rem;
   position: relative;
+  // -webkit-box-shadow: -1px 1px 18px -3px #314755;
+  // box-shadow: -1px 1px 18px -3px #314755;
   // overflow: hidden;
 
   @include phone {
@@ -56,6 +59,8 @@
       border-radius: 1rem;
       background-color: #acdcf4;
       position: relative;
+      // -webkit-box-shadow: -1px 1px 18px -3px #314755;
+      // box-shadow: -1px 1px 18px -3px #314755;
 
       .point {
         color: $colorOldGrey;
@@ -219,10 +224,13 @@
         width: 2rem;
         height: 2rem;
         border-radius: 50%;
-        background-color: #acdcf4;
+        background-color: #bfe5f8;
         position: absolute;
         left: -1rem;
         top: 2.2rem;
+        // -webkit-box-shadow: -1px 1px 18px -3px #314755;
+        // box-shadow: -1px 1px 18px -3px #314755;
+        // z-index: ;
 
         .point {
           span {

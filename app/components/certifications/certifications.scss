@@ -4,7 +4,7 @@
 .certification {
   grid-column: span 1;
   border-radius: 2rem;
-  background-color: #D0DBE2;
+  background-color: #dae9b7;
   color: $colorOldGrey;
   padding: 2rem;
   position: relative;
@@ -14,7 +14,7 @@
     content: '';
     width: 22rem;
     height: 4rem;
-    background-color: #c7d3da;
+    // background-color: #c7d3da;
     position: absolute;
     left: -2rem;
     top: 1.2rem;
@@ -38,7 +38,7 @@
 
     padding: 1.5rem 2rem;
     border-radius: 1rem;
-    background-color: #c7d3da;
+    // background-color: #d8dac7;
     position: relative;
 
     h2 {
