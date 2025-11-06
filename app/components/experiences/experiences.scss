@@ -4,7 +4,7 @@
 .experiences {
   grid-column: span 2;
   border-radius: 2rem;
-  background-color: #D8DAD9;
+  background-color: #bfe5f8;
   color: $colorOldGrey;
   padding: 2rem;
   position: relative;
@@ -18,7 +18,7 @@
     content: '';
     width: 20rem;
     height: 4rem;
-    background-color: #d3d5d3;
+    // background-color: #314755a7;
     position: absolute;
     left: -.001rem;
     top: 1.2rem;
@@ -30,7 +30,7 @@
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     position: relative;
   }
 
@@ -54,7 +54,7 @@
       list-style: none;
       padding: 2rem;
       border-radius: 1rem;
-      background-color: #d3d5d3;
+      background-color: #acdcf4;
       position: relative;
 
       .point {
@@ -62,8 +62,6 @@
         display: block;
         font-size: 1.6rem;
         font-weight: 700;
-        // font-style: italic
-        // text-decoration: underline;
         margin-bottom: .8rem;
         width: 100%;
       }
@@ -81,8 +79,6 @@
           padding: .5rem 1rem;
           border-radius: 1rem;
           font-size: 1.2rem;
-          // position: relative;
-          // text-decoration: underline;
 
           .tooltip {
             visibility: hidden;
@@ -211,8 +207,6 @@
               visibility: visible;
               background-color: #e9eeea;
             }
-
-
           }
         }
       }
@@ -222,7 +216,7 @@
         width: 2rem;
         height: 2rem;
         border-radius: 50%;
-        background-color: #d3d5d3;
+        background-color: #acdcf4;
         position: absolute;
         left: -1rem;
         top: 2.2rem;
