@@ -17,7 +17,8 @@ const Experiences: React.FC = () => {
               transition={{ duration: 1 }}
               className="liBox"
             >
-              <span className="point"> Research</span> Manage websites for individual, business and non-profit. Meet with clients to identify objectives and scope of website. Maintain regular client communication updates, issue list, and project plan.
+              <span className="point"> Research</span>
+              I work with individuals, businesses, and non-profits to define goals, audiences, and project scope. I keep communication open with regular updates and ensure every step aligns with the client’s vision.
             </motion.li>
             <motion.li
               initial={{ opacity: 0, scale: 1, y: 100 }}
@@ -26,7 +27,7 @@ const Experiences: React.FC = () => {
               className="liBox"
             >
               <span className="point">Design</span>
-              Develops prototypes and mock-ups to help develop, demonstrate, and validate business requirements to ensure all stakeholders understand what will be built and to help identify potential issues early in the project.
+              I create prototypes and mockups to visualize ideas early, helping stakeholders clearly understand the product and address potential issues before development begins.
             </motion.li>
           </ul>
         </div>
@@ -155,7 +156,8 @@ const Experiences: React.FC = () => {
               transition={{ duration: 1 }}
               className="liBox"
             >
-              <span className="point">Development & Implementation</span> Develops the website and secured portals. Start from front-end and performs testing implementation. Provides technical support with the integration of front-end HTML, CSS and JavaScript design deliverables to the back-end development.
+              <span className="point">Development & Implementation</span>
+              I build secure, responsive websites from front-end to back-end. My focus is on clean code, performance, and seamless integration between design and functionality.
             </motion.li>
           </ul>
         </div>
