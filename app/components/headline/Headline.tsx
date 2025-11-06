@@ -2,7 +2,7 @@
 import './headline.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
-import { faArrowUpRightFromSquare, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 
 import Lottie from "lottie-react";
@@ -39,9 +39,8 @@ const Headline: React.FC = () => {
         whileInView={{ opacity: 1, scale: 1, x: 0 }}
         transition={{ duration: 1 }}
       >
-        As a professional web developer, I bring innovation to the forefront. Beyond building websites, I design interactive spaces that stimulate curiosity and evoke emotions
-        {/* and encourage meaningful interactions for users. */}
-        {/* I work for an advertising digital agency as a front-end web designer. currently, I&apos;m not looking for a job but I love to help small businesses grow especially with websites or landing pages */}
+        {/* As a professional web developer, I bring innovation to the forefront. Beyond building websites, I design interactive spaces that stimulate curiosity and evoke emotions */}
+        From concept to launch, I design and develop interactive experiences that inspire users and empower businesses to grow online.
       </motion.p>
       <motion.div
         initial={{ opacity: 0, scale: 1, y: 100 }}
