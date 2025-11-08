@@ -1,6 +1,6 @@
 'use client'
 import './headlineTwo.scss';
-import Lottie from "lottie-react";
+// import Lottie from "lottie-react";
 import animation_smile from "../../../public/animation_smile.json";
 import animation_hi from "../../../public/animation_hi.json";
 import animation_grafik from "../../../public/animation_grafik.json";
@@ -8,6 +8,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+const Lottie = dynamic(() => import('lottie-react'), {
+  ssr: false,
+});
 
 const HeadlineTwo: React.FC = () => {
   return (

@@ -2,7 +2,11 @@
 import './workExperiences.scss';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Lottie from "lottie-react";
+// import Lottie from "lottie-react";
+import dynamic from 'next/dynamic';
+const Lottie = dynamic(() => import('lottie-react'), {
+  ssr: false,
+});
 import animation_smile from "../../../public/animation_smile.json";
 
 const WorkExperiences: React.FC = () => {

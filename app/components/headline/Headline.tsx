@@ -4,8 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 
-import Lottie from "lottie-react";
+// import Lottie from "lottie-react";
+const Lottie = dynamic(() => import('lottie-react'), {
+  ssr: false,
+});
 import animation_hi4 from "../../../public/animation_hi4.json";
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
