@@ -219,13 +219,13 @@ import { useEffect, useState } from 'react';
 import axios from "axios";
 import ReactPaginate from 'react-paginate';
 import { motion } from 'framer-motion';
-import Lottie from "lottie-react";
+// import Lottie from "lottie-react";
 import animation_work2 from "../../../public/animation_work2.json";
 import dynamic from 'next/dynamic';
 // 👇 dynamically import lottie-react with SSR disabled
-// const Lottie = dynamic(() => import('lottie-react'), {
-//   ssr: false,
-// });
+const Lottie = dynamic(() => import('lottie-react'), {
+  ssr: false,
+});
 
 const ListDemo: React.FC = () => {
   const [myWorks, setMyWorks] = useState([]);
