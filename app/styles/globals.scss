@@ -35,6 +35,9 @@ html {
 
 body {
   background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -48,6 +51,8 @@ a {
 }
 
 .home {
+  margin-bottom: 5rem;
+
   .wrapContainer {
     .sectionContainer {
       margin-top: 9rem;
