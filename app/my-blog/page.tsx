@@ -1,3 +1,4 @@
+//app/my-blog/page.tsx
 import type { Metadata } from "next";
 import BlogList from "../components/blogList/BlogList";
 import SearchBlog from "../components/searchBlog/SearchBlog";

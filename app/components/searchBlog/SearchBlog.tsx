@@ -1,98 +1,157 @@
-// 'use client'
+// //app/components/searchBlog/SearchBlog.tsx
+// 'use client';
+
 // import './searchBlog.scss';
-// import { useState, useEffect, useRef, useContext } from 'react';
-// import axios from 'axios';
-// import { SearchBlogContext } from '../../context//SearchBlogContext';
+// import { useContext, useEffect, useRef, useState } from 'react';
+// import { SearchBlogContext } from '../../context/SearchBlogContext';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faAngleLeft, faAngleRight, faArrowLeft, faArrowRight, faClose } from '@fortawesome/free-solid-svg-icons';
+// import {
+//   faAngleLeft,
+//   faAngleRight,
+//   faClose,
+// } from '@fortawesome/free-solid-svg-icons';
+// import { apiGet } from '@/app/lib/api';
+// import { mapCategoryToTab } from '@/app/lib/mappers';
+// import type { CategoriesApiResponse } from '@/app/types/category';
+
+// type CategoryTab = {
+//   id: string;
+//   name: string;
+//   slug: string;
+// };
 
 // const SearchBlog: React.FC = () => {
-//   // const [querySearch, setQuerySearch] = useState("");
-//   const [isLoading, setIsLoading] = useState(true);
-//   const blogContext: any = useContext(SearchBlogContext);
-//   const setQuerySearch = blogContext.setQuerySearch;
-//   const querySearch = blogContext.querySearch;
-//   const setBtnPerCategory = blogContext.setBtnQuery;
-//   const btnPerCategory = blogContext.btnQuery;
-//   const page = blogContext.page;
-//   const setPage = blogContext.setPage;
-//   // const [keywordButton, setKeywordButton] = useState(1)
+//   const [categories, setCategories] = useState<CategoryTab[]>([]);
+//   const blogContext = useContext(SearchBlogContext);
 
-//   // const getSearch = async () => {
-//   //   const responseSearch = await axios.get(`${process.env.NEXT_PUBLIC_GET_ALL_MY_BLOG}?search_query=${querySearch}`)
-//   //   console.log(responseSearch.data.result);
-//   //   console.log('first')
-//   // }
+//   if (!blogContext) {
+//     return null;
+//   }
 
+//   const { setQuerySearch, querySearch, setBtnQuery, btnQuery, setPage } = blogContext;
 
 //   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-//     setQuerySearch(e.target.value)
-//     setPage(0)
-//   }
+//     setQuerySearch(e.target.value);
+//     setPage(0);
+//   };
 
-//   const handlePerCategoryBtn = (id: number) => {
-//     // setQuerySearch('');
-//     setBtnPerCategory(id)
-//     setPage(0)
-//   }
+//   const handlePerCategoryBtn = (slug: string) => {
+//     setBtnQuery(slug);
+//     setPage(0);
+//   };
+
 //   const handleReset = () => {
-//     setQuerySearch('')
-//     setBtnPerCategory(3)
-//     setPage(0)
-//   }
+//     setQuerySearch('');
+//     setBtnQuery('');
+//     setPage(0);
+//   };
 
 //   const tabMenuRef = useRef<HTMLUListElement>(null);
 //   const iconLeftRef = useRef<SVGSVGElement>(null);
 //   const iconRightRef = useRef<SVGSVGElement>(null);
 
 //   const handleClickLeft = () => {
-//     tabMenuRef.current!.scrollLeft -= 100;
-//     const scrollRightValue = Math.ceil(tabMenuRef.current!.scrollLeft);
-//     console.log(scrollRightValue)
-//     iconRightRef.current!.style.display = scrollRightValue <= 100 ? "block" : "none";
-//   }
+//     if (!tabMenuRef.current) return;
+//     tabMenuRef.current.scrollLeft -= 100;
+//     iconVisibility();
+//   };
 
 //   const handleClickRight = () => {
-//     tabMenuRef.current!.scrollLeft += 100;
+//     if (!tabMenuRef.current) return;
+//     tabMenuRef.current.scrollLeft += 100;
 //     iconVisibility();
-//   }
+//   };
 
 //   const iconVisibility = () => {
-//     let scrollLeftValue = Math.ceil(tabMenuRef.current!.scrollLeft);
-//     iconLeftRef.current!.style.display = scrollLeftValue > 0 ? "block" : "none"
+//     if (!tabMenuRef.current || !iconLeftRef.current || !iconRightRef.current) return;
 
-//     let scrollableWidth = tabMenuRef.current!.scrollWidth - tabMenuRef.current!.clientWidth;
+//     const scrollLeftValue = Math.ceil(tabMenuRef.current.scrollLeft);
+//     const scrollableWidth =
+//       tabMenuRef.current.scrollWidth - tabMenuRef.current.clientWidth;
 
-//   }
+//     iconLeftRef.current.style.display = scrollLeftValue > 0 ? 'block' : 'none';
+//     iconRightRef.current.style.display =
+//       scrollLeftValue < scrollableWidth ? 'block' : 'none';
+//   };
+
+//   useEffect(() => {
+//     const getCategories = async () => {
+//       try {
+//         const response = await apiGet<CategoriesApiResponse>('/categories');
+//         const mapped = response.data.map(mapCategoryToTab);
+//         setCategories(mapped);
+//       } catch (error) {
+//         console.error('Failed to fetch categories:', error);
+//         setCategories([]);
+//       }
+//     };
+
+//     getCategories();
+//   }, []);
+
+//   useEffect(() => {
+//     iconVisibility();
+//   }, [categories]);
 
 //   return (
 //     <section className="search">
 //       <div className="wrapContainer">
 //         <div className="searchGroup">
-//           <input type='text' placeholder='search article here' onChange={handleSearch} value={querySearch} />
-//           {querySearch && <span className='result'><button onClick={handleReset}>{querySearch} <FontAwesomeIcon icon={faClose} className='icon' /></button></span>}
+//           <input
+//             type="text"
+//             placeholder="search article here"
+//             onChange={handleSearch}
+//             value={querySearch}
+//           />
+
+//           {querySearch && (
+//             <span className="result">
+//               <button onClick={handleReset}>
+//                 {querySearch} <FontAwesomeIcon icon={faClose} className="icon" />
+//               </button>
+//             </span>
+//           )}
 //         </div>
 
 //         <div className={`tabNavigation ${querySearch ? 'disable' : ''}`}>
-//           <FontAwesomeIcon icon={faAngleLeft} className="leftBtn" ref={iconLeftRef} onClick={handleClickLeft} />
-//           <FontAwesomeIcon icon={faAngleRight} className="rightBtn" ref={iconRightRef} onClick={handleClickRight} />
+//           <FontAwesomeIcon
+//             icon={faAngleLeft}
+//             className="leftBtn"
+//             ref={iconLeftRef}
+//             onClick={handleClickLeft}
+//           />
+//           <FontAwesomeIcon
+//             icon={faAngleRight}
+//             className="rightBtn"
+//             ref={iconRightRef}
+//             onClick={handleClickRight}
+//           />
+
 //           <ul className="tabMenu" ref={tabMenuRef}>
-//             <li className={`tabButton ${btnPerCategory == 1 ? 'active' : ''}`} onClick={() => handlePerCategoryBtn(1)}>HTML</li>
-//             <li className={`tabButton ${btnPerCategory == 2 ? 'active' : ''} `} onClick={() => handlePerCategoryBtn(2)}>CSS</li>
-//             <li className={`tabButton ${btnPerCategory == 3 ? 'active' : ''} `} onClick={() => handlePerCategoryBtn(3)}>JavaScript</li>
-//             <li className={`tabButton ${btnPerCategory == 4 ? 'active' : ''}`} onClick={() => handlePerCategoryBtn(4)}>ReactJs</li>
-//             <li className={`tabButton ${btnPerCategory == 5 ? 'active' : ''} `} onClick={() => handlePerCategoryBtn(5)}>Git & GitHub</li>
-//             <li className={`tabButton ${btnPerCategory == 6 ? 'active' : ''} `} onClick={() => handlePerCategoryBtn(6)}>Linux Server</li>
+//             <li
+//               className={`tabButton ${btnQuery === '' ? 'active' : ''}`}
+//               onClick={() => handlePerCategoryBtn('')}
+//             >
+//               All
+//             </li>
+
+//             {categories.map((category) => (
+//               <li
+//                 key={category.id}
+//                 className={`tabButton ${btnQuery === category.slug ? 'active' : ''}`}
+//                 onClick={() => handlePerCategoryBtn(category.slug)}
+//               >
+//                 {category.name}
+//               </li>
+//             ))}
 //           </ul>
 //         </div>
 //       </div>
 //     </section>
 //   );
-// }
+// };
 
 // export default SearchBlog;
-
-
 
 'use client';
 
@@ -126,12 +185,18 @@ const SearchBlog: React.FC = () => {
   const { setQuerySearch, querySearch, setBtnQuery, btnQuery, setPage } = blogContext;
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setQuerySearch(e.target.value);
+    const value = e.target.value;
+    setQuerySearch(value);
     setPage(0);
+
+    if (value.trim()) {
+      setBtnQuery('');
+    }
   };
 
   const handlePerCategoryBtn = (slug: string) => {
     setBtnQuery(slug);
+    setQuerySearch('');
     setPage(0);
   };
 
@@ -208,7 +273,7 @@ const SearchBlog: React.FC = () => {
           )}
         </div>
 
-        <div className={`tabNavigation ${querySearch ? 'disable' : ''}`}>
+        <div className="tabNavigation">
           <FontAwesomeIcon
             icon={faAngleLeft}
             className="leftBtn"
