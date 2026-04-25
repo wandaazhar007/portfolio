@@ -358,7 +358,7 @@ const BlogList: React.FC = () => {
           ) : null}
 
           <div className="contentBlog">
-            {paginatedBlogs.map((blog) => (
+            {/* {paginatedBlogs.map((blog) => (
               <Link href={blog.link || '#'} target="_blank" key={blog.id}>
                 <div className="boxBlog">
                   <div className="headerBox">
@@ -380,7 +380,43 @@ const BlogList: React.FC = () => {
                   </div>
                 </div>
               </Link>
-            ))}
+            ))} */}
+
+            {paginatedBlogs.map((blog) => {
+              const hasExternalLink =
+                typeof blog.link === 'string' &&
+                (blog.link.startsWith('http://') || blog.link.startsWith('https://'));
+
+              const card = (
+                <div className="boxBlog">
+                  <div className="headerBox">
+                    <div className="image">
+                      <Image src={blog.urlImage} alt={blog.title} width={100} height={100} />
+                    </div>
+
+                    <div className="descHeader">
+                      <h3 className="category">{blog.category.name}</h3>
+                      <p className="link">
+                        {hasExternalLink ? `${blog.link.substring(0, 45)}...` : 'No external link'}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="titleBox">
+                    <h1 className="titleBlog">{blog.title}</h1>
+                    <p className="descBlog">{blog.desc.substring(0, 95)} ...</p>
+                  </div>
+                </div>
+              );
+
+              return hasExternalLink ? (
+                <Link href={blog.link} target="_blank" rel="noopener noreferrer" key={blog.id}>
+                  {card}
+                </Link>
+              ) : (
+                <div key={blog.id}>{card}</div>
+              );
+            })}
           </div>
         </>
       )}
