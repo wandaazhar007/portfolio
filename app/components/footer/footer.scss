@@ -1,5 +1,5 @@
-@import '../../styles/responsive.scss';
-@import '../../styles/variable.scss';
+@use '../../styles/responsive.scss' as *;
+@use '../../styles/variable.scss' as *;
 
 .footer {
   // margin-top: 5rem;

@@ -23,7 +23,18 @@ const Navbar: React.FC = () => {
     <>
       <div className="wrapSvgNav">
         <div className="svgNav">
-          <Image src={waves5} width={100} height={100} alt='l' />
+          {/* <Image src={waves5} width={100} height={100} alt='l' /> */}
+          <div className="waveImageWrap">
+            <Image
+              src={waves5}
+              alt="Decorative wave background"
+              priority
+              loading="eager"
+              fill
+              sizes="100vw"
+              className="waveImage"
+            />
+          </div>
         </div>
       </div>
 

@@ -1,5 +1,5 @@
-@import '../../styles/responsive.scss';
-@import '../../styles/variable.scss';
+@use '../../styles/responsive.scss' as *;
+@use '../../styles/variable.scss' as *;
 
 .experiences {
   grid-column: span 2;
@@ -69,6 +69,11 @@
         font-weight: 700;
         margin-bottom: .8rem;
         width: 100%;
+
+        span {
+          display: block;
+          color: salmon;
+        }
       }
 
       .groupSkill {
@@ -127,8 +132,6 @@
                   position: absolute;
                   left: -1rem;
                   top: 2.2rem;
-
-
                 }
               }
 
@@ -230,17 +233,7 @@
         top: 2.2rem;
         // -webkit-box-shadow: -1px 1px 18px -3px #314755;
         // box-shadow: -1px 1px 18px -3px #314755;
-        // z-index: ;
-
-        .point {
-          span {
-            display: block;
-            color: salmon;
-          }
-        }
       }
-
     }
-
   }
 }

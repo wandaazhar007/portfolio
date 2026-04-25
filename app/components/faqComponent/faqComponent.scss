@@ -1,5 +1,6 @@
-@import '../../styles/responsive.scss';
-@import '../../styles/variable.scss';
+//app/components/faqComponent/faqComponent.scss
+@use '../../styles/responsive.scss' as *;
+@use '../../styles/variable.scss' as *;
 
 
 .faq {

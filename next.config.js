@@ -1,13 +1,30 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   images: {
-    domains: ['localhost', 'portfolio.birojasa-sahabat.com'] // <== Domain name
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      },
+      {
+        protocol: 'http',
+        hostname: 'portfolio.birojasa-sahabat.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'portfolio.birojasa-sahabat.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'storage.googleapis.com',
+      },
+      {
+        protocol: 'http',
+        hostname: 'storage.googleapis.com',
+      },
+    ],
   },
-  eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
-    ignoreDuringBuilds: true,
-  },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

@@ -1,12 +1,31 @@
-import './myBlog.scss';
-import BlogList from '../components/blogList/BlogList';
-import SearchBlog from '../components/searchBlog/SearchBlog';
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import BlogList from "../components/blogList/BlogList";
+import SearchBlog from "../components/searchBlog/SearchBlog";
+import "./myBlog.scss";
 
 export const metadata: Metadata = {
-  title: 'Web Development Blog | Insights and Tutorials by Wanda Azhar | Canton, Michigan',
-  description: 'tay up-to-date with the latest web development trends and insights. Read my blog for expert advice, tutorials, and industry news',
-}
+  title: "Web Development Blog in Twin Falls, Idaho",
+  description:
+    "Browse coding resources, web development articles, and technical references curated by Wanda Azhar, a web developer in Twin Falls, Idaho.",
+  alternates: {
+    canonical: "/my-blog",
+  },
+  openGraph: {
+    title: "Web Development Blog | Wanda Azhar",
+    description:
+      "Browse coding resources, web development articles, and technical references curated by Wanda Azhar.",
+    url: "/my-blog",
+    images: [
+      {
+        url: "/wanda-azhar.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Wanda Azhar Blog",
+      },
+    ],
+  },
+};
+
 const MyBlogPage: React.FC = () => {
   return (
     <section className="blog">
@@ -18,6 +37,6 @@ const MyBlogPage: React.FC = () => {
       </div>
     </section>
   );
-}
+};
 
 export default MyBlogPage;
