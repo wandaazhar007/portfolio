@@ -1,4 +1,3 @@
-//app/components/listDemo/ListDemo.tsx
 'use client';
 
 import Image from 'next/image';
@@ -19,6 +18,10 @@ const Lottie = dynamic(() => import('lottie-react'), {
   ssr: false,
 });
 
+const PAGE_SIZE = 2;
+const FETCH_LOADING_MS = 500;
+const PAGINATION_LOADING_MS = 350;
+
 const ListDemo: React.FC = () => {
   const [allWorks, setAllWorks] = useState<LegacyWorkCard[]>([]);
   const [openModal, setOpenModal] = useState(false);
@@ -26,15 +29,14 @@ const ListDemo: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(0);
   const [msg, setMsg] = useState('');
-  const limit = 2;
+
+  const pages = Math.ceil(allWorks.length / PAGE_SIZE);
 
   const paginatedWorks = useMemo(() => {
-    const start = page * limit;
-    const end = start + limit;
+    const start = page * PAGE_SIZE;
+    const end = start + PAGE_SIZE;
     return allWorks.slice(start, end);
   }, [allWorks, page]);
-
-  const pages = Math.ceil(allWorks.length / limit);
 
   const handleModal = (uuid: string) => {
     setOpenModal(true);
@@ -58,7 +60,7 @@ const ListDemo: React.FC = () => {
     } finally {
       setTimeout(() => {
         setIsLoading(false);
-      }, 500);
+      }, FETCH_LOADING_MS);
     }
   };
 
@@ -68,7 +70,7 @@ const ListDemo: React.FC = () => {
     setTimeout(() => {
       setPage(selected);
       setIsLoading(false);
-    }, 300);
+    }, PAGINATION_LOADING_MS);
 
     if (selected > 9) {
       setMsg('Please search by specific keyword...');
@@ -86,6 +88,8 @@ const ListDemo: React.FC = () => {
       setPage(0);
     }
   }, [page, pages]);
+
+  const skeletonItems = Array.from({ length: PAGE_SIZE });
 
   return (
     <>
@@ -172,47 +176,47 @@ const ListDemo: React.FC = () => {
             </div>
           </div>
 
-          {msg ? <p style={{ marginTop: '2rem', fontSize: '1.4rem' }}>{msg}</p> : null}
+          {msg ? <p className="helperMessage">{msg}</p> : null}
 
           {isLoading ? (
             <div className="content">
-              {(paginatedWorks.length ? paginatedWorks : Array.from({ length: limit })).map(
-                (_item, index) => (
-                  <div className="box skeletonBox" key={index}>
-                    <div className="image imageSkeleton skeleton skeletonImage"></div>
+              {skeletonItems.map((_, index) => (
+                <div className="box skeletonBox" key={index}>
+                  <div className="image imageSkeleton skeleton skeletonImage"></div>
 
-                    <div className="detail detailSkeleton">
-                      <div className="title skeleton skeletonTitle">
-                        <span>Loading title</span>
-                      </div>
-                      <p className="desc skeleton skeletonDesc">
-                        <span>Loading description</span>
-                      </p>
-                      <p className="desc skeleton skeletonDesc"></p>
-                      <p className="desc skeleton skeletonDesc"></p>
-
-                      <div className="tag">
-                        <div className="skeleton skeletonBtnTag"></div>
-                        <div className="skeleton skeletonBtnTag"></div>
-                        <div className="skeleton skeletonBtnTag"></div>
-                      </div>
-
-                      <div className="license skeleton skeletonLicense"></div>
+                  <div className="detail detailSkeleton">
+                    <div className="title skeleton skeletonTitle">
+                      <span>Loading title</span>
                     </div>
+
+                    <p className="desc skeleton skeletonDesc">
+                      <span>Loading description</span>
+                    </p>
+                    <p className="desc skeleton skeletonDesc short"></p>
+                    <p className="desc skeleton skeletonDesc medium"></p>
+
+                    <div className="tag">
+                      <div className="skeleton skeletonBtnTag"></div>
+                      <div className="skeleton skeletonBtnTag"></div>
+                      <div className="skeleton skeletonBtnTag"></div>
+                    </div>
+
+                    <div className="license skeleton skeletonLicense"></div>
                   </div>
-                )
-              )}
+                </div>
+              ))}
             </div>
           ) : (
             <div className="content">
-              {paginatedWorks.map((myWork, index) => (
-                <div className="box" key={index} onClick={() => handleModal(myWork.id)}>
+              {paginatedWorks.map((myWork) => (
+                <div className="box" key={myWork.id} onClick={() => handleModal(myWork.id)}>
                   <div className="image">
                     <Image
                       src={myWork.urlImage}
                       alt={myWork.name}
                       width={500}
                       height={500}
+                      unoptimized={myWork.urlImage.includes('storage.googleapis.com')}
                     />
                   </div>
 
@@ -222,7 +226,9 @@ const ListDemo: React.FC = () => {
 
                     <div className="tag">
                       {(myWork.tags.length ? myWork.tags : ['project']).slice(0, 3).map((tag) => (
-                        <button key={tag}>{tag}</button>
+                        <button key={tag} type="button">
+                          {tag}
+                        </button>
                       ))}
                     </div>
 
@@ -246,7 +252,6 @@ const ListDemo: React.FC = () => {
               nextLabel={'>'}
               pageCount={Math.max(1, pages)}
               onPageChange={changePage}
-              // forcePage={page}
               forcePage={Math.min(page, Math.max(0, pages - 1))}
               containerClassName={'pagination box-container'}
               pageLinkClassName={'link'}

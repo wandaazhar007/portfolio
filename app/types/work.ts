@@ -1,3 +1,4 @@
+//app/types/work.ts
 export type WorkItem = {
   uuid: string;
   legacyId: number | null;

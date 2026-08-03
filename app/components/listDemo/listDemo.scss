@@ -9,6 +9,12 @@
     margin-top: 5rem;
   }
 
+  .helperMessage {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: $colorGrey;
+  }
+
   .wrapContainer {
     .header {
       display: grid;
@@ -46,12 +52,10 @@
             grid-template-columns: 1fr;
           }
 
-
-
           .box1 {
             font-size: 1.4rem;
             line-height: 2.5rem;
-            background-color: #D8DAD9;
+            background-color: #d8dad9;
             color: $colorOldGrey;
             padding: 1rem 3rem;
             border-radius: 1rem;
@@ -67,7 +71,7 @@
               position: absolute;
               right: 1rem;
               bottom: 2rem;
-              opacity: .5;
+              opacity: 0.5;
             }
           }
         }
@@ -91,8 +95,6 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
 
-
-
         .headBox {
           display: flex;
           justify-content: center;
@@ -111,7 +113,6 @@
           border-radius: 1rem;
           padding: 2rem;
           line-height: 2rem;
-
         }
 
         .box.box1 {
@@ -144,36 +145,53 @@
 
       .box {
         display: flex;
-        gap: 1rem;
-        padding: 1rem;
-        border-radius: 1rem;
+        gap: 1.2rem;
+        padding: 1.2rem;
+        border-radius: 1.2rem;
         background-color: #ffffff;
         box-shadow: $boxShadow2;
         cursor: pointer;
+        min-height: 16.2rem;
+
+        @include phone {
+          flex-direction: column;
+        }
 
         .image {
           border-radius: 1rem;
           overflow: hidden;
           width: 20rem;
-          height: 10rem;
+          min-width: 20rem;
+          height: 12rem;
+          background-color: #f2f4f7;
+
+          @include phone {
+            width: 100%;
+            min-width: 100%;
+            height: 18rem;
+          }
 
           img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
           }
         }
 
         .detail {
           display: flex;
           flex-direction: column;
-          gap: .5rem;
+          gap: 0.8rem;
           justify-content: center;
+          flex: 1;
+          min-width: 0;
 
           .title {
             font-size: 1.8rem;
             font-weight: 600;
             color: $colorOldDrab;
+            line-height: 2.4rem;
           }
 
           .desc {
@@ -183,16 +201,16 @@
           }
 
           .tag {
-            margin-top: 1rem;
+            margin-top: 0.6rem;
             display: flex;
-            gap: .3rem;
+            gap: 0.4rem;
             flex-wrap: wrap;
 
             button {
-              border: .1rem solid #0149B4;
-              background-color: #E0F7FF;
-              color: #0149B4;
-              padding: .2rem 1rem;
+              border: 0.1rem solid #0149b4;
+              background-color: #e0f7ff;
+              color: #0149b4;
+              padding: 0.2rem 1rem;
               border-radius: 1rem;
             }
           }
@@ -200,7 +218,7 @@
           .license {
             display: flex;
             gap: 1rem;
-            margin-top: 1rem;
+            margin-top: 0.6rem;
             flex-wrap: wrap;
             color: grey;
 
@@ -212,15 +230,25 @@
       }
 
       .box.skeletonBox {
-        display: flex;
-
         .image.imageSkeleton {
-          flex-grow: 2;
+          width: 20rem;
+          min-width: 20rem;
+          height: 12rem;
+
+          @include phone {
+            width: 100%;
+            min-width: 100%;
+            height: 18rem;
+          }
         }
 
         .detail.detailSkeleton {
-          flex-grow: 1;
-          // border: .1rem solid salmon;
+          flex: 1;
+          min-width: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 0.8rem;
         }
       }
     }
@@ -246,20 +274,22 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: .6rem;
+        border-radius: 0.6rem;
         background-color: $colorSnow;
         color: $colorOldDrab;
         font-weight: 700;
         font-size: 1.4rem;
         cursor: pointer;
-        border: .1rem solid $colorFossil;
+        border: 0.1rem solid $colorFossil;
       }
 
       .link.on {
         background-color: $colorDrab;
         color: $colorSnow;
         font-weight: 700;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px 3px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        box-shadow:
+          rgba(50, 50, 93, 0.25) 0px 2px 5px 3px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         border: none;
       }
 
@@ -268,15 +298,12 @@
         color: black;
         cursor: not-allowed;
         border: transparent;
-        border-radius: .5rem;
+        border-radius: 0.5rem;
       }
     }
   }
 }
 
-
-
-// SKELETON MODAL DEMO
 @keyframes skeletonLoading {
   0% {
     background-color: hsl(200, 20%, 70%);
@@ -294,16 +321,12 @@
 .skeleton.skeletonImage {
   border-radius: 1rem;
   overflow: hidden;
-  width: 30rem;
-  height: 10rem;
-  // border: .1rem solid salmon;
 }
 
 .skeleton.skeletonTitle {
-  margin-bottom: 1rem;
-  width: 80%;
-  height: 2rem;
-  border-radius: .5rem;
+  width: 72%;
+  height: 2.1rem;
+  border-radius: 0.5rem;
 
   span {
     opacity: 0;
@@ -311,23 +334,33 @@
 }
 
 .skeleton.skeletonDesc {
-  // max-width: 10rem;
-  width: 90%;
-  height: 1rem;
+  width: 100%;
+  height: 1.2rem;
   border-radius: 1rem;
 
   span {
     opacity: 0;
   }
 
-  // @include phone {
-  //   width: 15rem;
-  // }
+  &.short {
+    width: 70%;
+  }
+
+  &.medium {
+    width: 85%;
+  }
+}
+
+.skeleton.skeletonBtnTag {
+  width: 6.8rem;
+  height: 2.6rem;
+  border-radius: 1rem;
+  border: transparent;
 }
 
 .skeleton.skeletonLicense {
-  height: 1rem;
-  width: 60%;
+  height: 1.2rem;
+  width: 40%;
   border-radius: 1rem;
   border: transparent;
 }

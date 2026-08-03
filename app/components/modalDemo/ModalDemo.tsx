@@ -1,4 +1,3 @@
-//app/components/modalDemo/ModalDemo.tsx
 'use client';
 
 import Image from 'next/image';
@@ -63,8 +62,8 @@ const ModalDemo: React.FC<PropsType> = ({ openModal, closeModal, propsUuid }) =>
               <div className="content">
                 <h1 className="title skeleton skeleton-title-modal"></h1>
                 <p className="desc skeleton skeleton-desc-modal"></p>
-                <p className="desc skeleton skeleton-desc-modal"></p>
-                <p className="desc skeleton skeleton-desc-modal"></p>
+                <p className="desc skeleton skeleton-desc-modal medium"></p>
+                <p className="desc skeleton skeleton-desc-modal short"></p>
 
                 <div className="tag">
                   <button className="skeleton skeletonBtnTag"></button>
@@ -73,17 +72,13 @@ const ModalDemo: React.FC<PropsType> = ({ openModal, closeModal, propsUuid }) =>
                 </div>
 
                 <div className="buttonGroup">
-                  <Link href="#" target="_blank">
-                    <button className="btn btnPreview skeleton skeletonBtnModal">
-                      Live Preview
-                    </button>
-                  </Link>
+                  <button className="btn btnPreview skeleton skeletonBtnModal" type="button">
+                    Live Preview
+                  </button>
 
-                  <Link href="#" target="_blank">
-                    <button className="btn btnGithub skeleton skeletonBtnModal">
-                      Repository
-                    </button>
-                  </Link>
+                  <button className="btn btnGithub skeleton skeletonBtnModal" type="button">
+                    Repository
+                  </button>
                 </div>
               </div>
             </div>
@@ -94,7 +89,13 @@ const ModalDemo: React.FC<PropsType> = ({ openModal, closeModal, propsUuid }) =>
               <div className="btnClose" onClick={closeModal}></div>
 
               <div className="image">
-                <Image src={work.urlImage} alt={work.name} width={500} height={500} />
+                <Image
+                  src={work.urlImage}
+                  alt={work.name}
+                  width={500}
+                  height={500}
+                  unoptimized={work.urlImage.includes('storage.googleapis.com')}
+                />
               </div>
 
               <div className="content">
@@ -103,7 +104,7 @@ const ModalDemo: React.FC<PropsType> = ({ openModal, closeModal, propsUuid }) =>
 
                 <div className="tag">
                   {(work.tags.length ? work.tags : ['project']).slice(0, 4).map((tag) => (
-                    <button className="btnTag" key={tag}>
+                    <button className="btnTag" key={tag} type="button">
                       {tag}
                     </button>
                   ))}
@@ -111,25 +112,29 @@ const ModalDemo: React.FC<PropsType> = ({ openModal, closeModal, propsUuid }) =>
 
                 <div className="buttonGroup">
                   {work.type?.toLowerCase() === 'backend' || !work.preview ? (
-                    <Link href="#">
-                      <button className="btn btnPreviewDisable">
-                        <FontAwesomeIcon icon={faClose} className="icon" /> No Preview
-                      </button>
-                    </Link>
+                    <button className="btn btnPreviewDisable" type="button">
+                      <FontAwesomeIcon icon={faClose} className="icon" /> No Preview
+                    </button>
                   ) : (
                     <Link href={work.preview} target="_blank">
-                      <button className="btn btnPreview">
+                      <button className="btn btnPreview" type="button">
                         Preview <FontAwesomeIcon icon={faSquareArrowUpRight} className="icon" />
                       </button>
                     </Link>
                   )}
 
-                  <Link href={work.github || '#'} target="_blank">
-                    <button className="btn btnGithub">
-                      Repository
-                      <FontAwesomeIcon icon={faSquareArrowUpRight} className="icon" />
+                  {work.github ? (
+                    <Link href={work.github} target="_blank">
+                      <button className="btn btnGithub" type="button">
+                        Repository
+                        <FontAwesomeIcon icon={faSquareArrowUpRight} className="icon" />
+                      </button>
+                    </Link>
+                  ) : (
+                    <button className="btn btnPreviewDisable" type="button">
+                      <FontAwesomeIcon icon={faClose} className="icon" /> No Repository
                     </button>
-                  </Link>
+                  )}
                 </div>
 
                 <div className="license">

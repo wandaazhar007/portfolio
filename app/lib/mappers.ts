@@ -1,4 +1,3 @@
-//app/lib/mappers.ts
 import type { BlogItem } from "@/app/types/blog";
 import type { CategoryItem } from "@/app/types/category";
 import type { WorkItem } from "@/app/types/work";
@@ -36,7 +35,6 @@ function normalizeImageUrl(url?: string | null): string {
   const trimmed = url.trim();
 
   if (
-    trimmed.includes("portfolio.birojasa-sahabat.com") ||
     trimmed.includes("localhost:5005") ||
     trimmed.includes("127.0.0.1:5005")
   ) {
@@ -56,8 +54,8 @@ export function mapBlogToLegacyCard(blog: BlogItem): LegacyBlogCard {
     category: {
       name: blog.categoryName,
       slug: blog.categorySlug,
-      uuid: blog.categoryUuid
-    }
+      uuid: blog.categoryUuid,
+    },
   };
 }
 
@@ -71,7 +69,7 @@ export function mapWorkToLegacyCard(work: WorkItem): LegacyWorkCard {
     preview: work.preview,
     github: work.github,
     type: work.type,
-    tags: work.tags ?? []
+    tags: work.tags ?? [],
   };
 }
 
@@ -79,6 +77,6 @@ export function mapCategoryToTab(category: CategoryItem) {
   return {
     id: category.uuid,
     name: category.name,
-    slug: category.slug
+    slug: category.slug,
   };
 }
