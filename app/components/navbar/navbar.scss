@@ -88,6 +88,8 @@
   height: 7rem;
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
   z-index: 999;
   background-color: #ffffff;
   // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -95,7 +97,7 @@
 
   @include miniDesktop {
     height: 7rem;
-    background-color: transparent;
+    background-color: #ffffff;
     // border: .1rem solid salmon;
   }
 
@@ -147,21 +149,20 @@
         }
 
         .iconClose.on {
-          display: block;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #ca0e0e;
+          color: #fff;
+          width: 2rem;
+          height: 2rem;
+          border-radius: 50%;
+          padding: 1rem;
+          cursor: pointer;
+        }
 
-          @include tablet {
-            position: fixed;
-            right: 1rem;
-            bottom: 18rem;
-            background-color: #ca0e0e;
-            color: #fff;
-            width: 2rem;
-            height: 2rem;
-            border-radius: 50%;
-            padding: 1rem;
-            z-index: 4;
-            cursor: pointer;
-          }
+        .iconClose.on~.cta .btnMenu {
+          display: none;
         }
 
         .nav {
@@ -284,22 +285,16 @@
             display: none;
 
             @include tablet {
-              display: block;
-              position: fixed;
-              bottom: 8.5rem;
-              right: 5rem;
-              padding: 1.5rem 2rem;
+              display: flex;
+              padding: 1rem 1.2rem;
               background-color: $colorSnow;
               color: $colorOldDrab;
               border: none;
-              border-radius: .3rem;
-              font-size: 2.6rem;
+              border-radius: .5rem;
+              font-size: 2rem;
               cursor: pointer;
-              display: flex;
-              gap: 1rem;
               align-items: center;
-              box-shadow: 0rem .5rem 2.5rem .1rem rgba(0, 0, 0, .2);
-              z-index: 2;
+              box-shadow: 0rem .3rem 1rem rgba(0, 0, 0, .15);
             }
 
             .icon {
