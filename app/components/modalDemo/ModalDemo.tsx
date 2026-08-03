@@ -116,7 +116,7 @@ const ModalDemo: React.FC<PropsType> = ({ openModal, closeModal, propsUuid }) =>
                       <FontAwesomeIcon icon={faClose} className="icon" /> No Preview
                     </button>
                   ) : (
-                    <Link href={work.preview} target="_blank">
+                    <Link href={work.preview} target="_blank" rel="noopener noreferrer">
                       <button className="btn btnPreview" type="button">
                         Preview <FontAwesomeIcon icon={faSquareArrowUpRight} className="icon" />
                       </button>
@@ -124,7 +124,7 @@ const ModalDemo: React.FC<PropsType> = ({ openModal, closeModal, propsUuid }) =>
                   )}
 
                   {work.github ? (
-                    <Link href={work.github} target="_blank">
+                    <Link href={work.github} target="_blank" rel="noopener noreferrer">
                       <button className="btn btnGithub" type="button">
                         Repository
                         <FontAwesomeIcon icon={faSquareArrowUpRight} className="icon" />

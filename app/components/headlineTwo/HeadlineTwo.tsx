@@ -28,7 +28,7 @@ const HeadlineTwo: React.FC = () => {
       </div>
 
       <div className="github">
-        <Link href="https://github.com/wandaazhar007/" target="_blank">
+        <Link href="https://github.com/wandaazhar007/" target="_blank" rel="noopener noreferrer">
           <button><FontAwesomeIcon icon={faGithub} className='iconGithub' /> Github <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='iconLink' /></button>
         </Link>
       </div>
