@@ -28,7 +28,6 @@ const ListDemo: React.FC = () => {
   const [propsUuid, setPropsUuid] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(0);
-  const [msg, setMsg] = useState('');
 
   const pages = Math.ceil(allWorks.length / PAGE_SIZE);
 
@@ -71,12 +70,6 @@ const ListDemo: React.FC = () => {
       setPage(selected);
       setIsLoading(false);
     }, PAGINATION_LOADING_MS);
-
-    if (selected > 9) {
-      setMsg('Please search by specific keyword...');
-    } else {
-      setMsg('');
-    }
   };
 
   useEffect(() => {
@@ -175,8 +168,6 @@ const ListDemo: React.FC = () => {
               </motion.div>
             </div>
           </div>
-
-          {msg ? <p className="helperMessage">{msg}</p> : null}
 
           {isLoading ? (
             <div className="content">
