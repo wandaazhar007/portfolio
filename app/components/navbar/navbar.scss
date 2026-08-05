@@ -144,30 +144,30 @@
         gap: 2rem;
         align-items: center;
 
-        .iconClose {
-          display: none;
-        }
-
-        .iconClose.on {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: #ca0e0e;
-          color: #fff;
-          width: 2rem;
-          height: 2rem;
-          border-radius: 50%;
-          padding: 1rem;
-          cursor: pointer;
-        }
-
-        .iconClose.on~.cta .btnMenu {
-          display: none;
-        }
-
         .nav {
           display: flex;
           gap: 3rem;
+
+          .iconClose {
+            display: none;
+          }
+
+          .iconClose.on {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: #ca0e0e;
+            color: #fff;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            padding: 1rem;
+            cursor: pointer;
+            z-index: 100;
+          }
 
           @media screen and (max-width : 857px) {
             gap: 1rem;
