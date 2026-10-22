@@ -44,10 +44,10 @@ const Navbar: React.FC = () => {
             <div className="colLeft">
               <Link href="/">
                 <div className="logo">
-                  <Image src="/wanda-azhar.jpg" alt="logo" width={500} height={500} />
+                  <Image src="/wanda-azhar.jpg" alt="Wanda Azhar" width={500} height={500} />
                 </div>
                 <div className="name">
-                  <h1>Wanda Azhar</h1>
+                  <p>Wanda Azhar</p>
                 </div>
               </Link>
             </div>

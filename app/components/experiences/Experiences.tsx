@@ -7,7 +7,7 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 const Experiences: React.FC = () => {
   return (
     <div className="experiences">
-      <h1 >WHAT I DO</h1>
+      <h2>WHAT I DO</h2>
       <div className="wrapBox">
         <div className="box">
           <ul className="ulBox">

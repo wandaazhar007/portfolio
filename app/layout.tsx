@@ -36,21 +36,12 @@ export const metadata: Metadata = {
     siteName: "Wanda Azhar Portfolio",
     locale: "en_US",
     type: "website",
-    images: [
-      {
-        url: "/wanda-azhar.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Wanda Azhar Portfolio",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Wanda Azhar | Web Developer in Twin Falls, Idaho",
     description:
       "Explore the portfolio of Wanda Azhar, a web developer in Twin Falls, Idaho, showcasing projects, experience, and technical blog resources.",
-    images: ["/wanda-azhar.jpg"],
   },
   robots: {
     index: true,

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const Educations: React.FC = () => {
   return (
     <div className="education">
-      <h1 >EDUCATIONS</h1>
+      <h2>EDUCATIONS</h2>
       <div className="wrapBox">
         <motion.div
           initial={{ opacity: 0, scale: 1, y: 100 }}

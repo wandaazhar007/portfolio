@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const Accomplishments: React.FC = () => {
   return (
     <div className="accomplishments">
-      <h1 >ACCOMPLISHMENTS</h1>
+      <h2>ACCOMPLISHMENTS</h2>
       <div className="wrapBox">
         <div className="box">
           <ul>

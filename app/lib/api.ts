@@ -1,4 +1,6 @@
 //app/lib/api.ts
+const REVALIDATE_SECONDS = 300;
+
 const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_BASE_URL?.replace(/\/$/, "") ??
   "http://localhost:5015/api";
@@ -20,9 +22,14 @@ export async function apiGet<T>(
   path: string,
   query?: Record<string, string | number | boolean | undefined | null>
 ): Promise<T> {
+  const cacheOptions: RequestInit =
+    typeof window === "undefined"
+      ? { next: { revalidate: REVALIDATE_SECONDS } }
+      : { cache: "no-store" };
+
   const response = await fetch(buildUrl(path, query), {
     method: "GET",
-    cache: "no-store"
+    ...cacheOptions
   });
 
   if (!response.ok) {

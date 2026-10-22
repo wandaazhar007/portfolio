@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { baseOpenGraph } from "../lib/seo";
 import ListDemo from "../components/listDemo/ListDemo";
+import { getPublishedWorks } from "../lib/data";
 
 export const metadata: Metadata = {
   title: "Web Development Portfolio in Twin Falls, Idaho",
@@ -9,23 +11,18 @@ export const metadata: Metadata = {
     canonical: "/my-works",
   },
   openGraph: {
+    ...baseOpenGraph,
     title: "Web Development Portfolio | Wanda Azhar",
     description:
       "Explore web development projects by Wanda Azhar, including frontend, full-stack, and modern web application work.",
     url: "/my-works",
-    images: [
-      {
-        url: "/wanda-azhar.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Wanda Azhar Works Portfolio",
-      },
-    ],
   },
 };
 
-const MyWork: React.FC = () => {
-  return <ListDemo />;
+const MyWork = async () => {
+  const works = await getPublishedWorks();
+
+  return <ListDemo initialWorks={works} />;
 };
 
 export default MyWork;

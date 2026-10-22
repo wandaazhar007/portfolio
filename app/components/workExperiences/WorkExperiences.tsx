@@ -12,7 +12,7 @@ import animation_smile from "../../../public/animation_smile.json";
 const WorkExperiences: React.FC = () => {
   return (
     <div className="workExperiences">
-      <h1 >WORK EXPERIENCES</h1>
+      <h2>WORK EXPERIENCES</h2>
       <div className="wrapBox">
         <motion.div
           initial={{ opacity: 0, scale: 1, y: 100 }}

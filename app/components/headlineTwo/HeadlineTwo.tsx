@@ -23,7 +23,7 @@ const HeadlineTwo: React.FC = () => {
       </div>
 
       <div className="title">
-        <h1>Transforming Ideas into Web Reality</h1>
+        <h2>Transforming Ideas into Web Reality</h2>
         <p>Reviewed and tested code and documentation. Researched, identified, and isolated issues</p>
       </div>
 

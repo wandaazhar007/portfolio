@@ -10,9 +10,8 @@ import ReactPaginate from 'react-paginate';
 import { motion } from 'framer-motion';
 import animation_work2 from '../../../public/animation_work2.json';
 import dynamic from 'next/dynamic';
-import { apiGet } from '@/app/lib/api';
-import { mapWorkToLegacyCard, type LegacyWorkCard } from '@/app/lib/mappers';
-import type { WorksApiResponse } from '@/app/types/work';
+import { getPublishedWorks } from '@/app/lib/data';
+import type { LegacyWorkCard } from '@/app/lib/mappers';
 
 const Lottie = dynamic(() => import('lottie-react'), {
   ssr: false,
@@ -22,11 +21,15 @@ const PAGE_SIZE = 2;
 const FETCH_LOADING_MS = 500;
 const PAGINATION_LOADING_MS = 350;
 
-const ListDemo: React.FC = () => {
-  const [allWorks, setAllWorks] = useState<LegacyWorkCard[]>([]);
+type ListDemoProps = {
+  initialWorks: LegacyWorkCard[];
+};
+
+const ListDemo: React.FC<ListDemoProps> = ({ initialWorks }) => {
+  const [allWorks, setAllWorks] = useState<LegacyWorkCard[]>(initialWorks);
   const [openModal, setOpenModal] = useState(false);
   const [propsUuid, setPropsUuid] = useState('');
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(initialWorks.length === 0);
   const [page, setPage] = useState(0);
 
   const pages = Math.ceil(allWorks.length / PAGE_SIZE);
@@ -45,22 +48,12 @@ const ListDemo: React.FC = () => {
   const getMyWork = async () => {
     setIsLoading(true);
 
-    try {
-      const response = await apiGet<WorksApiResponse>('/works', {
-        isPublished: true,
-        limit: 100,
-      });
+    const works = await getPublishedWorks();
+    setAllWorks(works);
 
-      const mapped = response.data.items.map(mapWorkToLegacyCard);
-      setAllWorks(mapped);
-    } catch (error) {
-      console.error('Failed to fetch works:', error);
-      setAllWorks([]);
-    } finally {
-      setTimeout(() => {
-        setIsLoading(false);
-      }, FETCH_LOADING_MS);
-    }
+    setTimeout(() => {
+      setIsLoading(false);
+    }, FETCH_LOADING_MS);
   };
 
   const changePage = ({ selected }: { selected: number }) => {
@@ -73,7 +66,9 @@ const ListDemo: React.FC = () => {
   };
 
   useEffect(() => {
-    getMyWork();
+    if (initialWorks.length === 0) {
+      getMyWork();
+    }
   }, []);
 
   useEffect(() => {
@@ -127,13 +122,13 @@ const ListDemo: React.FC = () => {
 
             <div className="colRight">
               <div className="headBox">
-                <motion.h1
+                <motion.h2
                   animate={{
                     scale: [0, 1.5, 1],
                   }}
                 >
                   Learn, Collaborate, Connect:
-                </motion.h1>
+                </motion.h2>
               </div>
 
               <motion.div
@@ -212,7 +207,7 @@ const ListDemo: React.FC = () => {
                   </div>
 
                   <div className="detail">
-                    <div className="title">{myWork.name}</div>
+                    <h2 className="title">{myWork.name}</h2>
                     <p className="desc">{myWork.desc.substring(0, 100)} ...</p>
 
                     <div className="tag">

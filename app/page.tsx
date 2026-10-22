@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { baseOpenGraph } from "./lib/seo";
 import Accomplishments from "./components/accomplishments/Accomplishments";
 import Biodata from "./components/biodata/Biodata";
 import Certifications from "./components/certifications/Certifications";
@@ -14,25 +15,17 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
+    ...baseOpenGraph,
     title: "Wanda Azhar | Web Developer in Twin Falls, Idaho",
     description:
       "Explore projects, experience, and technical expertise from Wanda Azhar, a web developer in Twin Falls, Idaho.",
     url: "/",
-    images: [
-      {
-        url: "/wanda-azhar.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Wanda Azhar Portfolio Homepage",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Wanda Azhar | Web Developer in Twin Falls, Idaho",
     description:
       "Explore projects, experience, and technical expertise from Wanda Azhar, a web developer in Twin Falls, Idaho.",
-    images: ["/wanda-azhar.jpg"],
   },
 };
 

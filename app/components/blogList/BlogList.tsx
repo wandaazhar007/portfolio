@@ -203,14 +203,17 @@ import Link from 'next/link';
 import { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import { SearchBlogContext } from '../../context/SearchBlogContext';
-import { apiGet } from '@/app/lib/api';
-import { mapBlogToLegacyCard, type LegacyBlogCard } from '@/app/lib/mappers';
-import type { BlogsApiResponse } from '@/app/types/blog';
+import { getPublishedBlogs } from '@/app/lib/data';
+import type { LegacyBlogCard } from '@/app/lib/mappers';
 
 const SKELETON_ITEMS = 6;
 const UI_LOADING_DELAY = 350;
 
-const BlogList: React.FC = () => {
+type BlogListProps = {
+  initialBlogs: LegacyBlogCard[];
+};
+
+const BlogList: React.FC<BlogListProps> = ({ initialBlogs }) => {
   const blogContext = useContext(SearchBlogContext);
 
   if (!blogContext) {
@@ -219,10 +222,12 @@ const BlogList: React.FC = () => {
 
   const { querySearch, btnQuery, page, setPage } = blogContext;
 
-  const [allBlogs, setAllBlogs] = useState<LegacyBlogCard[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const hasInitialBlogs = initialBlogs.length > 0;
+  const [allBlogs, setAllBlogs] = useState<LegacyBlogCard[]>(initialBlogs);
+  const [isLoading, setIsLoading] = useState(!hasInitialBlogs);
   const [msg, setMsg] = useState('');
-  const [isInitialLoaded, setIsInitialLoaded] = useState(false);
+  const [isInitialLoaded, setIsInitialLoaded] = useState(hasInitialBlogs);
+  const skipNextLoadingRef = useRef(hasInitialBlogs);
   const limit = 6;
 
   const loadingTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -260,21 +265,10 @@ const BlogList: React.FC = () => {
   const getAllBlogs = async () => {
     setIsLoading(true);
 
-    try {
-      const response = await apiGet<BlogsApiResponse>('/blogs', {
-        isPublished: true,
-        limit: 100,
-      });
-
-      const mapped = response.data.items.map(mapBlogToLegacyCard);
-      setAllBlogs(mapped);
-    } catch (error) {
-      console.error('Failed to fetch blogs:', error);
-      setAllBlogs([]);
-    } finally {
-      setIsLoading(false);
-      setIsInitialLoaded(true);
-    }
+    const blogs = await getPublishedBlogs();
+    setAllBlogs(blogs);
+    setIsLoading(false);
+    setIsInitialLoaded(true);
   };
 
   const changePage = ({ selected }: { selected: number }) => {
@@ -288,7 +282,9 @@ const BlogList: React.FC = () => {
   };
 
   useEffect(() => {
-    getAllBlogs();
+    if (!hasInitialBlogs) {
+      getAllBlogs();
+    }
   }, []);
 
   useEffect(() => {
@@ -297,6 +293,11 @@ const BlogList: React.FC = () => {
 
   useEffect(() => {
     if (!isInitialLoaded) return;
+
+    if (skipNextLoadingRef.current) {
+      skipNextLoadingRef.current = false;
+      return;
+    }
 
     setIsLoading(true);
 
@@ -317,7 +318,7 @@ const BlogList: React.FC = () => {
 
   return (
     <section className="boxListBlog">
-      <h1>{msg}</h1>
+      {msg ? <p className="searchResult">{msg}</p> : null}
 
       {isLoading ? (
         <div className="contentBlog">
@@ -333,9 +334,9 @@ const BlogList: React.FC = () => {
               </div>
 
               <div className="titleBox">
-                <h1 className="titleBlogSkeleton skeletonBlog skeletonTitle">
+                <div className="titleBlogSkeleton skeletonBlog skeletonTitle">
                   <span>Loading title</span>
-                </h1>
+                </div>
                 <p className="descBlogSkeleton skeletonBlog skeletonDesc">
                   <span>Loading description</span>
                 </p>
@@ -352,9 +353,9 @@ const BlogList: React.FC = () => {
       ) : (
         <>
           {querySearch ? (
-            <h1 className="searchResult">
+            <p className="searchResult">
               {rows} Results for: "{querySearch}"
-            </h1>
+            </p>
           ) : null}
 
           <div className="contentBlog">
@@ -403,7 +404,7 @@ const BlogList: React.FC = () => {
                   </div>
 
                   <div className="titleBox">
-                    <h1 className="titleBlog">{blog.title}</h1>
+                    <h2 className="titleBlog">{blog.title}</h2>
                     <p className="descBlog">{blog.desc.substring(0, 95)} ...</p>
                   </div>
                 </div>
