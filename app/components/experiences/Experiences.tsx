@@ -27,7 +27,7 @@ const Experiences: React.FC = () => {
               className="liBox"
             >
               <span className="point">Design</span>
-              I create prototypes and mockups to visualize ideas early, helping stakeholders clearly understand the product and address potential issues before development begins.
+              I create wireframes, mockups, and mobile-first layouts to visualize ideas early, so clients can see and shape their website before a single line of code is written.
             </motion.li>
           </ul>
         </div>
@@ -42,6 +42,12 @@ const Experiences: React.FC = () => {
             >
               <div className="groupSkill">
                 <span className="point">Programming Language & Tools</span>
+                <button className="skill">
+                  WordPress <FontAwesomeIcon icon={faInfoCircle} />
+                  <div className="tooltip tooltipWordpress">
+                    <p className='heading'>WordPress (2 Years Experience)</p>
+                    Where my web development journey started. I built and maintained WordPress websites for two years, from theme customization and page building to plugins, content updates, and on-page SEO. Today I combine that experience with modern JavaScript to build WordPress sites that are fast, secure, and easy for clients to manage.</div>
+                </button>
                 <button className="skill">
                   HTML5 <FontAwesomeIcon icon={faInfoCircle} />
                   <div className="tooltip tooltipHtml">
@@ -62,6 +68,12 @@ const Experiences: React.FC = () => {
                     From scripting novice to dynamic web developer. Expert in DOM manipulation, user interactions, APIs. Creating engaging, performance-driven solutions. Staying current with modern frameworks. Pushing web dev boundaries.</div>
                 </button>
                 <button className="skill">
+                  PHP & Laravel <FontAwesomeIcon icon={faInfoCircle} />
+                  <div className="tooltip tooltipLaravel">
+                    <p className='heading'>PHP & Laravel (1 Year Experience)</p>
+                    After WordPress, I moved deeper into PHP with Laravel, building MVC-structured web applications with routing, authentication, and database-driven features. This PHP background makes me comfortable working with WordPress themes and plugins under the hood.</div>
+                </button>
+                <button className="skill">
                   TypeScript <FontAwesomeIcon icon={faInfoCircle} />
                   <div className="tooltip tooltipTypeScript">
                     <p className='heading'>TypeScript (1 Years Experience)</p>
@@ -73,6 +85,12 @@ const Experiences: React.FC = () => {
                     <p className='heading'>ReactJs (2 Years Experience)</p>
                     Mastering component-based architecture, state management, and JSX. Crafting dynamic user interfaces and scalable web applications. Proficient in React hooks and context API for optimal code efficiency.
                   </div>
+                </button>
+                <button className="skill">
+                  Next.js <FontAwesomeIcon icon={faInfoCircle} />
+                  <div className="tooltip tooltipNextJs">
+                    <p className='heading'>Next.js</p>
+                    My current go-to framework for websites that need to rank. I use server rendering, metadata, sitemaps, and structured data to build Next.js sites that are fast and SEO-ready out of the box. This portfolio is built with Next.js and TypeScript.</div>
                 </button>
                 <button className="skill">
                   NodeJs <FontAwesomeIcon icon={faInfoCircle} />
@@ -148,6 +166,12 @@ const Experiences: React.FC = () => {
                     <p className='heading'>Nginx (2 Years Experience)</p>
                     Skillfully configuring and managing Nginx web servers. Optimizing performance, handling load balancing, and ensuring secure and efficient web application delivery.</div>
                 </button>
+                <button className="skill">
+                  AI Tools <FontAwesomeIcon icon={faInfoCircle} />
+                  <div className="tooltip tooltipAi">
+                    <p className='heading'>AI-Assisted Development</p>
+                    I use Claude, Claude Code, ChatGPT, Codex, and GitHub Copilot every day to scaffold components, debug faster, write documentation, and audit SEO. For example, I used Claude Code to audit this portfolio's technical SEO: it found that project and blog content was only loading client-side, and helped me move it to server rendering, fix the heading structure, and add structured data. AI speeds up the busywork. I make the decisions and review every line.</div>
+                </button>
               </div>
             </motion.li>
             <motion.li
@@ -157,7 +181,7 @@ const Experiences: React.FC = () => {
               className="liBox"
             >
               <span className="point">Development & Implementation</span>
-              I build secure, responsive websites from front-end to back-end. My focus is on clean code, performance, and seamless integration between design and functionality.
+              I build secure, responsive websites from front-end to back-end, in WordPress or custom code, whichever fits the project best. My focus is on clean code, performance, and an SEO-ready foundation so the site is easy to find from day one.
             </motion.li>
           </ul>
         </div>

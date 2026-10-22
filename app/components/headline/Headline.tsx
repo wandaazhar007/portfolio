@@ -36,7 +36,7 @@ const Headline: React.FC = () => {
           scale: [0, 1.2, 1],
           rotate: [0, -3, 0]
         }}
-      >I do more than just build a website
+      >WordPress Developer & Web Designer in Twin Falls, Idaho
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, scale: 1, x: -100 }}
@@ -44,7 +44,7 @@ const Headline: React.FC = () => {
         transition={{ duration: 1 }}
       >
         {/* As a professional web developer, I bring innovation to the forefront. Beyond building websites, I design interactive spaces that stimulate curiosity and evoke emotions */}
-        From concept to launch, I design and develop interactive experiences that inspire users and empower businesses to grow online.
+        I design and build fast, SEO-ready websites, from WordPress sites to modern Next.js apps. AI tools like Claude Code and ChatGPT help me move faster, and I personally review and own the quality of everything I ship.
       </motion.p>
       <motion.div
         initial={{ opacity: 0, scale: 1, y: 100 }}

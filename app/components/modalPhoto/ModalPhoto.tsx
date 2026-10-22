@@ -12,7 +12,7 @@ const ModalPhoto = ({ openModal, closeModal, isLoading, setIsLoading }: any) => 
     <div className="modalPhoto">
       {isLoading ? (
         <div className="boxPhoto">
-          <div className="skeletonProfile skeletonProfileImage">Are you ready..?</div>
+          <div className="skeletonProfile skeletonProfileImage"></div>
         </div>
       ) : (
         <div className="boxPhoto">

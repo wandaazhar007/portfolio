@@ -312,8 +312,8 @@ const FaqComponent: React.FC = () => {
 
                       <ol className="list">
                         <li>TypeScript</li>
+                        <li>PHP</li>
                         <li>Node.js</li>
-                        <li>MySQL</li>
                       </ol>
                     </div>
 
@@ -321,35 +321,66 @@ const FaqComponent: React.FC = () => {
 
                     <div className="groupList">
                       <ol className="list">
+                        <li>WordPress</li>
+                        <li>Laravel</li>
                         <li>Next.js</li>
+                      </ol>
+
+                      <ol className="list">
                         <li>React.js</li>
                         <li>Express.js</li>
+                        <li>MySQL</li>
                       </ol>
 
                       <ol className="list">
                         <li>Sequelize</li>
-                        <li>MySQL</li>
                         <li>Linux</li>
+                        <li>Nginx</li>
                       </ol>
 
                       <ol className="list">
-                        <li>Nginx</li>
                         <li>Git (VCS)</li>
                         <li>GitHub</li>
+                        <li>CI/CD</li>
                       </ol>
 
                       <ol className="list">
-                        <li>CI/CD</li>
                         <li>PM2</li>
                         <li>REST API</li>
                       </ol>
                     </div>
 
                     <p>
-                      I also work with modern frontend and backend tools to build
-                      responsive user interfaces, scalable web applications, and
-                      maintainable development workflows.
+                      I started my career with WordPress (2 years), then moved to
+                      Laravel, React and Node.js, and now Next.js with TypeScript.
+                      That path lets me pick the right tool for each project,
+                      whether it&apos;s a client-managed WordPress site or a
+                      custom web application.
                     </p>
+                  </div>
+                </div>
+              </motion.li>
+
+              <motion.li
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+              >
+                <input type="radio" name="accordion" id="ten" />
+                <label htmlFor="ten">
+                  Do you use AI tools in your development work?
+                </label>
+
+                <div className="content">
+                  <div className="answer">
+                    Yes. I use Claude, Claude Code, ChatGPT, Codex, and GitHub
+                    Copilot every day to scaffold components, debug faster, write
+                    documentation, and audit SEO. For example, I used Claude Code
+                    to audit this portfolio&apos;s technical SEO, then moved
+                    project and blog content to server rendering, fixed the
+                    heading structure, and added structured data. AI speeds up
+                    the busywork, but I make the decisions and review every line
+                    before it ships.
                   </div>
                 </div>
               </motion.li>

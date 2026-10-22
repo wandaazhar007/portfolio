@@ -6,7 +6,7 @@ import { baseOpenGraph } from '../lib/seo';
 export const metadata: Metadata = {
   title: 'Web Development FAQ in Twin Falls, Idaho',
   description:
-    'Find answers to common questions about Wanda Azhar, web development experience, workflow, technologies, and collaboration opportunities in Twin Falls, Idaho.',
+    'Answers to common questions about Wanda Azhar, a WordPress developer and web designer in Twin Falls, Idaho: technologies, AI-assisted workflow, process, and collaboration opportunities.',
   alternates: {
     canonical: '/faq',
   },
@@ -23,7 +23,12 @@ const FAQ_ITEMS = [
   {
     question: 'What technologies and programming languages are you proficient in?',
     answer:
-      'I am skilled in HTML, CSS, JavaScript, TypeScript, Node.js, and MySQL, along with frameworks and infrastructure technologies such as Next.js, React.js, Express.js, Sequelize, Linux, Nginx, Git, GitHub, CI/CD, PM2, and REST APIs.',
+      'I am skilled in HTML, CSS, JavaScript, TypeScript, PHP, and Node.js, along with WordPress, Laravel, Next.js, React.js, Express.js, MySQL, Sequelize, Linux, Nginx, Git, GitHub, CI/CD, PM2, and REST APIs. I started with WordPress (2 years), then moved to Laravel, React and Node.js, and now Next.js with TypeScript.',
+  },
+  {
+    question: 'Do you use AI tools in your development work?',
+    answer:
+      'Yes. I use Claude, Claude Code, ChatGPT, Codex, and GitHub Copilot every day to scaffold components, debug faster, write documentation, and audit SEO. For example, I used Claude Code to audit this portfolio\'s technical SEO, then moved project and blog content to server rendering, fixed the heading structure, and added structured data. AI speeds up the busywork, but I make the decisions and review every line before it ships.',
   },
   {
     question: 'What is your preferred development environment?',

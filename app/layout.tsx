@@ -11,14 +11,16 @@ const siteUrl =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Wanda Azhar | Web Developer in Twin Falls, Idaho",
+    default: "Wanda Azhar | WordPress Developer & Web Designer in Twin Falls, Idaho",
     template: "%s | Wanda Azhar",
   },
   description:
-    "Wanda Azhar is a web developer in Twin Falls, Idaho, United States, building modern websites and web applications with a focus on performance, usability, and clean frontend architecture.",
+    "Wanda Azhar is a WordPress developer and web designer in Twin Falls, Idaho, building fast, SEO-ready websites with WordPress, Next.js, and AI-assisted workflows.",
   keywords: [
-    "Web Developer in Twin Falls, Idaho, United States",
+    "WordPress Developer in Twin Falls, Idaho",
     "Web Designer in Twin Falls, Idaho",
+    "Web Developer in Twin Falls, Idaho, United States",
+    "AI-assisted web development",
     "Programmer in Twin Falls, Idaho",
     "DevOps in Twin Falls, Idaho",
     "Wanda Azhar portfolio",
@@ -29,9 +31,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Wanda Azhar | Web Developer in Twin Falls, Idaho",
+    title: "Wanda Azhar | WordPress Developer & Web Designer in Twin Falls, Idaho",
     description:
-      "Explore the portfolio of Wanda Azhar, a web developer in Twin Falls, Idaho, showcasing projects, experience, and technical blog resources.",
+      "Explore the portfolio of Wanda Azhar, a WordPress developer and web designer in Twin Falls, Idaho, showcasing projects, experience, and technical blog resources.",
     url: siteUrl,
     siteName: "Wanda Azhar Portfolio",
     locale: "en_US",
@@ -39,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wanda Azhar | Web Developer in Twin Falls, Idaho",
+    title: "Wanda Azhar | WordPress Developer & Web Designer in Twin Falls, Idaho",
     description:
-      "Explore the portfolio of Wanda Azhar, a web developer in Twin Falls, Idaho, showcasing projects, experience, and technical blog resources.",
+      "Explore the portfolio of Wanda Azhar, a WordPress developer and web designer in Twin Falls, Idaho, showcasing projects, experience, and technical blog resources.",
   },
   robots: {
     index: true,
@@ -55,9 +57,22 @@ const personJsonLd = {
   name: "Wanda Azhar",
   url: siteUrl,
   image: `${siteUrl}/wanda-azhar.jpg`,
-  jobTitle: "Web Developer",
+  jobTitle: "WordPress Developer & Web Designer",
   description:
-    "Web developer in Twin Falls, Idaho, United States, focused on modern websites, web applications, and clean frontend experiences.",
+    "WordPress developer and web designer in Twin Falls, Idaho, United States, building fast, SEO-ready websites with WordPress, Next.js, and AI-assisted workflows.",
+  knowsAbout: [
+    "WordPress",
+    "Web Design",
+    "PHP",
+    "Laravel",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Technical SEO",
+    "AI-assisted development",
+  ],
   address: {
     "@type": "PostalAddress",
     addressLocality: "Twin Falls",

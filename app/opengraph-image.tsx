@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
-export const alt = "Wanda Azhar | Web Developer in Twin Falls, Idaho";
+export const alt = "Wanda Azhar | WordPress Developer & Web Designer in Twin Falls, Idaho";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -33,7 +33,7 @@ export default async function OpengraphImage() {
         />
         <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
           <div style={{ fontSize: 76, fontWeight: 700 }}>Wanda Azhar</div>
-          <div style={{ fontSize: 40, color: "#3e5d6e" }}>Web Developer</div>
+          <div style={{ fontSize: 40, color: "#3e5d6e" }}>WordPress Developer & Web Designer</div>
           <div style={{ fontSize: 30, color: "#D87E53" }}>Twin Falls, Idaho, United States</div>
         </div>
       </div>

@@ -8,24 +8,26 @@ import Headline from "./components/headline/Headline";
 import HeadlineTwo from "./components/headlineTwo/HeadlineTwo";
 
 export const metadata: Metadata = {
-  title: "Web Developer in Twin Falls, Idaho",
+  title: {
+    absolute: "Wanda Azhar | WordPress Developer & Web Designer in Twin Falls, Idaho",
+  },
   description:
-    "Wanda Azhar is a web developer in Twin Falls, Idaho, United States, creating modern websites, responsive interfaces, and scalable web applications for businesses and personal brands.",
+    "Wanda Azhar is a WordPress developer and web designer in Twin Falls, Idaho, creating fast, SEO-ready websites and web applications for businesses, using WordPress, Next.js, and AI-assisted workflows.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     ...baseOpenGraph,
-    title: "Wanda Azhar | Web Developer in Twin Falls, Idaho",
+    title: "Wanda Azhar | WordPress Developer & Web Designer in Twin Falls, Idaho",
     description:
-      "Explore projects, experience, and technical expertise from Wanda Azhar, a web developer in Twin Falls, Idaho.",
+      "Explore projects, experience, and technical expertise from Wanda Azhar, a WordPress developer and web designer in Twin Falls, Idaho.",
     url: "/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wanda Azhar | Web Developer in Twin Falls, Idaho",
+    title: "Wanda Azhar | WordPress Developer & Web Designer in Twin Falls, Idaho",
     description:
-      "Explore projects, experience, and technical expertise from Wanda Azhar, a web developer in Twin Falls, Idaho.",
+      "Explore projects, experience, and technical expertise from Wanda Azhar, a WordPress developer and web designer in Twin Falls, Idaho.",
   },
 };
 

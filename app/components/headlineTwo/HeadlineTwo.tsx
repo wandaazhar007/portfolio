@@ -24,7 +24,7 @@ const HeadlineTwo: React.FC = () => {
 
       <div className="title">
         <h2>Transforming Ideas into Web Reality</h2>
-        <p>Reviewed and tested code and documentation. Researched, identified, and isolated issues</p>
+        <p>I started with WordPress, moved to Laravel, then React and Node.js, and now build with Next.js and TypeScript. I've grown with the web, and I bring that full-stack perspective to every design and build.</p>
       </div>
 
       <div className="github">

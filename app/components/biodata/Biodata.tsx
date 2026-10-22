@@ -36,7 +36,7 @@ const Biodata = () => {
               <FontAwesomeIcon icon={faUser} className='icon' /> : Riezka Azhari (Wanda Azhar)
             </div>
             <div className="row">
-              <Link href="tel:+16604299074">
+              <Link href="tel:+16464671926">
                 <FontAwesomeIcon icon={faPhone} className='icon' /> : 646-4671926
               </Link>
             </div>

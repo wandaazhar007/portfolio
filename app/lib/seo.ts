@@ -9,7 +9,7 @@ export const baseOpenGraph: NonNullable<Metadata["openGraph"]> = {
       url: "/opengraph-image",
       width: 1200,
       height: 630,
-      alt: "Wanda Azhar | Web Developer in Twin Falls, Idaho",
+      alt: "Wanda Azhar | WordPress Developer & Web Designer in Twin Falls, Idaho",
     },
   ],
 };
